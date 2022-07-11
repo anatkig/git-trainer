@@ -1,13 +1,35 @@
 #question-container {
   margin: 5vh auto;
+  padding: 1rem;
 
   width: 50vw;
-  height: 70vh;
-  background: orange;
+  background: rgb(255, 180, 0);
+}
+
+#question {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#addition-to-question {
+  margin: 1.5rem auto;
+}
+#next-button {
+  background: rgb(0, 200, 255);
+  cursor: pointer;
+  margin: 5px auto;
+  font-size: 1.2rem;
+}
+#next-button:active {
+  transform: scale(1.1);
 }
 
 .answer-option {
   text-align: left;
+  font-size: 1.2rem;
+}
+.answer-option button {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 400px) {

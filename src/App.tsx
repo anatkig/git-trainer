@@ -7,8 +7,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">Git Questions</header>
-      <QuestionContainer question={giveRandomQuestion()} />
-      {giveRandomQuestion()}
+      <QuestionContainer randomQuestion={giveRandomQuestion} />
     </div>
   );
 }
