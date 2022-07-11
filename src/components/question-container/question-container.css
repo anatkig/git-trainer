@@ -6,6 +6,10 @@
   background: orange;
 }
 
+.answer-option {
+  text-align: left;
+}
+
 @media only screen and (max-width: 400px) {
   #question-container {
     width: 90vw;
