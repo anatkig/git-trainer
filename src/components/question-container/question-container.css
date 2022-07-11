@@ -1,0 +1,14 @@
+#question-container {
+  margin: 5vh auto;
+
+  width: 50vw;
+  height: 70vh;
+  background: orange;
+}
+
+@media only screen and (max-width: 400px) {
+  #question-container {
+    width: 90vw;
+    height: 90vh;
+  }
+}
