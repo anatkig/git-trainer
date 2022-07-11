@@ -10,6 +10,13 @@ const QuestionContainer = ({
   const [showExplanation, setShowExplanation] = useState("none");
   const [question, setQuestion] = useState(giveRandomQuestion());
   const [answerMode, setAnswerMode] = useState(false);
+  const [counterOfCorrect, setCounterOfCorrect] = useState(0);
+  const [counterOfAttempts, setCounterOfAttempts] = useState(0);
+  const [totalCounter, setTotalCounter] = useState(
+    localStorage.getItem("total")
+      ? JSON.parse(localStorage.getItem("total") as string)
+      : [0, 0]
+  );
 
   const questionArray = question
     .split("\n")
@@ -26,19 +33,56 @@ const QuestionContainer = ({
   const explanation = questionArray.slice(optionEndIndex);
 
   const handleAnswerButtonClick = (event: React.MouseEvent, answer: string) => {
+    setCounterOfAttempts(counterOfAttempts + 1);
+    if (localStorage.getItem("total")) {
+      const kept = JSON.parse(localStorage.getItem("total") as string);
+
+      setTotalCounter([kept[0], kept[1] + 1]);
+      localStorage.setItem("total", JSON.stringify([kept[0], kept[1] + 1]));
+    } else {
+      setTotalCounter([counterOfCorrect, counterOfAttempts]);
+      localStorage.setItem(
+        "total",
+        JSON.stringify([counterOfCorrect, counterOfAttempts])
+      );
+    }
     setShowExplanation("block");
     if (!answer.includes("[x]")) {
       event.currentTarget.setAttribute("style", "background:rgb(255,100,0)");
+    } else {
+      setCounterOfCorrect(counterOfCorrect + 1);
+      if (localStorage.getItem("total")) {
+        const kept = JSON.parse(localStorage.getItem("total") as string);
+
+        setTotalCounter([kept[0] + 1, kept[1]]);
+        localStorage.setItem("total", JSON.stringify([kept[0] + 1, kept[1]]));
+      } else {
+        setTotalCounter([counterOfCorrect, counterOfAttempts]);
+        localStorage.setItem(
+          "total",
+          JSON.stringify([counterOfCorrect, counterOfAttempts])
+        );
+      }
     }
     setAnswerMode(true);
   };
   const handleNextButtonClick = () => {
     setQuestion(randomQuestion());
     setAnswerMode(false);
+    setShowExplanation("none");
   };
 
   return (
     <div id="question-container">
+      <div id="counter">
+        {" "}
+        <div>
+          Currect: {counterOfCorrect}/{counterOfAttempts}
+        </div>
+        <div>
+          Total: {totalCounter[0]}/{totalCounter[1]}
+        </div>
+      </div>
       <div id="question">{questionArray[0]}</div>
       <div id="addition-to-question">
         {additionToQuestion.map((addition) => (
@@ -66,10 +110,10 @@ const QuestionContainer = ({
       </div>
       <div id="explanation" style={{ display: showExplanation }}>
         {explanation.map((element) => (
-          <div>{element}</div>
+          <div key={element}>{element}</div>
         ))}
       </div>
-      <div>
+      <div style={{ display: showExplanation }}>
         <button id="next-button" onClick={handleNextButtonClick}>
           Next=&gt;
         </button>
