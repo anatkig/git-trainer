@@ -1,4 +1,4 @@
-const giveRandomQuestion = () => {
+const giveRandomGitQuestion = () => {
   const data = `
     #### Q1. How can you check your current git version?
 
@@ -996,4 +996,4 @@ const giveRandomQuestion = () => {
   return dataArray[Math.floor(Math.random() * 121)];
 };
 
-export default giveRandomQuestion;
+export default giveRandomGitQuestion;

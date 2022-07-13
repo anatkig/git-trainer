@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import giveRandomQuestion from "../../questions/giveRandomQuestion";
+import giveRandomGitQuestion from "../../questions/giveRandomGitQuestion";
 import "./question-container.css";
 
 const QuestionContainer = ({
@@ -8,7 +8,7 @@ const QuestionContainer = ({
   randomQuestion: () => string;
 }) => {
   const [showExplanation, setShowExplanation] = useState("none");
-  const [question, setQuestion] = useState(giveRandomQuestion());
+  const [question, setQuestion] = useState(giveRandomGitQuestion());
   const [answerMode, setAnswerMode] = useState(false);
   const [counterOfCorrect, setCounterOfCorrect] = useState(0);
   const [counterOfAttempts, setCounterOfAttempts] = useState(0);
