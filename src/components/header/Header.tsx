@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { skills } from "../../constants/constants";
 import "./header.css";
 
@@ -9,10 +9,21 @@ const Header = ({
   handleClick: (skill: string) => void;
   topic: string;
 }) => {
+  const [switchMenu, setSwitchMenu] = useState(false);
+
+  const handleMenuClick = () => {
+    setSwitchMenu(!switchMenu);
+  };
   return (
     <header id="header">
-      <div>{topic} Questions</div>
-      <div id="skills">
+      <div id="mobile-switcher" onClick={handleMenuClick}>
+        <div className="switcher-item"></div>
+        <div className="switcher-item"></div>
+        <div className="switcher-item"></div>
+      </div>
+      <div id="topic">{topic} Questions</div>
+
+      <div id="skills" style={switchMenu ? { display: "flex" } : undefined}>
         {skills.map((skill) => (
           <div
             className="skill"

@@ -42,5 +42,6 @@
   #question-container {
     width: 90vw;
     height: 90vh;
+    margin-top: 2px;
   }
 }
