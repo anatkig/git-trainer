@@ -2,11 +2,7 @@ import React, { useState } from "react";
 import giveRandomGitQuestion from "../../questions/giveRandomGitQuestion";
 import "./question-container.css";
 
-const QuestionContainer = ({
-  randomQuestion,
-}: {
-  randomQuestion: () => string;
-}) => {
+const QuestionContainer = () => {
   const [showExplanation, setShowExplanation] = useState("none");
   const [question, setQuestion] = useState(giveRandomGitQuestion());
   const [answerMode, setAnswerMode] = useState(false);
@@ -67,7 +63,7 @@ const QuestionContainer = ({
     setAnswerMode(true);
   };
   const handleNextButtonClick = () => {
-    setQuestion(randomQuestion());
+    setQuestion(giveRandomGitQuestion());
     setAnswerMode(false);
     setShowExplanation("none");
   };
