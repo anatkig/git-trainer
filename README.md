@@ -1,1 +1,1 @@
-https://anatkig.github.io/git-trainer
+https://anatkig.github.io/skills-trainer
