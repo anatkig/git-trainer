@@ -1,502 +1,626 @@
-const giveRandomRESTAPIQuestion = () => {
+const giveRandomNodeQuestion = () => {
   const data = `
-    
-  #### Q1. What type of relationship is defined as one resource existing only if another parent resource exist-for example, pages in a book?
-  
-  - [ ] 'Partial'
-  - [x] 'dependent'
-  - [ ] 'associative'
-  - [ ] 'linked'
-  
-  #### Q2. Which URL pattern is recommended when working with one resource and a collection of resources?
-  
-  - [ ] '/companies/{id} and/company'
-  - [ ] '/company/{id} and/companies'
-  - [x] '/companies/{id} and/companies'
-  - [ ] '/company/{id} and/company'
-  
-  #### Q3. When dealing with JSON web Tokens (JWTs), what is a claim?
-  
-  - [x] 'data in the token'
-  - [ ] 'Ownership'
-  - [ ] 'a permission'
-  - [ ] 'and integer'
-  
-  #### Q4. Which REST constraint specifies that knowledge and understanding obtained from one component of the API should be generally applicable elsewhere in the API?
-  
-  - [x] 'Uniform Interface'
-  - [ ] 'Client-Server'
-  - [ ] 'Stateless'
-  - [ ] 'Chacheable'
-  
-  #### Q5. What would you enable to allow a browser on another site to make an AJAX request to your API?
-  
-  - [ ] 'HTTP'
-  - [ ] 'REST'
-  - [ ] 'OPTIONS'
-  - [x] 'CORS'
-  
-  #### Q6. APIs commonly use webhooks to **\_**.
-  
-  - [x] 'notify other systems of an event'
-  - [ ] 'catch error faster'
-  - [ ] 'improve error logging'
-  - [ ] 'log additional data'
-  
-  #### Q7. What is the underlying goal of all APIs?
-  
-  - [ ] 'to add new technologies to an organization's infrastructure.'
-  - [x] 'to share features and functionality with other system.'
-  - [ ] 'to move infrastructure to the cloud.'
-  - [ ] 'to appease the latest digital transformation effort.'
-  
-  #### Q8. Which is a common command-line tool for using or exploring an API?
-  
-  - [ ] 'bash'
-  - [x] 'curl'
-  - [ ] 'ssh'
-  - [ ] 'powerShell'
-  
-  #### Q9. What is the modern specification for describing an API?
-  
-  - [x] 'OpenAPI (Swagger)'
-  - [ ] 'WADL'
-  - [ ] 'WSDL'
-  - [ ] 'OAuth'
-  
-  [OpenAPI Specification](https://swagger.io/specification/)
-  
-  #### Q10. Which HTTP verb is normally used to update or create a resource in an API?
-  
-  - [ ] 'SUBMIT'
-  - [ ] 'WRITE'
-  - [x] 'POST'
-  - [ ] 'CREATE'
-  
-  [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-  
-  #### Q11. What is one benefit of server-side caching in APIs?
-  
-  - [ ] 'Mobile app work better.'
-  - [ ] 'It improves uptime.'
-  - [ ] 'It offers better security.'
-  - [x] 'It reduce load on servers.'
-  
-  #### Q12. Your API resource does no allow deletion, and a client application attempted to delete the resource. What HTTP response code should you return?
-  
-  - [ ] '409 Conflict'
-  - [ ] '400 Bad Request'
-  - [ ] '406 Not Acceptable'
-  - [x] '405 Method Not Allowed'
-  
-  [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
-  
-  #### Q13. What is OpenID Connect?
-  
-  - [x] 'an identify layer on top of OAuth 2.0'
-  - [ ] 'the new name for SAML 3.0'
-  - [ ] 'a modern replacement for API keys'
-  - [ ] 'an SSO competitor for OAuth 2.0'
-  
-  [What is OpenID Connect?](https://openid.net/connect/)
-  
-  #### Q14. What is one benefit of GraphQl over REST approaches?
-  
-  - [x] 'flexible querying/responses'
-  - [ ] 'more stable APIs'
-  - [ ] 'compatible with more gateways'
-  - [ ] 'more secure by default'
-  
-  [GraphQL vs. REST](https://www.apollographql.com/blog/graphql/basics/graphql-vs-rest/)
-  
-  #### Q15. Which REST constraint specifies that there should be no shared context?
-  
-  - [x] 'Stateless'
-  - [ ] 'Client-Server'
-  - [ ] 'Uniform Interface'
-  - [ ] 'Cacheable'
-  
-  #### Q16. What purpose does a User-Agent serve?
-  
-  - [ ] 'It identifies the user ID.'
-  - [x] 'It identifies the client application or SDK.'
-  - [ ] 'It identifies if the API should expect a user authentication.'
-  - [ ] 'It identifies if the API should accept microservice traffic.'
-  
-  #### Q17. If you were to add versioning by using the Accept and Content-Type header, what would be the correct format of the header value?
-  
-  - [ ] 'application/json'
-  - [ ] 'application/json_version2'
-  - [ ] 'text/html'
-  - [x] 'application/vnd.myapp.v2+json'
-  
-  [Reference](https://blog.allegro.tech/2015/01/Content-headers-or-how-to-version-api.html)
-  
-  #### Q18. What is one benefit that OAuth provides over an API key approach?
-  
-  - [ ] 'A token is encrypted.'
-  - [ ] 'A token is encoded.'
-  - [x] 'A token is scoped to the use case.'
-  - [ ] 'A token can be shared between systems.'
-  
-  [How to easily secure your APIs with API keys and OAuth](https://apifriends.com/api-security/api-keys-oauth/)
-  
-  #### Q19. The ability to execute the same API request over and over again without changing the resource's state is an example of \_.
-  
-  - [ ] 'stateless architecture'
-  - [x] 'idempotency'
-  - [ ] 'a uniform interface'
-  - [ ] 'cacheability'
-  
-  #### Q20. What component can you use to wrap legacy architectures or protocols into a REST interface for easier consumption and integration?
-  
-  - [x] 'API proxy'
-  - [ ] 'API gateway'
-  - [ ] 'OpenAPI'
-  - [ ] 'OAuth authorization server'
-  
-  #### Q21. What protection does a JSON Web Token (JWT) offer to mitigate tampering with its contents?
-  
-  - [ ] 'transport over SSL'
-  - [ ] 'encrypted payload'
-  - [x] 'a signature'
-  - [ ] 'encoded payload'
-  
-  #### Q22. What OAuth term is used to represent permissions?
-  
-  - [ ] 'token'
-  - [x] 'scope'
-  - [ ] 'claim'
-  - [ ] 'back channel'
-  
-  [OAuth Scopes](https://oauth.net/2/scope/)
-  
-  #### Q23. What additional type of token would you see when using OpenID Connect?
-  
-  - [x] 'ID token'
-  - [ ] 'refresh token'
-  - [ ] 'access token'
-  - [ ] 'auth code token'
-  
-  #### Q24. What should you add to a Cache-Control response header to specify that a response should not be stored in an intermediary cache?
-  
-  - [ ] 'no-proxy'
-  - [ ] 'client-only'
-  - [ ] 'restricted'
-  - [x] 'private'
-  
-  [reference](https://www.digitalocean.com/community/tutorials/web-caching-basics-terminology-http-headers-and-caching-strategies)
-  
-  #### Q25. Which OAuth grant type can support a refresh token?
-  
-  - [x] 'Authorization Code Grant'
-  - [ ] 'Client Credentials Grant'
-  - [ ] 'Implicit Grant'
-  - [ ] 'Authentication Grant'
-  
-  [Reference:](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4.3)
-  
-  #### Q26. Using OAuth, what scope would you request for write access to the API?
-  
-  - [ ] 'It varies from API to API.'
-  - [x] 'admin'
-  - [ ] 'write'
-  - [ ] 'read-write'
-  
-  #### Q27. Which property would you use to include subresources directly into a JSON document?
-  
-  - [ ] '_embedded'
-  - [ ] 'resources'
-  - [x] 'subresources'
-  - [ ] '_links'
-  
-  #### Q28. What is the best way to track SDK and version usage?
-  
-  - [x] 'tracking downloads'
-  - [ ] 'Accept headers'
-  - [ ] 'user agents'
-  - [ ] 'polling users'
-  
-  #### Q29. Which REST constraint allows for the presence of caching, routing, and other systems between the client and server?
-  
-  - [x] 'Layered System'
-  - [ ] 'Stateless'
-  - [ ] 'Client-Server'
-  - [ ] 'Cacheable'
-  
-  #### Q30. Which content is best to include in your documentation?
-  
-  - [ ] 'your tech stack'
-  - [ ] 'reasoning for your naming schema'
-  - [ ] 'your mission statement'
-  - [x] 'sample code'
-  
-  #### Q31. What metric tracks overall availability for your API?
-  
-  - [ ] 'Response Time'
-  - [ ] 'Time to First Hello World'
-  - [ ] 'TTL'
-  - [x] 'Uptime'
-  
-  #### Q32. What is the recommended method and URL pattern for retrieving a specific user?
-  
-  - [ ] 'GET /user/{id}'
-  - [x] 'GET /users/{id}'
-  - [ ] 'GET /user?id={id}'
-  - [ ] 'GET /users?id={id}'
-  
-  #### Q33. What is the purpose of a link relation?
-  
-  - [ ] 'to describe relationships between resources or actions'
-  - [ ] 'to describe subresources related to the current one'
-  - [x] 'to link two resources together'
-  - [ ] 'to describe a resource and its purpose'
-  
-  #### Q34. When building SDKs, which languages should you support?
-  
-  - [ ] Java, Javascript, and .NET
-  - [ ] and you can support
-  - [ ] PHP, Python, and Go
-  - [x] the languages that your target users use
-  
-  #### Q35. Which property would you use to include references to other resources in a JSON document?
-  
-  - [x] 'resources'
-  - [ ] '_embedded'
-  - [ ] 'subresources'
-  - [ ] '_links'
-  
-  #### Q36. What is OAuth?
-  
-  - [x] an authorization framework for granted delegated access
-  - [ ] an approach to single sign-on for APIs
-  - [ ] a method for API authentication
-  - [ ] HTTP Basic Authentication 2.0
-  
-  #### Q37. What should your API documentation describe?
-  
-  - [ ] JSON
-  - [ ] HTTP
-  - [x] common use cases
-  - [ ] your tech stack
-  
-  #### Q38. What is the purpose of an OAuth refresh token?
-  
-  - [ ] to share user profile information
-  - [ ] to update an API configuration
-  - [ ] to keep a web session active
-  - [x] to retrieve an access token
-  
-  [Understanding Refresh Tokens](https://auth0.com/learn/refresh-tokens/)
-  
-  #### Q39. What is Time to First Hello World?
-  
-  - [x] how long it takes for a developer to do something with your API
-  - [ ] how long it takes to start a new programming language
-  - [ ] how long it takes to install your SDK
-  - [ ] how long it takes to read your documentation
-  
-  #### Q40. Which response header tells the client and intermediaries that the response is not to be cached anywhere?
-  
-  - [ ] Cache-State: none
-  - [ ] Expires:-1
-  - [ ] Cache-Control: no-cache
-  - [x] Cache-Control: no-store
-  
-  #### Q41. What component hides the distinctions or boundaries between various microservices from end-client applications?
-  
-  - [x] 'API gateway'
-  - [ ] 'API logging '
-  - [ ] 'a layered system '
-  - [ ] 'API proxy'
-  
-  #### Q42. The textbook approach to api versioning is to use **\_**.
-  
-  - [ ] 'common knowledge'
-  - [ ] 'URLs'
-  - [ ] 'no versioning'
-  - [x] 'the Accept header'
-  
-  #### Q43. Which is the most secure method to transmit an API key?
-  
-  - [ ] 'URL parameter'
-  - [x] 'Authorization header'
-  - [ ] 'Base64 encoding'
-  - [ ] 'Basic Auth'
-  
-  #### Q44. Within Oauth, what component validates the user's identity?
-  
-  - [ ] 'client'
-  - [ ] 'not specified'
-  - [x] 'authorization server'
-  - [ ] 'resource server'
-  
-  #### Q45. API traffic that is entirely internal to your organization is normally called \_?
-  
-  - [ ] 'inbound traffic'
-  - [ ] 'north-south traffic '
-  - [x] 'internal traffic '
-  - [ ] 'east-west traffic'
-  
-  #### Q46. What is the best approach for requesting JSON instead of XML from an API?
-  
-  - [ ] 'Add .json to the URL.'
-  - [ ] 'APIs do not use XML.'
-  - [ ] 'Use the Content-Type header.'
-  - [x] 'Use the Accept header.'
-  
-  #### Q47. When a user attempts to access a record that is not their own, which HTTP response code is the most appropriate?
-  
-  - [ ] '403'
-  - [ ] '404'
-  - [x] '401'
-  - [ ] '405'
-  
-  [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
-  
-  #### Q48. Which is a benefit of using an API gateway?
-  
-  - [ ] 'HTTP verbs'
-  - [ ] 'JSON payloads'
-  - [ ] 'HTTP response codes'
-  - [x] 'rate limiting/throttling'
-  
-  #### Q49. API testing must be treated as **\_**?
-  
-  - [ ] 'red team testing'
-  - [ ] 'white box testing'
-  - [ ] 'blue box testing'
-  - [x] 'black box testing'
-  
-  #### Q50. Which HTTP verb is used in a CORS preflight request?
-  
-  - [ ] 'PUT'
-  - [ ] 'POST'
-  - [ ] 'GET'
-  - [x] 'OPTIONS'
-  
-  #### Q51. Which response header will tell the client that the response is cached for 1 minute ?
-  
-  - [ ] 'Expires: 1 minute'
-  - [x] 'Cache-Control: max-age=60'
-  - [ ] 'Expires: 1 January 2020'
-  - [ ] 'Cache-Expires: max-age=60'
-  
-  [Cache Control Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control)
-  
-  #### Q52. What is the concept that allows an API client to explore an API via links embedded in payloads?
-  
-  - [ ] 'hypermedia'
-  - [x] 'link relations'
-  - [ ] 'parsing'
-  - [ ] 'browsing'
-  
-  #### Q53. Which HTTP response code describes a new resource as created successfully?
-  
-  - [ ] '200'
-  - [x] '201'
-  - [ ] '204'
-  - [ ] '202'
-  
-  [Response Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#successful_responses)
-  
-  #### Q54. Which is an example of Code on Demand?
-  
-  - [ ] AWS Lambda
-  - [ ] downloading open-source software
-  - [ ] Serverless
-  - [x] JavaScript on a webpage
-  
-  [Code on Demand](https://en.wikipedia.org/wiki/Code_on_demand)
-  
-  #### Q55. Which URL pattern should you follow for accessing a subresource attached to a specific resource?
-  
-  - [ ] /companies/employees/{companyId}/{employeeId}
-  - [ ] /company/{companyId}/employees/{employeeId}
-  - [x] /companies/{companyId}/employees/{employeeId}
-  - [ ] /companies/{companyId}/employee/{employeeId}
-  
-  [Resource Naming](https://restfulapi.net/resource-naming/)
-  
-  #### Q56. Which REST constraint essentially prohibits the use of cookies?
-  
-  - [x] Stateless
-  - [ ] Cacheable
-  - [ ] Layered System
-  - [ ] Uniform Interface
-  
-  #### Q57. Which HTTP verb is used to delete a resource?
-  
-  - [ ] FLUSH
-  - [x] DELETE
-  - [ ] CLEAR
-  - [ ] DESTROY
-  
-  #### Q58. Which verb is _not_ considered idempotent?
-  
-  - [ ] DELETE
-  - [ ] GET
-  - [ ] PUT
-  - [x] POST
-  
-  [Idempotency](https://restfulapi.net/idempotent-rest-apis/)
-  
-  #### Q59. Which REST constraint specifies that each request should stand on its own and not have a specific required order?
-  
-  - [ ] Uniform Interface
-  - [ ] Cacheable
-  - [x] Stateless
-  - [ ] Client-Server
-  
-  [REST Architectural Constraints](https://restfulapi.net/rest-architectural-constraints/)
-  
-  #### Q60. When you get a 429 code, what should you do next?
-  
-  - [ ] Check you JSON structure.
-  - [ ] Check the API uptime status.
-  - [x] Slow down your requests.
-  - [ ] Check you API key.
-  
-  #### Q61. When exploring record sets, what is the best approach for pagination?
-  
-  - [ ] date-based filtering
-  - [x] next/previous cursors
-  - [ ] page size and filters
-  - [ ] database IDs
-  
-  #### Q62. What is _not_ a method for API authentication or authorization?
-  
-  - [ ] OAuth
-  - [x] biometrics
-  - [ ] API Keys
-  - [ ] username and password
-  
-  #### Q63. Which HTTP response code usually means the requested work is still processing and may or may not result in an error later?
-  
-  - [ ] 200 OK
-  - [ ] 204 No Content
-  - [ ] 201 Created
-  - [x] 202 Accepted
-  
-  #### Q64. When validating a JWT, what are some of the claims that you must confirm? (Select all that apply.)
-  
-      A. The exp (expiration) has not passed.
-      B. The algorithm is sufficient.
-      C. The signature matches the payload.
-      D. The token was Base64 encoded.
-      E. The iss (issuer) is the auth server you expect.
-      F. There is a refresh token.
-      G. The cid (client ID) is the client you expect.
-      H. The token was encrypted.
-  
-  - [x] A,B,E,H
-  - [ ] B,C,F,G
-  - [ ] A,D,G,H
-  - [ ] A,C,E,G`;
+
+  #### Q1. When a javaScript function is invoked (called) in Node, where is a new frame placed?
+@
+  - [x] the call stack
+  - [ ] the event loop
+  - [ ] the poll phase
+  - [ ] the events queue
+@
+  **Explanation:** From javascripttutorial: [reference](https://www.javascripttutorial.net/javascript-call-stack/#:~:text=If%20a%20function%20calls%20another,top%20of%20the%20call%20stack.)
+@
+  #### Q2. Which of the following is a core module in Node?
+@
+  - [ ] webpack
+  - [x] crypto
+  - [ ] request
+  - [ ] chalk
+@
+  **Explanation:** From flaviocopes docs: [reference](https://flaviocopes.com/node-core-modules/)
+@
+  #### Q3. Which of the following Buffer class methods returns an uninitialized buffer?
+@
+  - [x] allocUnsafe
+  - [ ] concat
+  - [ ] from
+  - [ ] alloc
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/dist/latest-v13.x/docs/api/buffer.html#buffer_class_method_buffer_allocunsafe_size)
+@
+  #### Q4. Which of the following modules is NOT a built-in module in Node?
+@
+  - [x] ftp
+  - [ ] events
+  - [ ] dgram
+  - [ ] http2
+@
+  **Explanation:** From flaviocopes docs: [reference](https://flaviocopes.com/node-core-modules/)
+@
+  #### Q5. Which fs module method can be used to read the content of a file without buffering it in memory?
+@
+  - [ ] read
+  - [ ] readFile
+  - [x] createReadStream
+  - [ ] readFileSync
+@
+  **Explanation:** _From official docs: [reference](https://nodejs.org/api/fs.html#fs_dir_read)
+  To minimize memory costs, when possible prefer streaming via fs.createReadStream()._
+@
+  #### Q6. Which of the following DNS module methods uses the underlying OS facilities and does not necessarily perform any network communication?
+@
+  - [x] lookup
+  - [ ] resolve
+  - [ ] resolve4
+  - [ ] reverse
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/dns.html#dns_dns_lookup_hostname_options_callback)
+@
+  #### Q7. How do you check that a value is a date object in Node?
+@
+  - [x] util.types.isDate(value)
+  - [ ] assert.isDate(value)
+  - [ ] console.isDate(value)
+  - [ ] util.date(value)
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/util.html#util_util_types_isdate_value)
+@
+  #### Q8. Can you create an https web server with Node.js?
+@
+  - [ ] no, there are no modules supporting it yet
+  - [x] yes, with the https or http2 modules
+  - [ ] yes, through the path module
+  - [ ] yes, with the http module
+@
+  **Explanation:** From official docs: [reference](https://nodejs.dev/learn/making-http-requests-with-nodejs)
+@
+  #### Q9. What is the Api that is designed to insulate Addons from changes in the underlying JavaScript engine?
+@
+  - [ ] A-API
+  - [ ] Z-API
+  - [x] N-API
+  - [ ] X-API
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/n-api.html#n_api_node_api)
+@
+  #### Q10. Which CLI option can you use to debug a node script in Chrome DevTools?
+@
+  - [ ] --dev-tools
+  - [x] --inspect
+  - [ ] --chrome
+  - [ ] --debug
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/en/docs/guides/debugging-getting-started/)
+@
+  #### Q11. How can you count the number of logical CPUs on the machine that is running Node?
+@
+  - [ ] node -p "process.cpus"
+  - [ ] node -p "util.cpus().size"
+  - [ ] node -p "process.os.cpus"
+  - [x] node -p "os.cpus().length"
+@
+  **Explanation:** From coderrocketfuel docs: [reference](https://coderrocketfuel.com/article/get-the-number-of-system-cpu-cores-using-node-js)
+@
+  #### Q12. Which of the following is a method on the console object?
+@
+  - [ ] exit
+  - [ ] test
+  - [x] time
+  - [ ] print
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/console.html)
+@
+  #### Q13. Which object is used to manage the cache of required modules?
+@
+  - [ ] global.cache
+  - [ ] module.cache
+  - [ ] process.cache
+  - [x] require.cache
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/modules.html#modules_require_cache)
+@
+  #### Q14. What is the command to silence all process warnings?
+@
+  - [ ] node index.js --trace-warnings
+  - [x] node --no-warnings
+  - [ ] node -trace-warnings
+  - [ ] node index.js --no-warnings
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/cli.html#cli_no_warnings)
+@
+  #### Q15. How can you use the promise API with a callback-based function such as child_process.exec?
+@
+  - [ ] new Promise(child_process.exec())
+  - [ ] util.promisify(child_process.exec())
+  - [x] util.promisify(child_process.exec)
+  - [ ] new Promise(child_process.exec)
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/child_process.html)
+@
+  #### Q16. Which of the following is NOT a Node repl command?
+@
+  - [ ] .break
+  - [x] .history
+  - [ ] .editor
+  - [ ] .save
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/repl.html#repl_commands_and_special_keys)
+@
+  #### Q17. Which statement is true when you run the code shown below?
+@
+  'require('child_process').fork('script.js');'
+@
+  - [ ] The forked process shares the event loop with the parent process
+  - [ ] A new VM instance is created and the two VM instances will be shared between the forked process and the parent process.
+  - [x] The forked process will have its own VM instance.
+  - [ ] The forked process shares the same VM thread with the parent process.
+@
+  **Explanation:** From official docs: [reference](https://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options)
+@
+  #### Q18. If EventEmitter is in scope, which of the following lines of code will have an event emitter emitting a change event?
+@
+  - [x] EventEmitter.emit('change');
+  - [ ] EventEmitter.new().emit('change');
+  - [ ] (new EventEmitter()).emit('change');
+  - [ ] new EventEmitter('change');
+@
+  **Explanation:** _Because the EventEmitter is already in scope. No need to create new one._
+@
+  #### Q19. Which of the following objects is a stream
+@
+  - [ ] process.uptime
+  - [x] process.stdout
+  - [ ] process
+  - [ ] Buffer
+@
+  **Explanation:** _process.stdout is Buffer type._
+@
+  #### Q20. Which module variable holds the resolved absolute path of the current module file?
+@
+  - [ ] '__pathname'
+  - [ ] '__location'
+  - [ ] '__flder'
+  - [x] '__filename'
+@
+  #### Q21. If the child_process module methods are in scope, what is a current way to execute the command ps -ef using a child process?
+@
+  - [ ] spawn("ps -ef")
+  - [x] exec("ps -ef")
+  - [ ] exec("ps", "-ef")
+  - [ ] fork("ps -ef")
+@
+  #### Q22. Which console method can be used to print the stack trace to the point of its execution?
+@
+  - [ ] stack
+  - [x] trace
+  - [ ] debug
+  - [ ] print
+@
+  #### Q23. When you run JavaScript in a Node.js application, which of the following elements in a Node.js stack actually executes that JavaScript?
+@
+  - [ ] the libuv library
+  - [ ] the c-ares library
+  - [x] the VM (like VS or Chakra)
+  - [ ] the repl module
+@
+  #### Q24. Looking at the code below, what does the console show?
+@
+  '''
+  const http = require('http');
+   const hostname = '127.0.0.1'; const port = 3000;
+   const server = http.createServer((req, res) => {
+    res.statusCode = 200;  res.setHeader("Content-Type", "text/plain");  res.end("Hello World\n");
+  });
+  server.listen(port, hostname, () => { console.log('server running at http://\${hostname}:\${port}/'); });
+  '''
+@
+  - [ ] server running at http://localhost:3000/
+  - [ ] server running at port 3000
+  - [ ] server running at http://localhost:4000/
+  - [x] server running at http://127.0.0.1:3000/
+@
+  #### Q25. What is the purpose of the path module?
+@
+  - [x] to provide utilities to play with file and directory paths
+  - [ ] to provide utilities to add and remove files
+  - [ ] It is a retiring module.
+  - [ ] to provide utilities to test files
+@
+  #### Q26. How do you make an HTTP server object active and listen to requests on certain ports?
+@
+  - [ ] server. start
+  - [ ] server.activate
+  - [x] server.listen
+  - [ ] server. run
+@
+  #### Q27. What does the code shown below do?
+@
+  '''
+  const fs = require('fs'); const os = require('os');
+  const system = os.platform(); const user = os.userInfo().username;
+  fs.appendFile('hello.txt', 'Hello \${user} on \${system}', (err) => { if (err) throw err; console.log('The data was appended to file!');}
+  );
+  '''
+@
+  - [x] creates a text file hello.txt and appends customized text
+  - [ ] creates an image file
+  - [ ] console logs system information
+  - [ ] creates a file named data and append numbers
+@
+  #### Q28. How do you start a Node application, if the entry file is indexjs?
+@
+  - [ ] nodemon start
+  - [ ] start index.js
+  - [x] node index.js
+  - [ ] node start
+@
+  #### Q29. What is the purpose of the file system (fs) module?
+@
+  - [ ] to provide methods to work with requests and responses
+  - [x] to provide methods to work with files
+  - [ ] to provide methods to work with databases
+  - [ ] to find new file systems
+@
+  #### Q30. What is the Node LTS version?
+@
+  - [ ] It is the current unstable version and is to be avoided.
+  - [ ] It is the version that will be retired soon.
+  - [ ] It is the version with the latest features.
+  - [x] It is the safest version for long-term support.
+@
+  #### Q31. Which of the following is NOT a valid stream in Node?
+@
+  - [x] process. stdinfo
+  - [ ] process. stdin
+  - [ ] process. stdout
+  - [ ] process. stderr
+@
+  #### Q32. You have a script.js file with the single line of code shown here. What will be the output of executing script.js with the node command?
+@
+  'console.log(arguments);'
+@
+  - [ ] ReferenceError: arguments is not defined
+  - [ ] an empty string
+  - [ ] undefined
+  - [x] an object representing an array that has five elements
+@
+  #### Q33. Which choice is not a valid method on event emitters?
+@
+  - [x] start
+  - [ ] on
+  - [ ] once
+  - [ ] off
+@
+  #### Q34. Which special object is an instance of EventEmitter?Which special object is an instance of null?
+@
+  - [x] process
+  - [ ] Buffer
+  - [ ] root
+  - [ ] require
+@
+  [Reference](https://nodejs.org/docs/latest-v16.x/api/process.html)
+@
+  #### Q35. What is the command to get a list of available commands for Node.js?What is the command to get a list of available commands for Node.js?
+@
+  - [ ] node index.js -x
+  - [ ] node -v
+  - [x] node -h
+  - [ ] node index.js -h
+@
+  #### Q36. When a request event is received in the HTTP module, what is the type of the first argument passed to that event, usually named req?
+@
+  - [x] http.IncomingMessage
+  - [ ] http.ServerRequest
+  - [ ] http.ClientRequest
+  - [ ] http.ServerResponse
+@
+  #### Q37. What are the arguments passed to the module wrapper function?
+@
+  - [ ] 'exports, __filename, __dirname'
+  - [ ] 'exports, process, require, module, __filename, __dirname'
+  - [ ] 'exports, module, __filename, __dirname'
+  - [x] 'exports, require, module, __filename, __dirname'
+@
+  #### Q38. Which library provides Node.js with the event loop?
+@
+  - [ ] V8
+  - [ ] c-ares
+  - [x] libuv
+  - [ ] events
+@
+  #### Q39. What does the .node file extension represent?
+@
+  - [ ] a C++ file that can have a .node extension and that Node will be able to execute directly.
+  - [x] a C++ Addon file that is built with node-gyp
+  - [ ] a JSON file that can have a .node extension as well as the .json extension
+  - [ ] a JavaScript file that can have a .node extension as well as the .js extension
+@
+  #### Q40. What can you export with module.exports?
+@
+  - [ ] only objects.
+  - [ ] only functions
+  - [ ] only variables and arrays
+  - [x] functions, objects, arrays, or anything you assign to the module
+@
+  #### Q41. Which core module in Node can you use to take advantage of multicore systems?
+@
+  - [ ] os
+  - [ ] util
+  - [x] cluster
+  - [ ] net
+@
+  #### Q42. Which core Node module has wrappers for OpenSSL methods?
+@
+  - [ ] SSL
+  - [ ] hash
+  - [x] crypto
+  - [ ] TLS
+@
+  #### Q43. Which line imports a promise-based version of the readFile method?
+@
+  - [x] const { readFile } = require(fs).promises
+  - [ ] const { readFile } = require(fs)
+  - [ ] const { readFilePromises: readFile } = require(fs)
+  - [ ] const { readFile } = require(promises)
+@
+  #### Q44. According to the rules of semantic versioning, what does a release incrementing the third number in an npm version string communicate to users about the release changes?
+@
+  - [ ] Changes are not backwards compatible.
+  - [ ] Changes might not be backward compatible and might break existing code.
+  - [x] Changes are just bug fixes and no new features were added.
+  - [ ] Changes will add new functionality but will not break any existing code.
+@
+  #### Q45. What does REPL stand for?
+@
+  - [ ] run, examine, put, loop
+  - [x] read, eval, print, loop
+  - [ ] run, edit, print, loop
+  - [ ] read, extend, print, loop
+@
+  #### Q46. Which file does node-gyp use to read the build configuration of a module?
+@
+  - [ ] .gyprc
+  - [x] binding.gyp
+  - [ ] gyp.json
+  - [ ] package.gyp
+@
+  #### Q47. Which core module in Node can you use for testing?
+@
+  - [ ] chai
+  - [ ] jest
+  - [x] assert
+  - [ ] mocha
+@
+  #### Q48. Which core module in Node provides an API to register callbacks to track asynchronous resources created inside a Node.js application?
+@
+  - [ ] cluster
+  - [x] async_hooks
+  - [ ] dgram
+  - [ ] inspector
+@
+  #### Q49. Which Node.js module should you use when you need to decode raw data into strings?
+@
+  - [ ] buffer
+  - [ ] util
+  - [x] string_decoder
+  - [ ] string_buffer
+@
+  #### Q50. Which global object acts like a bridge between a Node script and the host operating system?
+@
+  - [ ] v8
+  - [ ] env
+  - [x] process
+  - [ ] child_process
+@
+  **Explanation:** \_process is an global object and act like a bridge, the others aren't
+@
+  1. [source](https://nodejs.org/api/globals.html)
+  2. [source](https://nodejs.org/api/process.html#process_process)
+@
+  #### Q51. Which statement is true about Node.js and threads?
+@
+  - [ ] Every Node process runs in a single thread, and all the I/O work is run in that same thread.
+  - [ ] Every Node process gets four threads that it can share between its JavaScript VM and the event loop.
+  - [x] The event loop is single-threaded, but a JavaScript VM can use multiple threads.
+  - [ ] JavaScript execution in Node.js is single-threaded, but I/O operations are executed using multiple threads.
+@
+  **Explanation:** _https://www.geeksforgeeks.org/why-node-js-is-a-single-threaded-language/_
+@
+  #### Q52. Which statement about event emitters is false?
+@
+  - [x] Event names must be camelCase strings.
+  - [ ] The emit method allows a arbitrary set of arguments to be passed to the listener functions.
+  - [ ] Any values returned by the listeners for an emitted events are ignored.
+  - [ ] When an event emitter objeect emits an event, all of the functions attached to that specific event are called synchronously.
+@
+  #### Q53. Which core module in Node can you use to compile and run JavaScript code in a sandbox environment?
+@
+  - [ ] sandbox
+  - [ ] buffer
+  - [x] vm
+  - [ ] v8
+@
+  #### Q54. How would you determine the number of cluster instances to start when using the cluster module?
+@
+  - [ ] const numInstances = cluster.instances().length;
+  - [ ] const numInstances = cluster.instances();
+  - [x] const numInstances = require('os').cpus().length;
+  - [ ] const numInstances = process.cpus().length;
+@
+  **Explanation:** _From official docs: [https://nodejs.org/api/cluster.html#cluster_cluster](https://nodejs.org/api/cluster.html#cluster_cluster)_
+@
+  #### Q55. You have to read a large text file, replace some words in it, and write it back to a new file. You know that the memory on your target system is limited. What should you do?
+@
+  - [ ] Use regular expressions directly on the file.
+  - [ ] Use Promises and async/await to offload the task to libuv.
+  - [ ] Copy the file into a database and perform the operations there.
+  - [x] Use readline together with streams to read and transform and write the file contents line by line.
+@
+  **Explanation:** _From official docs: [https://nodejs.org/api/readline.html#readline_example_read_file_stream_line_by_line](https://nodejs.org/api/readline.html#readline_example_read_file_stream_line_by_line)_
+@
+  #### Q56. Which choice is 'not' a Node global object?
+@
+  - [ ] process
+  - [ ] exports
+  - [ ] setTimeout
+  - [x] Buffer
+@
+  **Explanation:** _process, exports and setTimeout are global objects, Buffer isn't (please see https://nodejs.org/api/globals.html)_
+@
+  #### Q57. What is the correct way to pipe a readable stream and a writable stream?
+@
+  - [x] readableStream.pipe(writableStream)
+  - [ ] readableStream.on(pipe, writableStream)
+  - [ ] writableStream.pipe(readableStream)
+  - [ ] writableStream.on(pipe, readableStream)
+@
+  #### Q58. How can you convert path segments into a string using the platform-specific separator as a delimiter?
+@
+  - [ ] path.concat
+  - [x] path.join
+  - [ ] path.format
+  - [ ] path.parse
+@
+  #### Q59. What is the purpose of N-API?
+@
+  - [ ] to allow users to make requests to the server
+  - [x] to insulate Addons from changes in the underlying JavaScript engine
+  - [ ] to execute multi-threaded code in the Node environment
+  - [ ] to provide a quick way for users to create REST APIs
+@
+  #### Q60. What is a process object and its role?
+@
+  - [ ] a locally scoped object that provides information about the current node process
+  - [ ] a global object that provides information about files
+  - [ ] a global object that provides information about the database
+  - [x] a global object that provides information about the current node process
+@
+  #### Q61. What will this code log to the console?
+@
+  '''
+  // File: person.js
+  exports.name = "Jane";
+@
+  // File: index.js
+  const person = require('./person.js');
+  console.log(person);
+  '''
+@
+  - [ ] '{'Jane'}'
+  - [x] '{ name: 'Jane' }'
+  - [ ] '{}'
+  - [ ] 'Jane'
+@
+  #### Q62. What will this code log to the console?
+@
+  '''
+  // File: person.js
+  exports = "John";
+@
+  // File: index.js
+  const person = require('./person.js');
+  console.log(person);
+  '''
+@
+  - [ ] 'John'
+  - [ ] 'Undefined'
+  - [ ] '{'John'}'
+  - [x] '{}'
+@
+  #### Q63. Is it possible to write tests in Node.js without an external library?
+@
+  - [x] yes, through the assert module
+  - [ ] yes, through the debugger module
+  - [ ] yes, through the console module
+  - [ ] no
+@
+  **From the article:** [Making a Testing Framework in Node.js (Without any External Libraries)](https://www.sohamkamani.com/blog/javascript/making-a-node-js-test-runner/)
+@
+  #### Q64. Which assert module method is usually used to test the error-first argument in callbacks?
+@
+  - [ ] fail
+  - [ ] doesNotThrow
+  - [ ] deepStrictEqual
+  - [x] ifError
+@
+  #### Q65. Which choice is not a method on the util module?
+@
+  - [ ] promisify
+  - [x] asyncify
+  - [ ] types
+  - [ ] callbackify
+@
+  #### Q66. Which choice is not a subclass of the Error class?
+@
+  - [x] GlobalError
+  - [ ] TypeError
+  - [ ] RangeError
+  - [ ] AssertionError
+@
+  #### Q67. What is Node built on?
+@
+  - [ ] Python
+  - [x] V8 JavaScript engine
+  - [ ] PHP
+  - [ ] c
+@
+  #### Q68. How does it affect the performance of a web application when an execution path contains a CPU-heavy operation, such as calculating a long Fibonacci sequence?
+@
+  - [ ] As Node.js is asynchronous, this is handled by a libuv and a threadpool. The performance will not notably degrade.
+  - [ ] As the application code runs asynchronously within a single thread, the execution will block, accepting no more requests until the operation is completed.
+  - [ ] As Node.js is asynchronous, this is handled by a threadpool and the performance will not notably degrade.
+  - [x] The current thread will block until the executon is completed and the operating system will spawn new threads to handle incoming requests. This can exhaust the number of allowed threads (255) and degrade performance over time.
+@
+  #### Q69. What is used for parsing and running Javascript in Node.js?
+@
+  - [ ] EventLoop
+  - [ ] Libuv
+  - [x] Google V8
+  - [ ] Express.js
+@
+  #### Q70. What is the importance of having good practices around status code in your response?
+@
+  - [x] It indicates success or failure to the client and helps with testing.
+  - [ ] It is not important to have good practices regarding status codes
+  - [ ] Response codes are the only way you can tell what is happening on the server.
+  - [ ] It contains information about the current performance of the server.
+@
+  #### Q71. How can ECMAScript modules be used natively in Node?
+@
+  - [x] ECMAScript modules cannot be used natively in Node.
+  - [ ] ECMAScript modules can be used natively in Node with the .mjs file extension
+  - [ ] ECMAScript modules can be used natively in Node only by using a compiler like Babel.
+  - [ ] ECMAScript modules can be used natively in Node only by using a bundle like webpack.
+@
+  #### Q72. When exploring the Node documentation's features, what are the stability ratings?
+@
+  - [x] They are an indication of the stability of Nodejs modules and usage recommendations.
+  - [ ] They tell if a feature is ES6 compliant.
+  - [ ] They are a Node command to validate stability of your code.
+  - [ ] They tell if a feature is LTS (Long Term Supported).
+@
+  #### Q73. Which coice is a core module in Node?
+@
+  - [x] crypto
+  - [ ] chalk
+  - [ ] webpack
+  - [ ] request
+@
+  [Reference](https://nodejs.org/api/documentation.html)
+@
+  #### Q74. Which DNS module method uses the underlying OS facilities and does not necessarily perform any network communication?
+@
+  - [ ] resolve
+  - [ ] reverse
+  - [x] lookup
+  - [ ] resolve4
+@
+  [Reference](https://nodejs.org/api/dns.html#dnslookuphostname-options-callback)
+  `;
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * 64)];
+  return dataArray[Math.floor(Math.random() * 74)];
 };
 
-export default giveRandomRESTAPIQuestion;
+export default giveRandomNodeQuestion;

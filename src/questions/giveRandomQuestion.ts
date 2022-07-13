@@ -2,6 +2,9 @@ import giveRandomGitQuestion from "./giveRandomGitQuestion";
 import giveRandomCSSQuestion from "./giveRandomCSSQuestion";
 import giveRandomRESTAPIQuestion from "./giveRandomRESTAPIQuestion";
 import giveRandomHTMLQuestion from "./giveRandomHTMLQuestions";
+import giveRandomJSQuestion from "./giveRandomJSQuestions";
+import giveRandomNodeQuestion from "./giveRandomNodeQuestions";
+import giveRandomReactQuestion from "./giveRandomReactQuestions";
 
 const giveRandomQuestion = () => {
   const topic = localStorage.getItem("topic");
@@ -13,6 +16,12 @@ const giveRandomQuestion = () => {
       ? giveRandomRESTAPIQuestion()
       : topic === "HTML"
       ? giveRandomHTMLQuestion()
+      : topic === "JS"
+      ? giveRandomJSQuestion()
+      : topic === "Node"
+      ? giveRandomNodeQuestion()
+      : topic === "React"
+      ? giveRandomReactQuestion()
       : giveRandomCSSQuestion();
 
   const questionArray = question

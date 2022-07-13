@@ -22,6 +22,8 @@ const QuestionContainer = ({
 
   useEffect(() => {
     setQuestion(giveRandomQuestion());
+    setCounterOfCorrect(0);
+    setCounterOfAttempts(0);
   }, [topic]);
 
   const handleAnswerButtonClick = (event: React.MouseEvent, answer: string) => {
@@ -36,10 +38,10 @@ const QuestionContainer = ({
         JSON.stringify([kept[0], kept[1] + 1])
       );
     } else {
-      setTotalCounter([counterOfCorrect, counterOfAttempts]);
+      setTotalCounter([counterOfCorrect, 1]);
       localStorage.setItem(
         `total${topic}`,
-        JSON.stringify([counterOfCorrect, counterOfAttempts])
+        JSON.stringify([counterOfCorrect, 1])
       );
     }
     setShowExplanation("block");
@@ -47,23 +49,14 @@ const QuestionContainer = ({
       event.currentTarget.setAttribute("style", "background:rgb(255,100,0)");
     } else {
       setCounterOfCorrect(counterOfCorrect + 1);
-      if (localStorage.getItem(`total${topic}`)) {
-        const kept = JSON.parse(
-          localStorage.getItem(`total${topic}`) as string
-        );
 
-        setTotalCounter([kept[0] + 1, kept[1]]);
-        localStorage.setItem(
-          `total${topic}`,
-          JSON.stringify([kept[0] + 1, kept[1]])
-        );
-      } else {
-        setTotalCounter([counterOfCorrect, counterOfAttempts]);
-        localStorage.setItem(
-          `total${topic}`,
-          JSON.stringify([counterOfCorrect, counterOfAttempts])
-        );
-      }
+      const kept = JSON.parse(localStorage.getItem(`total${topic}`) as string);
+
+      setTotalCounter([kept[0] + 1, kept[1]]);
+      localStorage.setItem(
+        `total${topic}`,
+        JSON.stringify([kept[0] + 1, kept[1]])
+      );
     }
     setAnswerMode(true);
   };
@@ -77,10 +70,24 @@ const QuestionContainer = ({
       <div id="counter">
         {" "}
         <div>
-          Currect: {counterOfCorrect}/{counterOfAttempts}
+          Current: {counterOfCorrect}/{counterOfAttempts} -{" "}
+          <strong>
+            {" "}
+            {counterOfCorrect > 0
+              ? Math.floor((counterOfCorrect / counterOfAttempts) * 100)
+              : 0}
+            %{" "}
+          </strong>
         </div>
         <div>
-          Total: {totalCounter[0]}/{totalCounter[1]}
+          Total: {totalCounter[0]}/{totalCounter[1]}-{" "}
+          <strong>
+            {" "}
+            {totalCounter[0] > 0
+              ? Math.floor((totalCounter[0] / totalCounter[1]) * 100)
+              : 0}
+            %{" "}
+          </strong>
         </div>
       </div>
       <div id="question">{questionArray[0]}</div>
