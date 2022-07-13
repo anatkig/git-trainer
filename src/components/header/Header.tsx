@@ -1,4 +1,5 @@
 import React from "react";
+import { skills } from "../../constants/constants";
 import "./header.css";
 
 const Header = ({
@@ -8,8 +9,6 @@ const Header = ({
   handleClick: (skill: string) => void;
   topic: string;
 }) => {
-  const skills = ["CSS", "Git"];
-
   return (
     <header id="header">
       <div>{topic} Questions</div>
