@@ -92,14 +92,14 @@ const QuestionContainer = ({
       </div>
       <div id="question">{questionArray[0]}</div>
       <div id="addition-to-question">
-        {additionToQuestion.map((addition, index) => (
+        {additionToQuestion.map((addition: string, index: number) => (
           <div key={addition + index}>{addition}</div>
         ))}
       </div>
       <div id="answers">
         <ul>
           {optionsArray &&
-            optionsArray.map((answer, index) => (
+            optionsArray.map((answer: string, index: number) => (
               <li className="answer-option" key={answer + index}>
                 <button
                   onClick={(event: React.MouseEvent) =>
@@ -117,7 +117,7 @@ const QuestionContainer = ({
         </ul>
       </div>
       <div id="explanation" style={{ display: showExplanation }}>
-        {explanation.map((element, index) => (
+        {explanation.map((element: string, index: number) => (
           <div key={element + index}>{element}</div>
         ))}
       </div>

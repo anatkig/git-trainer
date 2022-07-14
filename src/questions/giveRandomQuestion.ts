@@ -1,35 +1,17 @@
-import giveRandomGitQuestion from "./giveRandomGitQuestion";
-import giveRandomCSSQuestion from "./giveRandomCSSQuestion";
-import giveRandomRESTAPIQuestion from "./giveRandomRESTAPIQuestion";
-import giveRandomHTMLQuestion from "./giveRandomHTMLQuestions";
-import giveRandomJSQuestion from "./giveRandomJSQuestions";
-import giveRandomNodeQuestion from "./giveRandomNodeQuestions";
-import giveRandomReactQuestion from "./giveRandomReactQuestions";
+import { skillsToFunctions } from "../constants/constants";
+import { SkillToFuncMapType } from "../types/types";
 
 const giveRandomQuestion = () => {
-  const topic = localStorage.getItem("topic");
+  const topic = localStorage.getItem("topic") || "Git";
 
-  const question: string =
-    topic === "Git"
-      ? giveRandomGitQuestion()
-      : topic === "RESTAPI"
-      ? giveRandomRESTAPIQuestion()
-      : topic === "HTML"
-      ? giveRandomHTMLQuestion()
-      : topic === "JS"
-      ? giveRandomJSQuestion()
-      : topic === "Node"
-      ? giveRandomNodeQuestion()
-      : topic === "React"
-      ? giveRandomReactQuestion()
-      : giveRandomCSSQuestion();
+  const question = skillsToFunctions[topic as keyof SkillToFuncMapType]();
 
   const questionArray = question
     .split("@")
-    .filter((question) => question.trim());
+    .filter((question: string) => question.trim());
 
   const options = questionArray?.filter(
-    (element) => element.includes("[x]") && element.includes("[ ]")
+    (element: string) => element.includes("[x]") && element.includes("[ ]")
   )[0];
 
   const optionsArray = options?.split("- ").slice(1);
