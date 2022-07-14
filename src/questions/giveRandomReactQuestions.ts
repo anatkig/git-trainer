@@ -504,34 +504,27 @@ const giveRandomReactQuestion = () => {
   '''
 @
   - [ ] A
-@
   '''javascript
   <...>
     <h1>Our Staff</h1>
     <p>Our staff is available 9-5 to answer your questions</p>
   </...>
   '''
-@
   - [ ] B
-@
   '''javascript
   <//>
     <h1>Our Staff</h1>
     <p>Our staff is available 9-5 to answer your questions</p>
   <///>
   '''
-@
   - [x] C
-@
   '''javascript
   <>
     <h1>Our Staff</h1>
     <p>Our staff is available 9-5 to answer your questions</p>
   </>
   '''
-@
   - [ ] D
-@
   '''javascript
   <Frag>
     <h1>Our Staff</h1>
@@ -628,28 +621,21 @@ const giveRandomReactQuestion = () => {
   '''
 @
   - [x] A
-@
   '''javascript
   <Route path="/:id">
     {' '}
     <About />
   </Route>
   '''
-@
   - [ ] B
-@
   '''javascript
   <Route path="/tid" about={Component} />
   '''
-@
   - [ ] C
-@
   '''javascript
   <Route path="/:id" route={About} />
   '''
-@
   - [ ] D
-@
   '''javascript
   <Route>
     <About path="/:id" />
@@ -663,7 +649,6 @@ const giveRandomReactQuestion = () => {
   '''
 @
   - [ ] A
-@
   '''javascript
   class Greeting extends React.Component {
     constructor() {
@@ -671,17 +656,13 @@ const giveRandomReactQuestion = () => {
     }
   }
   '''
-@
   - [ ] B
-@
   '''javascript
   class Greeting extends React.Component {
     <h1>Hello {this.props.name}!</h1>;
   }
   '''
-@
   - [x] C
-@
   '''javascript
   class Greeting extends React.Component {
     render() {
@@ -689,9 +670,7 @@ const giveRandomReactQuestion = () => {
     }
   }
   '''
-@
   - [ ] D
-@
   '''javascript
   class Greeting extends React.Component {
     render({ name }) {
