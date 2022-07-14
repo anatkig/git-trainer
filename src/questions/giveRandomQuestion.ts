@@ -1,5 +1,6 @@
 import { skillsToFunctions } from "../constants/constants";
 import { SkillToFuncMapType } from "../types/types";
+import shuffle from "../utils/utilFuncs";
 
 const giveRandomQuestion = () => {
   const topic = localStorage.getItem("topic") || "Git";
@@ -15,6 +16,7 @@ const giveRandomQuestion = () => {
   )[0];
 
   const optionsArray = options?.split("- ").slice(1);
+  optionsArray && shuffle(optionsArray);
 
   const optionsStartIndex = questionArray.indexOf(options);
   const optionEndIndex = questionArray.indexOf(options) + 1;
