@@ -1,0 +1,9 @@
+#counter {
+  margin: 5pxa auto;
+  background: white;
+  font-size: 1.4rem;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}

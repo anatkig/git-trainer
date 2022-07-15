@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import giveRandomQuestion from "../../questions/giveRandomQuestion";
+import FrontCounter from "../front-counter/FrontCounter";
 import "./question-container.css";
 
-const QuestionContainer = ({
-  totalCounter,
-  setTotalCounter,
-  topic,
-}: {
-  totalCounter: [number, number];
-  setTotalCounter: React.Dispatch<[number, number]>;
-  topic: string;
-}) => {
+const QuestionContainer = ({ topic }: { topic: string }) => {
+  const constantCounters = useRef([0, 0]);
+
+  const [todayDate, setTodayDate] = useState(new Date().toDateString());
   const [showExplanation, setShowExplanation] = useState("none");
-  const [
-    [questionArray, optionsArray, additionToQuestion, explanation],
-    setQuestion,
-  ] = useState(giveRandomQuestion());
+  const [[questionArray, optionsArray, additionToQuestion, explanation], setQuestion] = useState(
+    giveRandomQuestion()
+  );
   const [answerMode, setAnswerMode] = useState(false);
   const [counterOfCorrect, setCounterOfCorrect] = useState(0);
   const [counterOfAttempts, setCounterOfAttempts] = useState(0);
@@ -26,24 +21,67 @@ const QuestionContainer = ({
     setCounterOfAttempts(0);
   }, [topic]);
 
+  useEffect(() => {
+    setTodayDate(new Date().toDateString());
+  }, [topic, counterOfCorrect, counterOfAttempts]);
+
+  useEffect(() => {
+    let updateOnCorrect = 0;
+    let updateOnAttempts = 0;
+    if (counterOfCorrect > constantCounters.current[0]) {
+      updateOnCorrect = 1;
+      constantCounters.current[0] = counterOfCorrect;
+    }
+    if (counterOfAttempts > constantCounters.current[1]) {
+      updateOnAttempts = 1;
+      constantCounters.current[1] = counterOfAttempts;
+    }
+
+    const currentTopicStatistics = JSON.parse(localStorage.getItem(`statistics${topic}`) as string);
+    if (currentTopicStatistics) {
+      // write data into statistics by date
+      const today = currentTopicStatistics.find(
+        (date: object) => Object.keys(date)[0] === todayDate
+      );
+      const indexOfToday = currentTopicStatistics.indexOf(
+        (date: object) => Object.keys(date)[0] === todayDate
+      );
+
+      if (today) {
+        currentTopicStatistics[indexOfToday] = {
+          [todayDate]: [
+            today[todayDate][0] + updateOnCorrect,
+            today[todayDate][1] + updateOnAttempts,
+          ],
+        };
+        localStorage.setItem(`statistics${topic}`, JSON.stringify(currentTopicStatistics));
+      } else {
+        localStorage.setItem(
+          `statistics${topic}`,
+          JSON.stringify([
+            ...currentTopicStatistics,
+            { [todayDate]: [updateOnCorrect, updateOnAttempts] },
+          ])
+        );
+      }
+    } else {
+      localStorage.setItem(
+        `statistics${topic}`,
+        JSON.stringify([{ [todayDate]: [updateOnCorrect, updateOnAttempts] }])
+      );
+    }
+  }, [topic, counterOfCorrect, counterOfAttempts, todayDate]);
+
   const handleAnswerButtonClick = (event: React.MouseEvent, answer: string) => {
     setCounterOfAttempts(counterOfAttempts + 1);
     if (localStorage.getItem(`total${topic}`)) {
       const kept = JSON.parse(localStorage.getItem(`total${topic}`) as string);
 
-      setTotalCounter([kept[0], kept[1] + 1]);
-
-      localStorage.setItem(
-        `total${topic}`,
-        JSON.stringify([kept[0], kept[1] + 1])
-      );
+      localStorage.setItem(`total${topic}`, JSON.stringify([kept[0], kept[1] + 1]));
     } else {
-      setTotalCounter([counterOfCorrect, 1]);
-      localStorage.setItem(
-        `total${topic}`,
-        JSON.stringify([counterOfCorrect, 1])
-      );
+      localStorage.setItem(`total${topic}`, JSON.stringify([counterOfCorrect, 1]));
     }
+
     setShowExplanation("block");
     if (!answer.includes("[x]")) {
       event.currentTarget.setAttribute("style", "background:rgb(255,100,0)");
@@ -52,11 +90,7 @@ const QuestionContainer = ({
 
       const kept = JSON.parse(localStorage.getItem(`total${topic}`) as string);
 
-      setTotalCounter([kept[0] + 1, kept[1]]);
-      localStorage.setItem(
-        `total${topic}`,
-        JSON.stringify([kept[0] + 1, kept[1]])
-      );
+      localStorage.setItem(`total${topic}`, JSON.stringify([kept[0] + 1, kept[1]]));
     }
     setAnswerMode(true);
   };
@@ -67,29 +101,7 @@ const QuestionContainer = ({
   };
   return (
     <div id="question-container">
-      <div id="counter">
-        {" "}
-        <div>
-          Current: {counterOfCorrect}/{counterOfAttempts} -{" "}
-          <strong>
-            {" "}
-            {counterOfCorrect > 0
-              ? Math.floor((counterOfCorrect / counterOfAttempts) * 100)
-              : 0}
-            %{" "}
-          </strong>
-        </div>
-        <div>
-          Total: {totalCounter[0]}/{totalCounter[1]}-{" "}
-          <strong>
-            {" "}
-            {totalCounter[0] > 0
-              ? Math.floor((totalCounter[0] / totalCounter[1]) * 100)
-              : 0}
-            %{" "}
-          </strong>
-        </div>
-      </div>
+      <FrontCounter counterOfCorrect={counterOfCorrect} counterOfAttempts={counterOfAttempts} />
       <div id="question">{questionArray[0]}</div>
       <div id="addition-to-question">
         {additionToQuestion.map((addition: string, index: number) => (
@@ -102,12 +114,9 @@ const QuestionContainer = ({
             optionsArray.map((answer: string, index: number) => (
               <li className="answer-option" key={answer + index}>
                 <button
-                  onClick={(event: React.MouseEvent) =>
-                    handleAnswerButtonClick(event, answer)
-                  }
+                  onClick={(event: React.MouseEvent) => handleAnswerButtonClick(event, answer)}
                   style={{
-                    background:
-                      answerMode && answer.includes("[x]") ? "lightgreen" : "",
+                    background: answerMode && answer.includes("[x]") ? "lightgreen" : "",
                   }}
                 >
                   {answer.slice(answer.indexOf("]") + 1)}

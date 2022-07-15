@@ -24,12 +24,6 @@
   transform: scale(1.1);
 }
 
-#counter {
-  margin: 5pxa auto;
-  background: white;
-  font-size: 1.4rem;
-}
-
 .answer-option {
   text-align: left;
 }

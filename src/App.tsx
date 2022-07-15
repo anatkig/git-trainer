@@ -1,24 +1,14 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/header/Header";
 import QuestionContainer from "./components/question-container/QuestionContainer";
+import Statistics from "./components/statistics/Statistics";
 
 function App() {
   const [topic, setTopic] = useState(localStorage.getItem("topic") || "Git");
-  const [totalCounter, setTotalCounter] = useState(
-    localStorage.getItem(`total${topic}`)
-      ? JSON.parse(localStorage.getItem(`total${topic}`) as string)
-      : [0, 0]
-  );
 
-  useEffect(() => {
-    setTotalCounter(
-      localStorage.getItem(`total${topic}`)
-        ? JSON.parse(localStorage.getItem(`total${topic}`) as string)
-        : [0, 0]
-    );
-  }, [topic]);
+  const [displayMode, setDisplayMode] = useState("questions");
 
   const handleClick = (skill: string) => {
     localStorage.setItem("topic", skill);
@@ -27,12 +17,17 @@ function App() {
 
   return (
     <div className="App">
-      <Header handleClick={handleClick} topic={topic} />
-      <QuestionContainer
-        totalCounter={totalCounter}
-        setTotalCounter={setTotalCounter}
+      <Header
+        handleClick={handleClick}
         topic={topic}
+        displayMode={displayMode}
+        setDisplayMode={setDisplayMode}
       />
+      {displayMode === "questions" ? (
+        <QuestionContainer topic={topic} />
+      ) : (
+        <Statistics topic={topic} />
+      )}
     </div>
   );
 }
