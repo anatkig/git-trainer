@@ -27,23 +27,31 @@ const Header = ({
       </div>
       <div id="headings">
         <div
-          className="topic"
+          className={`topic ${switchMenu && "switch"}`}
           onClick={() => setDisplayMode("questions")}
           style={
             displayMode === "questions"
-              ? { transform: "scale(1.2)", background: "rgb(0, 0, 230)" }
+              ? {
+                  transform: switchMenu ? "scale(1.1)" : "scale(1.2)",
+                  background: "rgb(0, 0, 230)",
+                }
               : undefined
           }
         >
           {topic} Questions
         </div>
-        <div id="app-title">Skills Trainer</div>
+        <div id="app-title" style={{ display: switchMenu ? "none" : "block" }}>
+          Skills Trainer
+        </div>
         <div
-          className="topic"
+          className={`topic ${switchMenu && "switch"}`}
           onClick={() => setDisplayMode("statistics")}
           style={
             displayMode === "statistics"
-              ? { transform: "scale(1.2)", background: "rgb(0, 0, 230)" }
+              ? {
+                  transform: switchMenu ? "scale(1.1)" : "scale(1.2)",
+                  background: "rgb(0, 0, 230)",
+                }
               : undefined
           }
         >
