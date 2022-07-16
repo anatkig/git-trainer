@@ -6,5 +6,6 @@ export interface SkillToFuncMapType {
   JS: function;
   Node: function;
   React: function;
+  Go: function;
   Mixed: function;
 }

@@ -620,7 +620,7 @@ const giveRandomNodeQuestion = () => {
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * 74)];
+  return dataArray[Math.floor(Math.random() * dataArray.length)];
 };
 
 export default giveRandomNodeQuestion;

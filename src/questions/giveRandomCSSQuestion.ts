@@ -1916,7 +1916,7 @@ const giveRandomCSSQuestion = () => {
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * 127)];
+  return dataArray[Math.floor(Math.random() * dataArray.length)];
 };
 
 export default giveRandomCSSQuestion;

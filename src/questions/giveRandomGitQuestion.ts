@@ -993,7 +993,7 @@ const giveRandomGitQuestion = () => {
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * 121)];
+  return dataArray[Math.floor(Math.random() * dataArray.length)];
 };
 
 export default giveRandomGitQuestion;

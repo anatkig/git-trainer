@@ -5,18 +5,10 @@ import giveRandomHTMLQuestion from "../questions/giveRandomHTMLQuestions";
 import giveRandomJSQuestion from "../questions/giveRandomJSQuestions";
 import giveRandomNodeQuestion from "../questions/giveRandomNodeQuestions";
 import giveRandomReactQuestion from "../questions/giveRandomReactQuestions";
+import giveRandomGoQuestion from "../questions/giveRandomGoQuestion";
 import { SkillToFuncMapType } from "../types/types";
 
-export const skills = [
-  "CSS",
-  "Git",
-  "RESTAPI",
-  "HTML",
-  "JS",
-  "Node",
-  "React",
-  "Mixed",
-];
+export const skills = ["CSS", "Git", "RESTAPI", "HTML", "JS", "Node", "React", "Go", "Mixed"];
 
 export const skillsToFunctions: SkillToFuncMapType = {
   CSS: giveRandomCSSQuestion,
@@ -26,6 +18,7 @@ export const skillsToFunctions: SkillToFuncMapType = {
   JS: giveRandomJSQuestion,
   Node: giveRandomNodeQuestion,
   React: giveRandomReactQuestion,
+  Go: giveRandomGoQuestion,
   Mixed: (): string =>
     [
       giveRandomCSSQuestion,

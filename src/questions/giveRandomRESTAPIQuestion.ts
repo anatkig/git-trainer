@@ -495,7 +495,7 @@ const giveRandomRESTAPIQuestion = () => {
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * 64)];
+  return dataArray[Math.floor(Math.random() * dataArray.length)];
 };
 
 export default giveRandomRESTAPIQuestion;
