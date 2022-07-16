@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/skills-trainer/static/css/main.09f98db4.css",
-    "main.js": "/skills-trainer/static/js/main.81bc5d9f.js",
+    "main.css": "/skills-trainer/static/css/main.1d4636a8.css",
+    "main.js": "/skills-trainer/static/js/main.121c71b5.js",
     "static/js/787.b4690fa5.chunk.js": "/skills-trainer/static/js/787.b4690fa5.chunk.js",
     "index.html": "/skills-trainer/index.html",
-    "main.09f98db4.css.map": "/skills-trainer/static/css/main.09f98db4.css.map",
-    "main.81bc5d9f.js.map": "/skills-trainer/static/js/main.81bc5d9f.js.map",
+    "main.1d4636a8.css.map": "/skills-trainer/static/css/main.1d4636a8.css.map",
+    "main.121c71b5.js.map": "/skills-trainer/static/js/main.121c71b5.js.map",
     "787.b4690fa5.chunk.js.map": "/skills-trainer/static/js/787.b4690fa5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09f98db4.css",
-    "static/js/main.81bc5d9f.js"
+    "static/css/main.1d4636a8.css",
+    "static/js/main.121c71b5.js"
   ]
 }
