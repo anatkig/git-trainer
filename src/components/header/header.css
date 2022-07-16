@@ -81,7 +81,7 @@
     transform: scale(1.1);
   }
   #app-title {
-    font-size: calc(10px + 3vmin);
+    font-size: calc(10px + 2vmin);
   }
   #headings {
     width: 50%;

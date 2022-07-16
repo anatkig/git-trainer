@@ -41,7 +41,7 @@ const Header = ({
           {topic} Questions
         </div>
         <div id="app-title" style={{ display: switchMenu ? "none" : "block" }}>
-          Skills Trainer
+          <span id="mobile-topic">{topic}</span> Skills Trainer
         </div>
         <div
           className={`topic ${switchMenu && "switch"}`}
