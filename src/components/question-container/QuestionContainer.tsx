@@ -31,10 +31,14 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
     if (counterOfCorrect > constantCounters.current[0]) {
       updateOnCorrect = 1;
       constantCounters.current[0] = counterOfCorrect;
+    } else {
+      updateOnCorrect = 0;
     }
     if (counterOfAttempts > constantCounters.current[1]) {
       updateOnAttempts = 1;
       constantCounters.current[1] = counterOfAttempts;
+    } else {
+      updateOnAttempts = 0;
     }
 
     const currentTopicStatistics = JSON.parse(localStorage.getItem(`statistics${topic}`) as string);
@@ -43,7 +47,8 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
       const today = currentTopicStatistics.find(
         (date: object) => Object.keys(date)[0] === todayDate
       );
-      const indexOfToday = currentTopicStatistics.indexOf(
+
+      const indexOfToday = currentTopicStatistics.findIndex(
         (date: object) => Object.keys(date)[0] === todayDate
       );
 
