@@ -7,7 +7,7 @@
 }
 
 #question {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 0.7rem 0;
   font-weight: 700;
 }
@@ -55,19 +55,6 @@
     height: auto;
     margin: auto;
     box-sizing: border-box;
-  }
-  #question {
-    font-size: 5vmin;
-  }
-  #addition-to-question {
-    font-size: 4vmin;
-  }
-  .answer-option button {
-    cursor: pointer;
-    font-size: 4vmin;
-  }
-  #explanation {
-    font-size: 4vmin;
   }
   #answers ul {
     padding-inline-start: 20px;
