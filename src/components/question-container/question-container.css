@@ -57,17 +57,17 @@
     box-sizing: border-box;
   }
   #question {
-    font-size: 1.1rem;
+    font-size: 5vmin;
   }
   #addition-to-question {
-    font-size: 1rem;
+    font-size: 4vmin;
   }
   .answer-option button {
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 4vmin;
   }
   #explanation {
-    font-size: 1rem;
+    font-size: 4vmin;
   }
   #answers ul {
     padding-inline-start: 20px;
