@@ -173,7 +173,6 @@ const giveRandomGoQuestion = () => {
   '''
 @
   - [ ] A
-@
   '''go
   // Calculate a + b
   // - a: int
@@ -183,27 +182,21 @@ const giveRandomGoQuestion = () => {
     return a + b
   }
   '''
-@
   - [ ] B
-@
   '''go
   // Does a + b
   func Add(a, b int) {
     return a + b
   }
   '''
-@
   - [x] C
-@
   '''go
   // Add returns the sum of a and b
   func Add(a, b int) {
     return a + b
   }
   '''
-@
   - [ ] D
-@
   '''go
   // returns the sum of a and b
   func Add(a, b int) {
