@@ -48,7 +48,7 @@
   transform: scale(1.1);
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #header {
     flex-direction: row;
     justify-content: start;

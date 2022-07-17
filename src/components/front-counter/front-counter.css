@@ -11,7 +11,7 @@
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   #counter {
     font-size: 1rem;
   }
