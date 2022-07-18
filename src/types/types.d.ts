@@ -7,5 +7,6 @@ export interface SkillToFuncMapType {
   Node: function;
   React: function;
   Go: function;
+  TypeScript: function;
   Mixed: function;
 }
