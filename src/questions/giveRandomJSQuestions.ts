@@ -100,8 +100,7 @@ for (var i = 1; i <= 4; i++) {
 }
 '''
 @
-- [ ] .
-@
+- [ ]
 '''javascript
 for (var i = 1; i <= 4; i++) {
   (function (i) {
@@ -111,9 +110,7 @@ for (var i = 1; i <= 4; i++) {
   })(j);
 }
 '''
-@
-- [ ] .
-@
+- [ ]
 '''javascript
 for (var i=1; i<=4; i++) {
   setTimeout(function() {
@@ -121,9 +118,7 @@ for (var i=1; i<=4; i++) {
     }, i*1000);
 }
 '''
-@
-- [x] .
-@
+- [x] 
 '''javascript
 for (var i = 1; i <= 4; i++) {
   (function (j) {
@@ -134,8 +129,7 @@ for (var i = 1; i <= 4; i++) {
 }
 '''
 @
-- [ ] .
-@
+- [ ]
 '''javascript
 for (var j = 1; j <= 4; j++) {
   setTimeout(function () {
@@ -158,32 +152,25 @@ for (var j = 1; j <= 4; j++) {
 @
 #### Q10. Which statement creates a new function called discountPrice?
 @
-- [x] .
-@
+- [x] 
 '''js
 let discountPrice = function (price) {
   return price * 0.85;
 };
 '''
-@
-- [ ] .
-@
+- [ ]
 '''js
 let discountPrice(price) {
   return price * 0.85;
 };
 '''
-@
-- [ ] .
-@
+- [ ]
 '''js
 let function = discountPrice(price) {
   return price * 0.85;
 };
 '''
-@
-- [ ] .
-@
+- [ ]
 '''js
 discountPrice = function (price) {
   return price * 0.85;
