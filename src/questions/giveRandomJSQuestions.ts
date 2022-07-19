@@ -128,7 +128,6 @@ for (var i = 1; i <= 4; i++) {
   })(i);
 }
 '''
-@
 - [ ]
 '''javascript
 for (var j = 1; j <= 4; j++) {
