@@ -18,12 +18,14 @@
   font-size: 1.2rem;
   box-shadow: inset 0 0 5px orange;
   border-radius: 5px;
+  word-wrap: break-word;
 }
 #explanation {
   background: rgb(255, 255, 0);
   font-size: 1.2rem;
   box-shadow: inset 0 0 5px orange;
   border-radius: 5px;
+  word-wrap: break-word;
 }
 #next-button {
   background: rgb(0, 200, 255);
