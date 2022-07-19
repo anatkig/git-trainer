@@ -616,6 +616,22 @@ const giveRandomNodeQuestion = () => {
   - [ ] resolve4
 @
   [Reference](https://nodejs.org/api/dns.html#dnslookuphostname-options-callback)
+  @
+  #### Q75. What does SSL stand for?
+@
+  - [ ] Secure Server Layer 
+  - [ ] Save Sockets Landing 
+  - [x] Secure Sockets Layer 
+  - [ ] Secure Sockets Laws 
+  @
+  #### Q76. Which is not a util's method?
+@
+var util = require('util');
+@
+  - [ ] deprecate()
+  - [ ] format() 
+  - [x] emmulate() 
+  - [ ] inherits() 
   `;
 
   const dataArray = data.split("####").slice(1);
