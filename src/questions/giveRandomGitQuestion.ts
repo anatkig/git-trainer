@@ -989,7 +989,31 @@ const giveRandomGitQuestion = () => {
     - [ ]  a future branch of a repository
     - [x]  a separate copy of a repository
 @
-    [reference](https://stackoverflow.com/a/9339460/1573267)`;
+    [reference](https://stackoverflow.com/a/9339460/1573267)
+ @
+    #### Q122. Which line is incorrect?
+ @
+     - [x]  git bisect start <commit>
+     - [ ]  git bisect good <commit>
+     - [ ]  git bisect bad <commit>
+     - [ ]  git bisect start
+  @
+     #### Q123. Which is rerere?
+  @
+      - [x]  Reuse Recorded Resolution
+      - [ ]  Reuse Record Resolution
+      - [ ]  Reuse Record Resolve
+      - [ ]  Refuse Recorded Resolution
+      @
+      #### Q124. Which is missing in the line below?
+   @
+   git config --global rerere.<missiing part> true
+   @
+       - [x]  enabled
+       - [ ]  enforced
+       - [ ]  established
+       - [ ]  emailed
+    `;
 
   const dataArray = data.split("####").slice(1);
 
