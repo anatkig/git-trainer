@@ -1584,7 +1584,7 @@ const giveRandomHTMLQuestion = () => {
     <dt>Server</dt>
     <dd>Software used to serve webpages, like Apache.</dd>
     <dd>Hardware used to provide data to other computers.</dd>
-    <!-- Other terms and descriptions -->
+    <!--Other terms and descriptions -->
   </dl>
   '''
   - [ ] B
@@ -1593,7 +1593,7 @@ const giveRandomHTMLQuestion = () => {
     <dl>Server</dl>
     <dd>Software used to serve webpages, like Apache.</dd>
     <dd> Hardware used to provide data to other computers.</dd>
-    <!-- Other terms and descriptions -->
+    <!--Other terms and descriptions -->
   </dt>
   '''
   - [ ] C
@@ -1602,7 +1602,7 @@ const giveRandomHTMLQuestion = () => {
     <dt>Server</dt>
     <dd>Software used to serve webpages, like Apache.</dd>
     <dt>Hardware used to provide data to other computers.</dt>
-    <!-- Other terms and descriptions -->
+    <!--Other terms and descriptions -->
   </dl>
   '''
   - [ ] D
@@ -1611,7 +1611,7 @@ const giveRandomHTMLQuestion = () => {
     <dd>Server</dd>
     <dt>Software used to serve webpages, like Apache.</dt>
     <dt>Hardware used to provide data to other computers.</dt>
-    <!-- Other terms and descriptions -->
+    <!--Other terms and descriptions -->
   </dl>
   '''
 @
