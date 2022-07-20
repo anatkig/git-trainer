@@ -7,7 +7,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   document.onkeydown = (event) => {
     const answerOptions = document.querySelectorAll(".answer-option button");
     const key = Number(event.key);
-    if (key === 1 || key === 2 || key === 3 || key === 4) {
+    if (answerOptions[key - 1]) {
       answerOptions[key - 1].dispatchEvent(
         new MouseEvent("click", {
           view: window,
