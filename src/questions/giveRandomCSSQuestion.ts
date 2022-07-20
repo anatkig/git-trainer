@@ -1857,7 +1857,7 @@ const giveRandomCSSQuestion = () => {
 @
   #### Q125. Which choice is a valid example of a comment in CSS?
 @
-  - [ ] '-- This line has been cancelled.'
+  - [ ] '--This line has been cancelled.'
   - [x] '/* This line has been cancelled. */'
   - [ ] '// This line has been cancelled.'
   - [ ] '# This line has been cancelled.'
