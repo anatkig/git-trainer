@@ -4,6 +4,28 @@ import FrontCounter from "../front-counter/FrontCounter";
 import "./question-container.css";
 
 const QuestionContainer = ({ topic }: { topic: string }) => {
+  document.onkeydown = (event) => {
+    const answerOptions = document.querySelectorAll(".answer-option button");
+    const key = Number(event.key);
+    if (key === 1 || key === 2 || key === 3 || key === 4) {
+      answerOptions[key - 1].dispatchEvent(
+        new MouseEvent("click", {
+          view: window,
+          bubbles: true,
+          cancelable: true,
+        })
+      );
+    } else if (event.key === " ") {
+      document.querySelector("#next-button")?.dispatchEvent(
+        new MouseEvent("click", {
+          view: window,
+          bubbles: true,
+          cancelable: true,
+        })
+      );
+    }
+  };
+
   const constantCounters = useRef([0, 0]);
 
   const [todayDate, setTodayDate] = useState(new Date().toDateString());
@@ -78,6 +100,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   }, [topic, counterOfCorrect, counterOfAttempts, todayDate]);
 
   const handleAnswerButtonClick = (event: React.MouseEvent, answer: string) => {
+    event.preventDefault();
     setCounterOfAttempts(counterOfAttempts + 1);
     if (localStorage.getItem(`total${topic}`)) {
       const kept = JSON.parse(localStorage.getItem(`total${topic}`) as string);
@@ -114,7 +137,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
         ))}
       </div>
       <div id="answers">
-        <ul>
+        <ol>
           {optionsArray &&
             optionsArray.map((answer: string, index: number) => (
               <li className="answer-option" key={answer + index}>
@@ -128,7 +151,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
                 </button>
               </li>
             ))}
-        </ul>
+        </ol>
       </div>
       <div id="explanation" style={{ display: showExplanation }}>
         {explanation.map((element: string, index: number) => (
