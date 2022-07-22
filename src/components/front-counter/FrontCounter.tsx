@@ -18,6 +18,8 @@ const FrontCounter = ({
   useEffect(() => {
     if (counterOfAttempts > 9 && counterOfCorrect > 4) {
       setPoints(Math.floor(counterOfCorrect / 5 + persent));
+    } else {
+      setPoints(0);
     }
   }, [counterOfCorrect, counterOfAttempts, persent]);
 
