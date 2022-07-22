@@ -1013,6 +1013,13 @@ const giveRandomGitQuestion = () => {
        - [ ]  enforced
        - [ ]  established
        - [ ]  emailed
+       @
+       #### Q125. Why is the protocol associated with a repository to be served read-only over HTTP called "dumb protocol?
+    @
+        - [x]  it requires no Git-specific code on the server side during the transport process
+        - [ ]  it requires no Git-specific effort on the developer's side during the transport process
+        - [ ]  it requires no Git-specific logic on the client side during the transport process
+        - [ ]   it requires no Git-specific code on the server side during the uploading process
     `;
 
   const dataArray = data.split("####").slice(1);
