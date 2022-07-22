@@ -341,7 +341,14 @@ const giveRandomDockerQuestion = () => {
   - [ ] docker exec
   - [ ] docker pull
   - [ ] docker start
-  - [x] docker run`;
+  - [x] docker run
+  @
+  #### Q51. It is a persistent background process that manages Docker images, containers, networks, and storage volumes.
+  @
+  - [ ] Docker Host
+  - [ ] Docker Virtual Machine
+  - [ ] Docker Background Manager
+  - [x] Docker Daemon`;
 
   const dataArray = data.split("####").slice(1);
 
