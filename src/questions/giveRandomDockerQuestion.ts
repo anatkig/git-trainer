@@ -284,7 +284,7 @@ const giveRandomDockerQuestion = () => {
   - [ ] point-to-time snapshot of a container used for backups.
   - [ ] read-write template for starting one or more containers.
   @
-  #### Q42.  What format does Docker uses to export images?
+  #### Q42.  What format does Docker use to export images?
   @
   - [ ] Image
   - [ ] iso
