@@ -8,6 +8,7 @@ import giveRandomReactQuestion from "../questions/giveRandomReactQuestions";
 import giveRandomGoQuestion from "../questions/giveRandomGoQuestion";
 import { SkillToFuncMapType } from "../types/types";
 import giveRandomTypeScriptQuestion from "../questions/giveRandomTypeScriptQuestion";
+import giveRandomDockerQuestion from "../questions/giveRandomDockerQuestion";
 
 export const skills = [
   "CSS",
@@ -19,6 +20,7 @@ export const skills = [
   "React",
   "Go",
   "TypeScript",
+  "Docker",
   "Mixed",
 ];
 
@@ -32,6 +34,7 @@ export const skillsToFunctions: SkillToFuncMapType = {
   React: giveRandomReactQuestion,
   Go: giveRandomGoQuestion,
   TypeScript: giveRandomTypeScriptQuestion,
+  Docker: giveRandomDockerQuestion,
   Mixed: (): string =>
     [
       giveRandomCSSQuestion,
@@ -41,5 +44,8 @@ export const skillsToFunctions: SkillToFuncMapType = {
       giveRandomNodeQuestion,
       giveRandomReactQuestion,
       giveRandomRESTAPIQuestion,
+      giveRandomGoQuestion,
+      giveRandomTypeScriptQuestion,
+      giveRandomDockerQuestion,
     ][Math.floor(Math.random() * (skills.length - 1))](),
 };

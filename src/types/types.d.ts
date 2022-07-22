@@ -8,5 +8,6 @@ export interface SkillToFuncMapType {
   React: function;
   Go: function;
   TypeScript: function;
+  Docker: function;
   Mixed: function;
 }
