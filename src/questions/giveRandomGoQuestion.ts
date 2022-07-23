@@ -503,7 +503,42 @@ const giveRandomGoQuestion = () => {
   - [ ] There is no customizing the string representation of a type.
   - [ ] Build it in pieces each time by calling individual fields.
   - [x] Implement a method 'String()' string
-  - [ ] Create a wrapper function that accepts your type and outputs a string.`;
+  - [ ] Create a wrapper function that accepts your type and outputs a string.
+  @
+  #### Q43. What is naked return?
+@
+  - [ ] when return statement doesn't have any arguments, it returns nothing
+  - [ ] when return statement doesn't have any arguments, it returns null, which is call naked value
+  - [x] when return statement doesn't have any arguments, it returns named return values
+  - [ ] when return statement doesn't have any arguments, it returns named an empty value
+  @
+  #### Q44. When there is an initializer, what can we omit?
+@
+  - [ ] the comma
+  - [ ] the value
+  - [x] the type 
+  - [ ] the second var
+  @
+  #### Q45. Package flag implements?
+@
+  - [ ] run-time reflection, allowing a program to manipulate objects with arbitrary types
+  - [ ] conversions to and from string representations of basic data types
+  - [x] command-line flag parsing
+  - [ ] formatted I/O with functions analogous to C's printf and scanf
+  @
+  #### Q46. Package reflect implements?
+@
+  - [ ] command-line flag parsing
+  - [ ] conversions to and from string representations of basic data types
+  - [x] run-time reflection, allowing a program to manipulate objects with arbitrary types
+  - [ ] formatted I/O with functions analogous to C's printf and scanf
+  #### Q47. Package fmt implements?
+  @
+    - [ ] command-line flag parsing
+    - [ ] conversions to and from string representations of basic data types
+    - [x] formatted I/O with functions analogous to C's printf and scanf
+    - [ ] run-time reflection, allowing a program to manipulate objects with arbitrary types
+  `;
 
   const dataArray = data.split("####").slice(1);
 
