@@ -532,12 +532,105 @@ const giveRandomGoQuestion = () => {
   - [ ] conversions to and from string representations of basic data types
   - [x] run-time reflection, allowing a program to manipulate objects with arbitrary types
   - [ ] formatted I/O with functions analogous to C's printf and scanf
+  @
   #### Q47. Package fmt implements?
   @
     - [ ] command-line flag parsing
     - [ ] conversions to and from string representations of basic data types
     - [x] formatted I/O with functions analogous to C's printf and scanf
     - [ ] run-time reflection, allowing a program to manipulate objects with arbitrary types
+    @
+  #### Q48. := short assignment statement can be used?
+  @
+  - [x] inside functions
+  - [ ] everywhere
+  - [ ] with initializer 
+  - [ ] shouldn't be used as it makes code more opaque
+@
+#### Q49. Variables declared without an explicit initial value are?
+@
+- [x] given their zero value
+- [ ] given underfined value
+- [ ] cause an error
+- [ ] cause the program to stop
+@
+#### Q50. Find the wrong syntax.
+@
+- [x] f = 10
+- [ ] var f = 10
+- [ ] var f int = 10
+- [ ] f := 10
+@
+#### Q51. In Go assignment between items of different type requires an explicit conversion only when?
+@
+- [x] always
+- [ ] inside a function
+- [ ] types are not compatible
+- [ ] in strict mode
+@
+#### Q52. What is the workspace in GO?
+@
+- [x] Both of these
+- [ ] None
+- [ ] pkg contains package objects
+- [ ] src contains GO source files organized into packages
+@
+#### Q53. How to use custom packages in GO language?
+@
+- [x] Both of these
+- [ ] None
+- [ ] Under the directory of your project place the directory with library files
+- [ ] Refer to the library using its path relative to the root of your workspace consisting the project
+@
+#### Q54. Which of the following is true about functions in Go?
+@
+- [x] Both of the above
+- [ ] None
+- [ ] func starts the declaration of a function
+- [ ] Every Go program has at least one function, which is main(), and all the most trivial programs can define additional functions
+@
+#### Q55. Which of the following is the default value of a global variable in Go?
+@
+- [x] 0 or nil
+- [ ] Undefined
+- [ ] Not fixed
+- [ ] None of the above
+@
+#### Q56. Which of the following function can be used to copy a slice to another slice in Go?
+- [x] copy()
+- [ ] append()
+- [ ] resize()
+- [ ] None of the above
+@
+#### Q57. In Go language, a function/variable is exported if its name starts with capital letter.
+@
+- [x] true
+- [ ] false
+@
+#### Q58. In Go language, Slice types are inbuilt types.
+@
+- [x] false
+- [ ] true
+@
+#### Q59. what is the output of below code snippet?
+@
+package main
+
+import (
+        "fmt"
+)
+
+func main() {
+        var x int
+        lstArray := [3]int{1, 2, 3}
+        x, lstArray = lstArray[0], lstArray[1:]
+        fmt.Println( x, lstArray)
+}
+@
+- [x] Error
+- [ ] None of the above
+- [ ] 1 [1,2,3]
+- [ ] 1 [2,3]
   `;
 
   const dataArray = data.split("####").slice(1);
