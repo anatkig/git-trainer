@@ -7,9 +7,7 @@ const giveRandomQuestion = () => {
 
   const question = skillsToFunctions[topic as keyof SkillToFuncMapType]();
 
-  const questionArray = question
-    .split("@")
-    .filter((question: string) => question.trim());
+  const questionArray = question.split("@@").filter((question: string) => question.trim());
 
   const options = questionArray?.filter(
     (element: string) => element.includes("[x]") && element.includes("[ ]")
