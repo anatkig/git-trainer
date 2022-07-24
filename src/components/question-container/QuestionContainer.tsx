@@ -132,7 +132,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
         );
         localStorage.setItem(
           `wrong ${topic} questions`,
-          JSON.stringify([...JSON.parse(wrongQuestionsFiltered)])
+          JSON.stringify([...wrongQuestionsFiltered])
         );
       }
 
