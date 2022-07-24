@@ -101,6 +101,9 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
 
   const handleAnswerButtonClick = (event: React.MouseEvent, answer: string) => {
     event.preventDefault();
+
+    const wrongQuestions = localStorage.getItem(`wrong ${topic} questions`);
+
     setCounterOfAttempts(counterOfAttempts + 1);
     if (localStorage.getItem(`total${topic}`)) {
       const kept = JSON.parse(localStorage.getItem(`total${topic}`) as string);
@@ -113,7 +116,26 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
     setShowExplanation("block");
     if (!answer.includes("[x]")) {
       event.currentTarget.setAttribute("style", "background:rgb(255,100,0)");
+
+      if (wrongQuestions) {
+        localStorage.setItem(
+          `wrong ${topic} questions`,
+          JSON.stringify([...JSON.parse(wrongQuestions), questionArray[0]])
+        );
+      } else {
+        localStorage.setItem(`wrong ${topic} questions`, JSON.stringify([questionArray[0]]));
+      }
     } else {
+      if (wrongQuestions) {
+        const wrongQuestionsFiltered = JSON.parse(wrongQuestions).filter(
+          (question: string) => question !== questionArray[0]
+        );
+        localStorage.setItem(
+          `wrong ${topic} questions`,
+          JSON.stringify([...JSON.parse(wrongQuestionsFiltered)])
+        );
+      }
+
       setCounterOfCorrect(counterOfCorrect + 1);
 
       const kept = JSON.parse(localStorage.getItem(`total${topic}`) as string);

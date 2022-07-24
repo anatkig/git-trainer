@@ -1024,18 +1024,14 @@ I
 Javascript!
 love
 '''
-@@
 - [ ] .
 '''plaintext
 love
 I
 Javascript!
 '''
-@@
 - [ ] The output may change with each execution of code and cannot be determined.
-@@
 - [ ] .
-@@
 '''
 I
 love
@@ -1812,7 +1808,20 @@ var flagDatabase = JSON.parse(flagsJSON);
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * dataArray.length)];
+  const wrongQuestions = localStorage.getItem("wrong  JS questions");
+  const wrongEntries: string[] = [];
+  if (wrongQuestions) {
+    dataArray.forEach(
+      (questionEntry: string) =>
+        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
+          questionEntry.includes(wrongQuestion)
+        ) && wrongEntries.push(questionEntry)
+    );
+  }
+
+  const finalDataArray = [...dataArray, ...wrongEntries];
+
+  return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };
 
 export default giveRandomJSQuestion;

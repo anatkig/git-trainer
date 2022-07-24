@@ -495,7 +495,20 @@ const giveRandomRESTAPIQuestion = () => {
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * dataArray.length)];
+  const wrongQuestions = localStorage.getItem("wrong  RESTAPI questions");
+  const wrongEntries: string[] = [];
+  if (wrongQuestions) {
+    dataArray.forEach(
+      (questionEntry: string) =>
+        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
+          questionEntry.includes(wrongQuestion)
+        ) && wrongEntries.push(questionEntry)
+    );
+  }
+
+  const finalDataArray = [...dataArray, ...wrongEntries];
+
+  return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };
 
 export default giveRandomRESTAPIQuestion;

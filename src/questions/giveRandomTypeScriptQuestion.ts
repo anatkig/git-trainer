@@ -319,7 +319,20 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
 
   const dataArray = data.split("####").slice(1);
 
-  return dataArray[Math.floor(Math.random() * dataArray.length)];
+  const wrongQuestions = localStorage.getItem("wrong  TypeScript questions");
+  const wrongEntries: string[] = [];
+  if (wrongQuestions) {
+    dataArray.forEach(
+      (questionEntry: string) =>
+        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
+          questionEntry.includes(wrongQuestion)
+        ) && wrongEntries.push(questionEntry)
+    );
+  }
+
+  const finalDataArray = [...dataArray, ...wrongEntries];
+
+  return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };
 
 export default giveRandomTypeScriptQuestion;
