@@ -84,7 +84,7 @@ const giveRandomTypeScriptQuestion = () => {
   - [ ] TypeScript 4.8 
   - [ ] TypeScript 4.6 
   @@
-  ####  Which object-oriented principle TypeScript does not support?
+  #### Q13.Which object-oriented principle TypeScript does not support?
   @@
   - [ ] encapsulation
   - [ ] polymorphism
@@ -312,6 +312,7 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] Record<Keys, Type>
   @@
   #### Q44. Which utility type constructs an object type with property keys are of type Keys, and values are Type?
+  @@
   - [ ] Partial<Type>
   - [ ] Required<Type>
   - [ ] Readonly<Type> 
