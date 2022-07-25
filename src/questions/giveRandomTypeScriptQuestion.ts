@@ -305,6 +305,7 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] Record<Keys, Type>
   @@
   #### Q43. Which utility type constructs a type with all properties of Type set to readonly?
+  @@
   - [ ] Partial<Type>
   - [ ] Required<Type>
   - [x] Readonly<Type> 
