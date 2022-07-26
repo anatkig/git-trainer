@@ -1021,6 +1021,20 @@ const giveRandomGitQuestion = () => {
         - [ ]  it requires no Git-specific effort on the developer's side during the transport process
         - [ ]  it requires no Git-specific logic on the client side during the transport process
         - [ ]   it requires no Git-specific code on the server side during the uploading process
+    @@
+    #### Q126. Git was created by Linus Torvalds in?
+    @@
+    - [x] 2005
+    - [ ] 2004
+    - [ ] 2006
+    - [ ] 2007
+    @@
+    #### Q127. To unstage files we should use git <?> --staged <file>.
+    @@
+    - [x] restore
+    - [ ] reset
+    - [ ] remove
+    - [ ] rm
     `;
 
   const dataArray = data.split("####").slice(1);
