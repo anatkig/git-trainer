@@ -638,7 +638,7 @@ const giveRandomHTMLQuestion = () => {
   - [ ] 'keyboard'
   - [ ] 'access'
 @@
-  #### Q42. What is the correct way to code a link that, when clicked, will send an email to 'email@@example.com' with a subject of "Hello"?
+  #### Q42. What is the correct way to code a link that, when clicked, will send an email to 'email@example.com' with a subject of "Hello"?
 @@
   - [ ] '<a href="mailto:email@@example.com&subject=Hello">Click me</a>'
   - [ ] '<a href="mailto:email@@example.com">Hello</a>'
