@@ -915,7 +915,7 @@ const giveRandomHTMLQuestion = () => {
   - [ ] '//this is a comment'
   - [ ] '/* this is a comment */'
   - [ ] '<! this is a comment ->'
-  - [x] '<!-- this is a comment -->'
+  - [x] '<!--this is a comment-->'
 @@
   #### Q59. Which statement is **false**?
 @@
