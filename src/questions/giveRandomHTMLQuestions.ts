@@ -417,13 +417,13 @@ const giveRandomHTMLQuestion = () => {
   - [x] A
   '''html
   <a id="top"></a>
-  <!-- placed at the top of the page -->
+  <!--placed at the top of the page-->
   <a href="#top">back to top</a>
   '''
   - [ ] B
   '''html
   <a name="top"></a>
-  <!-- placed at the top of the page -->
+  <!--placed at the top of the page-->
   <a href="#top">back to top</a>
   '''
   - [ ] C
