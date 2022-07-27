@@ -1912,7 +1912,96 @@ const giveRandomCSSQuestion = () => {
         ':hover' styles are applied on mouse over.
         ':focus' styles are applied when a Tab key on a keyboard is used to navigate through links.
 @@
-  [Reference](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes)`;
+  [Reference](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes)
+@@
+ ### Q128. Which CSS property allows you to specify an image to be used instead of the normal border around an element?
+ @@
+ - [x] border-image
+ - [ ] border-picture
+ - [ ] border-background
+ - [ ] border-bgimage
+ @@
+ #### Q129. Which is correct CSS statement to define blue background color with opacity?
+ @@
+ - [x] background-color: rgba(0, 0, 255, 0.3)
+ - [ ] background-color: rgba(0, 0, 255, 255)
+ - [ ] background-color: rgba(0, 255, 255, 0.3)
+ - [ ] background-color: rgba(0, 0, 1, 0.3)
+ @@
+ #### Q130. HSL color value stands for_____.
+ @@
+  - [x] Hue, Saturation and Lightness
+  - [ ] Hex, Saturation and Lightness
+  - [ ] Hex, Solid and Lightness
+  - [ ] Hue, Solid and Lightness
+  @@
+  #### Q131. What is Hue in HSL color value?
+  @@
+  - [x] Hue is a degree on the color wheel (from 0 to 360)
+  - [ ] Hue is a degree on the color wheel (from 0 to 90)
+  - [ ] Hue is a degree on the color wheel (from 0 to 180)
+  - [ ] Hue is a special color name
+  @@
+  #### Q132. Which is the correct HSL value for green color?
+  @@
+  - [x] background-color: hsl(120, 100%, 50%)
+  - [ ] background-color: hsl(180, 100%, 50%)
+  - [ ] background-color: hsl(360, 100%, 50%)
+  - [ ] background-color: hsl(0, 100%, 50%)
+  @@
+  #### Q133. What are the HSLA color values?
+  @@
+  - [x] hsla(hue, saturation, lightness, alpha)
+  - [ ] hsla(hex, saturation, lightness, alpha)
+  - [ ] hsla(hex, solid, lightness, alpha)
+  - [ ] hsla(hue, solid, lightness, alpha)
+  @@
+  Explanation:
+
+An HSLA color value is specified with: hsla(hue, saturation, lightness, alpha), where the alpha parameter defines the opacity.
+@@
+#### Q134. Which is the correct HSLA value for green color with fully transparent?
+@@
+- [x] hsla(120, 100%, 50%, 1.0)
+- [ ] hsla(360, 100%, 50%, 0.3)
+- [ ] hsla(120, 100%, 50%, 0.1)
+- [ ] hsla(360, 100%, 100%, 0.3)
+@@
+#### Q135. Which keyword is like a variable that holds the current value of the color property of an element?
+@@
+- [x] currentcolor
+- [ ] color
+- [ ] current_color
+- [ ] elementcolor
+@@
+Example: 
+
+div.example1 {
+  color: #006969;
+  border: 2px solid currentcolor;
+}
+@@
+#### Q136. What are the names of different gradients in CSS?
+@@
+- [x] Linear Gradients, Radial Gradients, and Conic Gradients
+- [ ] Linear Gradients, Vertical Gradients, and Corner Gradients
+- [ ] Horizontal Gradients, Vertical Gradients, and Conic Gradients
+- [ ] Linear Gradients, Radial Gradients, Vertical Gradients, and Conic Gradients
+@@
+#### Q137. Which gradients define the color by their center?
+@@
+- [x] Radial Gradients
+- [ ] Linear Gradients
+- [ ] Conic Gradients
+- [ ] Both Linear and Radial  
+@@
+#### @138. Which gradients rotate color around a center point?
+@@
+- [x] Conic Gradients
+- [ ] Linear Gradients
+- [ ] Radial Gradients
+- [ ] Both Linear adn Radial
+  `;
 
   const dataArray = data.split("####").slice(1);
   const wrongQuestions = localStorage.getItem("wrong  CSS questions");
