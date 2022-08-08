@@ -77,7 +77,7 @@ const giveRandomTypeScriptQuestion = () => {
   - [ ] Impose coding guidelines
   - [x] All of the above
   @@
-  #### Q12.What are the prerequisites to install TypeScript?
+  #### Q12. What is the latest version of typescript?
   @@
   - [x] TypeScript 4.7 
   - [ ] TypeScript 4.5 
@@ -105,6 +105,11 @@ const giveRandomTypeScriptQuestion = () => {
   - [ ] can be used to create mapped types
   - [ ] have implicit index signature
   @@
+  “declaration merging” means that the compiler merges two separate declarations declared with the same name into a single definition. 
+  This merged definition has the features of both of the original declarations.
+   Any number of declarations can be merged; it’s not limited to just two declarations.
+   At the most basic level, the merge mechanically joins the members of both declarations into a single interface with the same name.
+   @@
   #### Q16.Which keyword can internal modules use in TypeScript?
   @@
   - [ ] module
@@ -168,12 +173,18 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] one possible way to write a comment
   - [ ] is widely used
   @@
+  The contents of the comment are used as compiler directives.
+  e.g.: /// <reference path="..." /> - serves as a declaration of dependency between files. 
+  Triple-slash is outdated. Better to use tsconfig.json instead.
+  @@
   #### Q24. What is tsd?
   @@
   - [ ] TypeScript Definition Module
   - [ ] TypeScript Definition Maker
   - [ ] TypeScript Declaration Manager
   - [x] TypeScript Definition Manager
+  @@
+  TSD is a package manager to search and install TypeScript definition files directly from the community driven DefinitelyTyped repository.
   @@
   #### Q25. Which JSX module has .jsx files as an outcome?
   @@
@@ -212,6 +223,9 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] No
   - [ ] Yes, partially
   @@
+  You can have multiple functions with the same name but different parameter types and return type. 
+  However, the number of parameters should be the same.
+  @@
   #### Q30.You want to use a third party code (possible JS without types). 
   TypeScript doesn't like the lack of types. How do you make TypeScript accept the code?
   @@
@@ -219,6 +233,8 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] let module: any
   - [ ] this is not possible
   - [x] declare let module: any
+  @@
+  declare specifies a type to an already existing variable, not declaring a new one.
   @@
   #### Q31. What is a TypeScipt data type that allows us to define a set of named constants?
   @@
@@ -317,11 +333,19 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] Required<Type>
   - [ ] Readonly<Type> 
   - [x] Record<Keys, Type>
+  @@
+  #### Q45. A <?> is a special kind of declaration that can be attached to a class declaration, method, accessor, property, or parameter. 
+  <?> use the form @expression, where expression must evaluate to a function that will be called at runtime with information about the decorated declaration.
+  @@
+  - [x] Decorator
+  - [ ] Insulator
+  - [ ] Property type
+  - [ ] Access Modifier
 `;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  TypeScript questions");
+  const wrongQuestions = localStorage.getItem('wrong  TypeScript questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(
