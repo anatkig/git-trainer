@@ -341,6 +341,75 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] Insulator
   - [ ] Property type
   - [ ] Access Modifier
+  @@
+  ####Q46.You can disable implicit variable type assignment by enabling the compiler option: ?
+  @@
+  - [x] noImplicitAny  
+  - [ ] noAutoType  
+  - [ ] autoTypeAssignment = FALSE
+  - [ ] Implicit = FALSE
+  @@
+  ####Q47. True or False: Generics can not be assigned default values.
+  @@
+  - [x] False  
+  - [ ] True
+  @@
+  ####Q48. TypeScript is a ?
+  @@
+  - [x] All of the above
+  - [ ] compiled language
+  - [ ] object oriented
+  - [ ] strongly typed
+  @@
+  ####Q49. How many components typescript has?
+  @@
+  - [x] 3
+  - [ ] 2
+  - [ ] 4
+  - [ ] 5
+  @@
+  At its heart, TypeScript has the following three components : Language, The TypeScript Compiler and The TypeScript Language Service.
+  @@
+  ####Q50. TypeScript is <?> framework.
+  @@
+  - [x] Open-sourced
+  - [ ] Commercial
+  - [ ] Licensed
+  - [ ] Both Commercial and Licensed
+  @@
+  ####Q51. <?> command is used to generate a JavaScript file from a TypeScript file.
+  @@
+  - [x] tsc fileName.ts
+  - [ ] npm filename.ts
+  - [ ] tsc -js fileName.ts
+  - [ ] All of the above
+  @@
+  ####Q52. Which of the following is a valid union type variable?
+  @@
+  - [x] var emp: (number|string) = 123;
+  - [ ] var emp: [number, string] = [1, "Steve"];
+  - [ ] var emp: string[] = ["Bill"]
+  - [ ] None of the above
+  @@
+  ####Q53. Which of the following is a valid tuple?
+  @@
+  - [x] var employee: [number, string] = [1, "Bill"]
+  - [ ] var employee: (number, string) = 123;
+  - [ ] var employee = [1, "Bill"];
+  - [ ] None of the above
+  @@
+  ####Q54. Which of the following statement is TRUE?
+  @@
+  - [x] All of the above
+  - [ ] An interface can extend another interface in TypeScript.
+  - [ ] An interface can extend a class in TypeScript.
+  - [ ] TypeScript interface does not generate any JavaScript code.
+  @@
+  ####Q55. Which of the following command is used to compile a module?
+  - [x] Both, A and B
+  - [ ] None of the above
+  - [ ] tsc --module amd mymodule.ts
+  - [ ] tsc -m amd mymodule.ts
 `;
 
   const dataArray = data.split('####').slice(1);
