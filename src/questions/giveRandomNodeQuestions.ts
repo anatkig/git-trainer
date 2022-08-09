@@ -8,7 +8,7 @@ const giveRandomNodeQuestion = () => {
   - [ ] the poll phase
   - [ ] the events queue
 @@
-  **Explanation:** From javascripttutorial: [reference](https://www.javascripttutorial.net/javascript-call-stack/#:~:text=If%20a%20function%20calls%20another,top%20of%20the%20call%20stack.)
+  **Explanation:** If a function calls another function, the JavaScript engine creates a new function execution context for the function that is being called and pushes it on top of the call stack.
 @@
   #### Q2. Which of the following is a core module in Node?
 @@
@@ -17,8 +17,6 @@ const giveRandomNodeQuestion = () => {
   - [ ] request
   - [ ] chalk
 @@
-  **Explanation:** From flaviocopes docs: [reference](https://flaviocopes.com/node-core-modules/)
-@@
   #### Q3. Which of the following Buffer class methods returns an uninitialized buffer?
 @@
   - [x] allocUnsafe
@@ -26,7 +24,7 @@ const giveRandomNodeQuestion = () => {
   - [ ] from
   - [ ] alloc
 @@
-  **Explanation:** From official docs: [reference](https://nodejs.org/dist/latest-v13.x/docs/api/buffer.html#buffer_class_method_buffer_allocunsafe_size)
+  **e.g.:** const buf3 = Buffer.allocUnsafe(10);
 @@
   #### Q4. Which of the following modules is NOT a built-in module in Node?
 @@
@@ -35,8 +33,6 @@ const giveRandomNodeQuestion = () => {
   - [ ] dgram
   - [ ] http2
 @@
-  **Explanation:** From flaviocopes docs: [reference](https://flaviocopes.com/node-core-modules/)
-@@
   #### Q5. Which fs module method can be used to read the content of a file without buffering it in memory?
 @@
   - [ ] read
@@ -44,8 +40,7 @@ const giveRandomNodeQuestion = () => {
   - [x] createReadStream
   - [ ] readFileSync
 @@
-  **Explanation:** _From official docs: [reference](https://nodejs.org/api/fs.html#fs_dir_read)
-  To minimize memory costs, when possible prefer streaming via fs.createReadStream()._
+  To minimize memory costs, when possible prefer streaming via fs.createReadStream()
 @@
   #### Q6. Which of the following DNS module methods uses the underlying OS facilities and does not necessarily perform any network communication?
 @@
@@ -54,7 +49,11 @@ const giveRandomNodeQuestion = () => {
   - [ ] resolve4
   - [ ] reverse
 @@
-  **Explanation:** From official docs: [reference](https://nodejs.org/api/dns.html#dns_dns_lookup_hostname_options_callback)
+  **Explanation:** dns.lookup() does not necessarily have anything to do with the DNS protocol. 
+  The implementation uses an operating system facility that can associate names with addresses and vice versa. 
+  **e.g.:** dns.lookup('example.com', options, (err, address, family) =>
+  console.log('address: %j family: IPv%s', address, family));
+// address: "2606:2800:220:1:248:1893:25c8:1946" family: IPv6
 @@
   #### Q7. How do you check that a value is a date object in Node?
 @@
@@ -63,8 +62,6 @@ const giveRandomNodeQuestion = () => {
   - [ ] console.isDate(value)
   - [ ] util.date(value)
 @@
-  **Explanation:** From official docs: [reference](https://nodejs.org/api/util.html#util_util_types_isdate_value)
-@@
   #### Q8. Can you create an https web server with Node.js?
 @@
   - [ ] no, there are no modules supporting it yet
@@ -72,7 +69,7 @@ const giveRandomNodeQuestion = () => {
   - [ ] yes, through the path module
   - [ ] yes, with the http module
 @@
-  **Explanation:** From official docs: [reference](https://nodejs.dev/learn/making-http-requests-with-nodejs)
+  **e.g.:** const https = require('https');
 @@
   #### Q9. What is the Api that is designed to insulate Addons from changes in the underlying JavaScript engine?
 @@
@@ -81,7 +78,8 @@ const giveRandomNodeQuestion = () => {
   - [x] N-API
   - [ ] X-API
 @@
-  **Explanation:** From official docs: [reference](https://nodejs.org/api/n-api.html#n_api_node_api)
+  **Explanation:** Node-API (formerly N-API) is an API for building native Addons.
+   It is independent from the underlying JavaScript runtime (for example, V8) and is maintained as part of Node.js itself.
 @@
   #### Q10. Which CLI option can you use to debug a node script in Chrome DevTools?
 @@
@@ -291,7 +289,7 @@ const giveRandomNodeQuestion = () => {
   - [ ] once
   - [ ] off
 @@
-  #### Q34. Which special object is an instance of EventEmitter?Which special object is an instance of null?
+  #### Q34. Which special object is an instance of EventEmitter?
 @@
   - [x] process
   - [ ] Buffer
@@ -300,7 +298,7 @@ const giveRandomNodeQuestion = () => {
 @@
   [Reference](https://nodejs.org/docs/latest-v16.x/api/process.html)
 @@
-  #### Q35. What is the command to get a list of available commands for Node.js?What is the command to get a list of available commands for Node.js?
+  #### Q35. What is the command to get a list of available commands for Node.js?
 @@
   - [ ] node index.js -x
   - [ ] node -v
@@ -320,6 +318,10 @@ const giveRandomNodeQuestion = () => {
   - [ ] 'exports, process, require, module, __filename, __dirname'
   - [ ] 'exports, module, __filename, __dirname'
   - [x] 'exports, require, module, __filename, __dirname'
+@@
+**e.g.:** (function (exports, require, module, __filename, __dirname) {
+  //module code
+});
 @@
   #### Q38. Which library provides Node.js with the event loop?
 @@
@@ -397,6 +399,9 @@ const giveRandomNodeQuestion = () => {
   - [x] async_hooks
   - [ ] dgram
   - [ ] inspector
+@@
+As stated earlier, the Async Hooks class is a core Node.js module that provides an API for tracking asynchronous resources in your Node.js application. 
+This also includes tracking of resources created by native Node modules such as fs and net.
 @@
   #### Q49. Which Node.js module should you use when you need to decode raw data into strings?
 @@
@@ -632,6 +637,46 @@ var util = require('util');
   - [ ] format() 
   - [x] emmulate() 
   - [ ] inherits() 
+  @@
+  ####Q77. What is DNS?
+  @@
+  - [x] Domain Name System
+  - [ ] Distributed Name System
+  - [ ] Distance Number System
+  - [ ] None of it
+  @@
+  ####Q78. How does DNS(Domain Name System) work?
+  @@
+  The process of DNS resolution involves converting a <?> into a computer-friendly IP address (such as 192.168.1.1).
+  @@
+  - [x] hostname (such as www.example.com)
+  - [ ] sitename (such as www.example.com)
+  - [ ] resourcename (such as www.example.com)
+  - [ ] domainname (such as www.example.com)
+  @@
+  ####Q79. Under the hood, NodeJS does not run our code directly, it wraps the entire code inside a function before execution.
+   This function is termed as <?>
+   @@
+   - [x]  Module Wrapper Function
+   - [ ]  Model Wrapper Function
+   - [ ]  Wrapper Function
+   - [ ]  The correct name is not provided here
+   @@
+   ####Q80. What returns the string that identifies the underlying architecture, like arm, x64, arm64?
+   @@
+   - [x] os.arch()
+   - [ ] os.cpus()
+   - [ ] os.endianness()
+   - [ ] os.freemem()
+   @@
+   An ARM-based CPU is a family of processors based on reduced instruction set computer (RISC) architecture
+   @@
+   ####Q81. What returns the number of bytes that represent the available memory in the system.
+   @@
+   - [x] os.freemem()
+   - [ ] os.homedir()
+   - [ ] os.loadavg()
+   - [ ] os.platform()
   `;
 
   const dataArray = data.split('####').slice(1);
