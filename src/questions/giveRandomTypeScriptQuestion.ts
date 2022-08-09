@@ -416,7 +416,7 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
 
   const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem('wrong  TypeScript questions');
+  const wrongQuestions = localStorage.getItem('wrong TypeScript questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

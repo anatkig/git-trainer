@@ -1700,9 +1700,9 @@ const giveRandomHTMLQuestion = () => {
 @@
   [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)`;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  HTML questions");
+  const wrongQuestions = localStorage.getItem('wrong HTML questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

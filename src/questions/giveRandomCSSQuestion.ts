@@ -2003,8 +2003,8 @@ div.example1 {
 - [ ] Both Linear adn Radial
   `;
 
-  const dataArray = data.split("####").slice(1);
-  const wrongQuestions = localStorage.getItem("wrong  CSS questions");
+  const dataArray = data.split('####').slice(1);
+  const wrongQuestions = localStorage.getItem('wrong CSS questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

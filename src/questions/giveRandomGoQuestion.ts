@@ -633,9 +633,9 @@ func main() {
 - [ ] 1 [2,3]
   `;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  Go questions");
+  const wrongQuestions = localStorage.getItem('wrong Go questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

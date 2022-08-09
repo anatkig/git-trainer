@@ -350,9 +350,9 @@ const giveRandomDockerQuestion = () => {
   - [ ] Docker Background Manager
   - [x] Docker Daemon`;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  Docker questions");
+  const wrongQuestions = localStorage.getItem('wrong Docker questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

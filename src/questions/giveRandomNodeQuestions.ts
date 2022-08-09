@@ -634,9 +634,9 @@ var util = require('util');
   - [ ] inherits() 
   `;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  Node questions");
+  const wrongQuestions = localStorage.getItem('wrong Node questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

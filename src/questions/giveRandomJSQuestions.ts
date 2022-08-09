@@ -1806,9 +1806,9 @@ var flagDatabase = JSON.parse(flagsJSON);
 - [ ] flagDatabase[1].flag
 - [ ] flagsJSON.countries[0].flag`;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  JS questions");
+  const wrongQuestions = localStorage.getItem('wrong JS questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

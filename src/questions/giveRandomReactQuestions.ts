@@ -1143,9 +1143,9 @@ const giveRandomReactQuestion = () => {
   [Reference](https://javascript.info/destructuring-assignment)
   `;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  React questions");
+  const wrongQuestions = localStorage.getItem('wrong React questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

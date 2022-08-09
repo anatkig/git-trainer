@@ -1037,9 +1037,9 @@ const giveRandomGitQuestion = () => {
     - [ ] rm
     `;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  Git questions");
+  const wrongQuestions = localStorage.getItem('wrong Git questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(

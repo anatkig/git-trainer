@@ -493,9 +493,9 @@ const giveRandomRESTAPIQuestion = () => {
 - [ ] A,D,G,H
 - [ ] A,C,E,G`;
 
-  const dataArray = data.split("####").slice(1);
+  const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem("wrong  RESTAPI questions");
+  const wrongQuestions = localStorage.getItem('wrong RESTAPI questions');
   const wrongEntries: string[] = [];
   if (wrongQuestions) {
     dataArray.forEach(
