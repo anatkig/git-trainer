@@ -154,6 +154,7 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] let employee = { }<Employee> ; 
   @@
   #### Q21. What keyword is used for type assertion in JSX?
+  @@
   - [ ] in
   - [ ] <T>
   - [x] as
@@ -406,6 +407,7 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] TypeScript interface does not generate any JavaScript code.
   @@
   ####Q55. Which of the following command is used to compile a module?
+  @@
   - [x] Both, A and B
   - [ ] None of the above
   - [ ] tsc --module amd mymodule.ts
