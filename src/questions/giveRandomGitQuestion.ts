@@ -1035,6 +1035,13 @@ const giveRandomGitQuestion = () => {
     - [ ] reset
     - [ ] remove
     - [ ] rm
+    @@
+    #### Q128. How to delete branch in Git if it has already been pushed and merged with the remote branch?
+    @@
+    - [x] git branch -d <branch>
+    - [ ] git branch -D <branch>
+    - [ ] git delete <branch>
+    - [ ] git branch -del <branch>
     `;
 
   const dataArray = data.split('####').slice(1);
