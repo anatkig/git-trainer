@@ -491,7 +491,70 @@ const giveRandomRESTAPIQuestion = () => {
 - [x] A,B,E,H
 - [ ] B,C,F,G
 - [ ] A,D,G,H
-- [ ] A,C,E,G`;
+- [ ] A,C,E,G
+@@
+####Q65. REST stands for ?
+@@
+- [x] REpresentational State Transfer
+- [ ] REpresentatative State Transfer
+- [ ] REliable State Transfer
+- [ ] REasonal State Transfer
+@@
+####Q66. What is missing in these Guiding Principles of REST?
+@@
+Uniform Interface
+Client-Server
+Stateless
+Layered System
+Code on Demand
+@@
+- [x] Cacheable
+- [ ] Code on Demand
+- [ ] Layered System
+- [ ] Self-descriptive
+@@
+####Q67. What is missing in these Guiding Principles of REST?
+@@
+Uniform Interface
+Stateless
+Cacheable
+Layered System
+Code on Demand
+@@
+- [x] Client-Server
+- [ ] principle of generality
+- [ ] Layered System
+- [ ] Self-descriptive
+@@
+####Q68. What is missing in these Guiding Principles of REST?
+@@
+Client-Server
+Stateless
+Cacheable
+Layered System
+Code on Demand
+@@
+- [x] Uniform Interface
+- [ ] principle of generality
+- [ ] Layered System
+- [ ] Self-descriptive
+@@
+####Q69. The <?> constraint requires that a response should implicitly or explicitly label itself as <?> or non-<?>.
+If the response is <?>, the client application gets the right to reuse the response data later for equivalent requests and a specified period.
+@@
+- [x] cacheable
+- [ ] stateless
+- [ ] uniform
+- [ ] skalable
+@@
+####Q70. The <?> style allows an architecture to be composed of hierarchical layers by constraining component behavior.
+For example, in a <?>, each component cannot see beyond the immediate layer they are interacting with.
+@@
+- [x] layered system
+- [ ] cacheable
+- [ ] uniform interface
+- [ ] client-server
+`;
 
   const dataArray = data.split('####').slice(1);
 
