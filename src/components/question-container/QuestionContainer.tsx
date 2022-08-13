@@ -1,23 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import giveRandomQuestion from "../../questions/giveRandomQuestion";
-import FrontCounter from "../front-counter/FrontCounter";
-import "./question-container.css";
+import React, { useEffect, useRef, useState } from 'react';
+import giveRandomQuestion from '../../questions/giveRandomQuestion';
+import FrontCounter from '../front-counter/FrontCounter';
+import './question-container.css';
 
 const QuestionContainer = ({ topic }: { topic: string }) => {
   document.onkeydown = (event) => {
-    const answerOptions = document.querySelectorAll(".answer-option button");
+    const answerOptions = document.querySelectorAll('.answer-option button');
     const key = Number(event.key);
     if (answerOptions[key - 1]) {
       answerOptions[key - 1].dispatchEvent(
-        new MouseEvent("click", {
+        new MouseEvent('click', {
           view: window,
           bubbles: true,
           cancelable: true,
         })
       );
-    } else if (event.key === " ") {
-      document.querySelector("#next-button")?.dispatchEvent(
-        new MouseEvent("click", {
+    } else if (event.key === ' ') {
+      document.querySelector('#next-button')?.dispatchEvent(
+        new MouseEvent('click', {
           view: window,
           bubbles: true,
           cancelable: true,
@@ -29,7 +29,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   const constantCounters = useRef([0, 0]);
 
   const [todayDate, setTodayDate] = useState(new Date().toDateString());
-  const [showExplanation, setShowExplanation] = useState("none");
+  const [showExplanation, setShowExplanation] = useState('none');
   const [[questionArray, optionsArray, additionToQuestion, explanation], setQuestion] = useState(
     giveRandomQuestion()
   );
@@ -113,9 +113,9 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
       localStorage.setItem(`total${topic}`, JSON.stringify([counterOfCorrect, 1]));
     }
 
-    setShowExplanation("block");
-    if (!answer.includes("[x]")) {
-      event.currentTarget.setAttribute("style", "background:rgb(255,100,0)");
+    setShowExplanation('block');
+    if (!answer.includes('[x]')) {
+      event.currentTarget.setAttribute('style', 'background:rgb(255,100,0)');
 
       if (wrongQuestions) {
         localStorage.setItem(
@@ -147,7 +147,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   const handleNextButtonClick = () => {
     setQuestion(giveRandomQuestion());
     setAnswerMode(false);
-    setShowExplanation("none");
+    setShowExplanation('none');
   };
   return (
     <div id="question-container">
@@ -155,7 +155,11 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
       <div id="question">{questionArray[0]}</div>
       <div id="addition-to-question">
         {additionToQuestion.map((addition: string, index: number) => (
-          <div key={addition + index}>{addition}</div>
+          <div key={addition + index}>
+            {addition.split('\n').map((line) => (
+              <div key={line}>{line}</div>
+            ))}
+          </div>
         ))}
       </div>
       <div id="answers">
@@ -166,10 +170,10 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
                 <button
                   onClick={(event: React.MouseEvent) => handleAnswerButtonClick(event, answer)}
                   style={{
-                    background: answerMode && answer.includes("[x]") ? "lightgreen" : "",
+                    background: answerMode && answer.includes('[x]') ? 'lightgreen' : '',
                   }}
                 >
-                  {answer.slice(answer.indexOf("]") + 1)}
+                  {answer.slice(answer.indexOf(']') + 1)}
                 </button>
               </li>
             ))}

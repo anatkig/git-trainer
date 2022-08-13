@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(8px + 2vmin);
   color: white;
   box-sizing: border-box;
 }
@@ -13,7 +13,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  row-gap: 2rem;
+  row-gap: 1rem;
   column-gap: 4rem;
   margin: 1rem 0;
 }
@@ -31,7 +31,7 @@
 .topic {
   display: flex;
   margin: 1vmin;
-  padding: 1%;
+  padding: 0.5%;
 
   background: rgb(0, 0, 200);
   cursor: pointer;
