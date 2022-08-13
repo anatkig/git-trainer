@@ -1804,8 +1804,78 @@ var flagDatabase = JSON.parse(flagsJSON);
 - [ ] flagDatabase.countries[1].flag
 - [x] flagDatabase.countries[0].flag
 - [ ] flagDatabase[1].flag
-- [ ] flagsJSON.countries[0].flag`;
-
+- [ ] flagsJSON.countries[0].flag
+@@
+#### Q131. What  will  the following code print to the console?
+@@
+'''js
+function myFunction() {
+  this.value = 5
+}
+console.log(myFunction.prototype)
+'''
+@@
+- [x] {constructor: ƒ}
+- [ ] {}
+- [ ] undefined
+- [ ] {constructor.prototype}
+@@
+#### Q132. What  will  the following code print to the console?
+@@
+'''js
+const myArrowFunction = () => {}
+console.log(myArrowFunction.prototype)
+'''
+@@
+- [x] undefined
+- [ ] {constructor: ƒ}
+- [ ] {constructor.prototype}
+- [ ] {}
+@@
+#### Q133. Arrow Functions Have No <?>?
+@@
+- [x] constructor
+- [ ] collee
+- [ ] lexical scope
+- [ ] non of these
+#### Q134. Arrow Functions can <?> without <?> keyword.
+@@
+- [x] return
+- [ ] new
+- [ ] function
+- [ ] this
+@@
+#### Q135. Arrow functions do not have their own <?> binding. Instead, they go up to the next level of execution.
+It can be useful to use the arrow function in cases where you really want <?> to refer to the outer context. 
+For example, if you had an event listener inside of a class, you would probably want <?> to refer to some value in the class.
+@@
+- [x] this
+- [ ] bind
+- [ ] new
+- [ ] implicit
+@@
+#### Q136. In the browser, there is a special this context for event handlers.
+ In an event handler called by addEventListener, this will refer to <?>.
+ @@
+ - [x] event.currentTarget
+ - [ ] event
+ - [ ] event.target
+ - [ ] event.target.value
+ @@
+ #### Q137. The first difference between Map and WeakMap is ?
+ @@
+ - [x] that keys must be objects, not primitive values
+ - [ ] that keys may be objects, not primitive values
+ - [ ] that keys may be objects and primitive values
+ - [ ] that keys must be primitive values, not objects
+ @@
+ #### Q138. WeakSet is analogous to Set, but we may only add?
+ @@
+ - [x] objects to WeakSet (not primitives)
+ - [ ] objects to Set (not primitives)
+ - [ ] primitives to WeakSet
+ - [ ] weak objects
+`;
   const dataArray = data.split('####').slice(1);
 
   const wrongQuestions = localStorage.getItem('wrong JS questions');
