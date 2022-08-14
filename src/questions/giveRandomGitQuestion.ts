@@ -1044,6 +1044,150 @@ const giveRandomGitQuestion = (dataBlockNumber: number) => {
     - [ ] git branch -D <branch>
     - [ ] git delete <branch>
     - [ ] git branch -del <branch>
+    #### Q129. What is the difference between annotated and non-annotated tags?
+    @@
+    - [x] Annotated tags can hold extra information about themselves (tag metadata, release notes, security signatures), whereas non-annotated tags serve just as a pointer for a commit. 
+    - [ ] Annotated tags cannot hold extra information about themselves (tag metadata, release notes, security signatures), whereas non-annotated can hold that information within themselves.
+    - [ ] Annotated tags can only be associated with a name in a remote repository, while non-annotated tags can only have a unique identifier.
+    - [ ] Annotated tags point at a commit, while non-annotated tags point at remote repositories.
+    @@
+    #### Q130. Which problem does configuring core.excludesfile solve?
+    @@
+    - [x] It lists all objects that are not meant to be tracked by Git with a reference file
+    - [ ] It removes generated files before pushing a commit
+    - [ ] It rejects commits that include files with proprietary secrets
+    - [ ] It deletes unnecessary files after migrating from other source control systems to Git
+    @@
+    #### Q131. What command would you use to remove file2.txt from the working tree as well as the index and then stage the deletion to the index?
+    @@
+    - [x] git rm file2.txt
+    - [ ] git reset --hard file2.txt
+    - [ ] git remove file2.txt
+    - [ ] git reset file2.txt
+    @@
+    #### Q132. Which term defines a pointer to a commit in Git?
+    @@
+    - [x] Branch
+    - [ ] Blob
+    - [ ] Tree
+    - [ ] Origin
+    @@
+    #### Q133. Why does Git garbage collect objects?
+    @@ 
+    - [x] To avoid storing unnecessary information or sending it over the network
+    - [ ] To speed up commits
+    - [ ] To guarantee the repository's consistency
+    - [ ] To avoid problems where the same branch points to multiple commits
+    @@
+    #### Q134. What happens when you tag the current branch and then rename it?
+    @@
+    - [x] The tag remains active because it points to a particular commit, not the branch itself.
+    - [ ] You would break the reference in the tag by renaming the commit.
+    - [ ] The tag is garbage-collected.
+    - [ ] Git will update the tag to point to the same branch even if it is renamed.
+    @@
+    #### Q135. You are working on an application used by your company for internal communications and knowledge management. 
+    Your application's current version is v1.3, and your team then pushes their latest changes into the master branch for the new release. How can you label the new release of the project according to the version sequence used in the project and following Git's best practices?
+    @@
+    - [x] git tag -a v1.4
+    - [ ] git label -a v1.4 
+    - [ ] git label v1.4 
+    - [ ] git tag -l v1.4 
+    @@
+    #### Q136. You are working on a project that has two key branches : main and dev . You perform all work on dev and once there is a release, you plan to push the code from dev to main expecting a fast-forward merge commit every time. 
+    Why is this an unreasonable expectation?
+    @@
+    - [x] The merge commit will not be a fast-forward commit every time, because the HEAD of dev is not always a direct descendant of the HEAD on main.
+    - [ ] The merge commit will never be a fast-forward commit, because dev, being the development branch, does not support fast-forward commits by default. 
+    - [ ] The merge commit will never be a fast-forward commit, because main, being the release branch, does not support fast-forward commits by default.
+    - [ ] The merge commit will never be a fast-forward commit, because the HEAD of main is not a direct descendant of the HEAD on dev.
+    @@
+    #### Q137. A developer on your team commits their latest changes and immediately pushes them to the repository. However, they included in their commits a file with sensitive authentication information. 
+    How could they have avoided this situation?
+    @@
+    - [x] By running git status before committing and ensuring that all the staged files are safe to be committed.
+    - [ ] By running git push --status before committing and ensuring that all the staged files are safe to be committed.  
+    - [ ] By running git commit --dry-run -t index before committing and ensuring that all the staged files are safe to be committed.  
+    - [ ] By running git checkup before committing and ensuring that all the staged files are safe to be committed. 
+    @@
+    #### Q138. You are working on a project where keeping a linear repository history is important.
+    One of your teammates pushes their latest changes to the main branch, so you proceed to pull the latest changes using the following command:
+    git pull origin main
+    What is the problem with this approach? 
+    @@
+    - [x] git pull will execute a merge by default, creating merge commits and damaging the linearity of the project's history.
+    - [ ] git pull will execute a rebase by default, creating possible conflicts. 
+    - [ ] git pull will execute a fetch by default, stashing all pending commits and damaging the linearity of the project's history. 
+    - [ ] git pull will hard reset HEAD to the state of the pulled commits by default, overwriting changes in the staging area and in the working directory.  
+    @@
+    #### Q139. When performing a revert on a single commit you encounter the following error:
+    Error: your local changes would be overwritten by revert. 
+    Which command would allow you to proceed with the revert process after committing your local changes? 
+    @@
+    - [x] git revert --continue
+    - [ ] git revert --proceed
+    - [ ] git revert --retry
+    - [ ] git revert --continue <commit>
+    @@
+    #### Q140. How would you force Git to trigger garbage collection?
+    @@
+    - [x] With git gc
+    - [ ] With git runtime --gc
+    - [ ] With git clean
+    - [ ] Use a command that starts it implicitly, such as git push
+    @@
+    #### Q141. Why is the reflog considered a safety net?
+    @@
+    - [x] It maintains references to the old state of objects even if they are not connected to a branch.
+    - [ ] It logs every action on the repository so that administrators can identify errors easily.
+    - [ ] It is persisted across every distributed copy of the repository without user configuration.
+    - [ ] It does not perform any destructive operations.
+    @@
+    #### Q142. How does rebasing affect the history of a repository?
+    @@
+    - [x] Rebasing can modify, delete, or even create a new history.
+    - [ ] Rebasing can only affect superficial data, not the history of the repository.
+    - [ ] Rebasing will erase history, while preserving the previous history in a backup branch.
+    - [ ] Local changes from rebasing are overwritten when pushing to a remote branch.
+    @@
+    #### Q143. Where is the object database located in a Git repository?
+    @@
+    - [x] In the .git/objects folder
+    - [ ] in the .git/db folder
+    - [ ] In the .git/config/objects folder
+    - [ ] In the .git/db/objects folder
+    @@
+    #### Q144. Your team primarily resolves merge conflicts by navigating the standard conflict markers, such as, <<<<<<<, =======, and >>>>>>>, but uses graphical user interface (GUI) applications for all other tasks. What is the most likely explanation for this discrepancy?
+    @@
+    - [x] The team is not aware of merge utilities that are available with git mergetool.
+    - [ ] The team has a pre-commit hook configured to add the markers into the files for quality control.
+    - [ ] The team has not configured its merge conflict settings with git rerere.
+    - [ ] The team performed a rebase on a project, which only allows merges.
+    @@
+    #### Q145. How do you create the first commit in a project?
+    @@
+    - [x] Stage the relevant files and directories and then use git commit.
+    - [ ] Use git init to make Git create it automatically with the message "First commit".
+    - [ ] Use git commit without a commit message because Git automatically gives it the message "First commit".
+    - [ ] Use git commit because Git automatically stages all the files and folders when you use git init.
+    @@
+    #### Q146. You are working on the main branch in your repository that contains a file called app.js. You create a branch called experiments where you run experimental changes to app.js. After a while, you want to bring the changes made to app.js into your main branch, so you run the following command:
+    git switch main
+    git restore --source experiments -- app.js
+    What would be the outcome?
+    @@
+    - [x] This will check out the latest changes of that file on the experiments branch onto your main branch.
+    - [ ] This will merge the file with the latest changes onto your experiments branch. 
+    - [ ] This will create a conflict because the file already exists in your main branch.
+    - [ ] This will rebase the file with the latest changes onto your main branch.
+    @@
+    #### Q147. What command would you use to test pushing the feature/test branch to a remote origin?
+    @@
+    - [x] git push --dry-run origin feature/test
+    - [ ] git push origin feature/test
+    - [ ] git push feature/test origin
+    - [ ] git push --dry-run upstream feature/test
+    @@
     `;
 
   const dataArray = data.split('####').slice(1);
