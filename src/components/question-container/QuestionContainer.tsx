@@ -31,17 +31,26 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   const [todayDate, setTodayDate] = useState(new Date().toDateString());
   const [showExplanation, setShowExplanation] = useState('none');
   const [[questionArray, optionsArray, additionToQuestion, explanation], setQuestion] = useState(
-    giveRandomQuestion()
+    giveRandomQuestion(0)
   );
   const [answerMode, setAnswerMode] = useState(false);
   const [counterOfCorrect, setCounterOfCorrect] = useState(0);
   const [counterOfAttempts, setCounterOfAttempts] = useState(0);
+  const [rightRowCounter, setRightRowCounter] = useState(0);
+  const [dataBlockNumber, setDataBlockNumber] = useState(0);
 
   useEffect(() => {
-    setQuestion(giveRandomQuestion());
+    setQuestion(giveRandomQuestion(dataBlockNumber));
     setCounterOfCorrect(0);
     setCounterOfAttempts(0);
+    setRightRowCounter(0);
   }, [topic]);
+
+  useEffect(() => {
+    if (rightRowCounter % 5 === 0 && rightRowCounter !== 0) {
+      setDataBlockNumber((dataBlockNumber) => dataBlockNumber + 1);
+    }
+  }, [rightRowCounter]);
 
   useEffect(() => {
     setTodayDate(new Date().toDateString());
@@ -115,6 +124,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
 
     setShowExplanation('block');
     if (!answer.includes('[x]')) {
+      setRightRowCounter(0);
       event.currentTarget.setAttribute('style', 'background:rgb(255,100,0)');
 
       if (wrongQuestions) {
@@ -126,6 +136,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
         localStorage.setItem(`wrong ${topic} questions`, JSON.stringify([questionArray[0]]));
       }
     } else {
+      setRightRowCounter((rightRowCounter) => rightRowCounter + 1);
       if (wrongQuestions) {
         const wrongQuestionsFiltered = JSON.parse(wrongQuestions).filter(
           (question: string) => question !== questionArray[0]
@@ -145,7 +156,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
     setAnswerMode(true);
   };
   const handleNextButtonClick = () => {
-    setQuestion(giveRandomQuestion());
+    setQuestion(giveRandomQuestion(dataBlockNumber));
     setAnswerMode(false);
     setShowExplanation('none');
   };

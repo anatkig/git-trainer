@@ -1,4 +1,6 @@
-const giveRandomDockerQuestion = () => {
+import randomQuestionLogic from '../utils/randomQuesionLogic';
+
+const giveRandomDockerQuestion = (dataBlockNumber: number) => {
   const data = `
   #### Q1. What is a Dockerfile?
   @@
@@ -352,18 +354,7 @@ const giveRandomDockerQuestion = () => {
 
   const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem('wrong Docker questions');
-  const wrongEntries: string[] = [];
-  if (wrongQuestions) {
-    dataArray.forEach(
-      (questionEntry: string) =>
-        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
-          questionEntry.includes(wrongQuestion)
-        ) && wrongEntries.push(questionEntry)
-    );
-  }
-
-  const finalDataArray = [...dataArray, ...wrongEntries];
+  const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
 
   return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };

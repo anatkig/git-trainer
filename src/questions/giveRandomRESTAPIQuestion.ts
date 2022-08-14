@@ -1,4 +1,6 @@
-const giveRandomRESTAPIQuestion = () => {
+import randomQuestionLogic from '../utils/randomQuesionLogic';
+
+const giveRandomRESTAPIQuestion = (dataBlockNumber: number) => {
   const data = `
 #### Q1. What type of relationship is defined as one resource existing only if another parent resource exist-for example, pages in a book?
 @@
@@ -558,18 +560,7 @@ For example, in a <?>, each component cannot see beyond the immediate layer they
 
   const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem('wrong RESTAPI questions');
-  const wrongEntries: string[] = [];
-  if (wrongQuestions) {
-    dataArray.forEach(
-      (questionEntry: string) =>
-        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
-          questionEntry.includes(wrongQuestion)
-        ) && wrongEntries.push(questionEntry)
-    );
-  }
-
-  const finalDataArray = [...dataArray, ...wrongEntries];
+  const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
 
   return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };

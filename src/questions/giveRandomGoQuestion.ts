@@ -1,4 +1,6 @@
-const giveRandomGoQuestion = () => {
+import randomQuestionLogic from '../utils/randomQuesionLogic';
+
+const giveRandomGoQuestion = (dataBlockNumber: number) => {
   const data = `
   #### Q1. What do you need for two functions to be the same type?
 @@
@@ -635,18 +637,7 @@ func main() {
 
   const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem('wrong Go questions');
-  const wrongEntries: string[] = [];
-  if (wrongQuestions) {
-    dataArray.forEach(
-      (questionEntry: string) =>
-        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
-          questionEntry.includes(wrongQuestion)
-        ) && wrongEntries.push(questionEntry)
-    );
-  }
-
-  const finalDataArray = [...dataArray, ...wrongEntries];
+  const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
 
   return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };

@@ -1,4 +1,6 @@
-const giveRandomHTMLQuestion = () => {
+import randomQuestionLogic from '../utils/randomQuesionLogic';
+
+const giveRandomHTMLQuestion = (dataBlockNumber: number) => {
   const data = `
 
   #### Q1. What is the purpose of the '<track>' tag, and when should it be used?
@@ -1702,18 +1704,7 @@ const giveRandomHTMLQuestion = () => {
 
   const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem('wrong HTML questions');
-  const wrongEntries: string[] = [];
-  if (wrongQuestions) {
-    dataArray.forEach(
-      (questionEntry: string) =>
-        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
-          questionEntry.includes(wrongQuestion)
-        ) && wrongEntries.push(questionEntry)
-    );
-  }
-
-  const finalDataArray = [...dataArray, ...wrongEntries];
+  const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
 
   return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };

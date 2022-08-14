@@ -1,4 +1,6 @@
-const giveRandomReactQuestion = () => {
+import randomQuestionLogic from '../utils/randomQuesionLogic';
+
+const giveRandomReactQuestion = (dataBlockNumber: number) => {
   const data = `
 
   #### Q1. If you want to import just the Component from the React library, what syntax do you use?
@@ -1145,18 +1147,7 @@ const giveRandomReactQuestion = () => {
 
   const dataArray = data.split('####').slice(1);
 
-  const wrongQuestions = localStorage.getItem('wrong React questions');
-  const wrongEntries: string[] = [];
-  if (wrongQuestions) {
-    dataArray.forEach(
-      (questionEntry: string) =>
-        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
-          questionEntry.includes(wrongQuestion)
-        ) && wrongEntries.push(questionEntry)
-    );
-  }
-
-  const finalDataArray = [...dataArray, ...wrongEntries];
+  const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
 
   return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };

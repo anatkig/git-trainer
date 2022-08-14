@@ -1,4 +1,6 @@
-const giveRandomCSSQuestion = () => {
+import randomQuestionLogic from '../utils/randomQuesionLogic';
+
+const giveRandomCSSQuestion = (dataBlockNumber: number) => {
   const data = `
   #### Q1. In the following example, which selector has the highest specificity ranking for selecting the anchor link element?
 @@
@@ -2004,18 +2006,8 @@ div.example1 {
   `;
 
   const dataArray = data.split('####').slice(1);
-  const wrongQuestions = localStorage.getItem('wrong CSS questions');
-  const wrongEntries: string[] = [];
-  if (wrongQuestions) {
-    dataArray.forEach(
-      (questionEntry: string) =>
-        JSON.parse(wrongQuestions).some((wrongQuestion: string) =>
-          questionEntry.includes(wrongQuestion)
-        ) && wrongEntries.push(questionEntry)
-    );
-  }
 
-  const finalDataArray = [...dataArray, ...wrongEntries];
+  const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
 
   return finalDataArray[Math.floor(Math.random() * finalDataArray.length)];
 };
