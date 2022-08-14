@@ -633,6 +633,98 @@ func main() {
 - [ ] None of the above
 - [ ] 1 [1,2,3]
 - [ ] 1 [2,3]
+@@
+#### Q60. What types in Go are supported by the range operator?
+@@
+- [x] array, slice, string, map, channel
+- [ ] array, slice, string, map, channel, struct
+- [ ] array, slice, channel
+- [ ] array, slice, map
+@@
+#### Q62. What is correct about initializing a variable in a <code>switch</code> statement?
+@@
+- [x] A new variable can be initialized within the <code>switch</code> statement to be evaluated against the condition in the accompanying cases.
+- [ ] A variable to be used within a <code>switch</code> statement must be declared within the case.
+- [ ] A variable cannot be included within a <code>switch</code> statement, whether the variable is a new statement being initialized or a previously declared variable.
+- [ ] Only an existing variable declared before the <code>switch</code> statement is made can be evaluated against the condition in the accompanying cases.
+@@
+#### Q63. While using <code>html/templates</code> with Go, which control structure can you use in the HTML file to iterate over <code>AllMessages</code> and render each using <code>{{.}}</code>?
+@@
+- [x] <code>{{range .AllMessages}} {{.}} {{end}}</code>
+- [ ] <code>{{for .AllMessages}} {{.render}} {{end}}</code>
+- [ ] <code>{{loop .AllMessages}} {{.}} {{end}}</code>
+- [ ] <code>{{start .AllMessages}} {{.render}} {{end}}</code>
+@@
+#### Q64. What package contains functions that allow files to be opened on the filesystem?
+@@
+- [x] <code>os</code>
+- [ ] <code>path</code>
+- [ ] <code>file</code>
+- [ ] <code>io</code>
+@@
+#### Q65. You have a <code>for</code> loop in a separate function <code>sub</code> along with the rest of the code as follows:
+@@
+- [x] Change <code>x := 6</code> to <code>x = 6</code>.
+- [ ] Convert the <code>sub</code> function into a recursive function without altering the body of the <code>for</code> loop.
+- [ ] After the line <code>x := 6</code>, save the value of <code>x</code> in a new variable <code>t</code> (<code>t := x</code>) and perform <code>t--</code>.
+- [ ] Define <code>x := 6</code> before the <code>for</code> loop inside the function <code>sub</code>.
+@@
+#### Q66. You created a basic function <code>length</code> that returns the length of an array and the main function lets you print the length by calling it inside <code>Println</code> as shown:
+@@
+- [x] You passed only <code>vs</code> inside the function call; replace it with <code>vs...</code>.
+- [ ] You defined the integer array with curly brackets; use round brackets instead.
+- [ ] You defined <code>args ...int</code> inside the function definition; replace it with <code>args int</code>.
+- [ ] You left <code>[]</code> blank while defining the integer array; fill these brackets with <code>...</code>.
+@@
+#### Q67. You stored a user password in a variable <code>passD</code> with value <code>@Uih56roam</code>. The organization policy doesn't allow the program to store the password in its original format. How can you encode the password using <code>base 64 encoding</code>?
+@@
+- [x] Import <code>b64 "encoding/base64"</code> and use <code>b64.StdEncoding.EncodeToString([]byte(passD))</code>
+- [ ] Import <code>"encoding.base64"</code> and use <code>encoding.base64.EncodeToString([]byte(passD))</code>
+- [ ] Import <code>"base64"</code> and use <code>base64.StdEncoding.EncodeToString([]byte(passD))</code>
+- [ ] Import <code>b64 "base64"</code> and use <code>base64.EncodeToString([]byte(passD))</code>
+@@
+#### Q68. Why will the following code panic at runtime?
+@@
+- [x] The jobs channel was not closed, which causes the program to enter into a deadlock.
+- [ ] The jobs channel capacity was not used up.
+- [ ] The <code>fmt</code> package is imported, but never used.
+- [ ] The jobs channel is halted and will continue to be halted until it receives a value from the channel.
+@@
+#### Q69. What is the result of running the <code>go mod vendor</code> command?
+@@
+- [x] It creates a directory <code>vendor</code> that holds the metadata for all the packages
+- [ ] A creates a directory <code>vendorpkgs</code> that holds copies of all the packages
+- [ ] It creates a directory <code>vendor</code> that holds a markdown and a text file
+- [ ] It creates a file <code>vendor/license.md</code> that holds the license information for all the packages
+@@
+#### Q70. Which flag must you add in the command line to find a data race in the program and print a report?
+@@
+- [x] <code>-race</code>
+- [ ] <code>-fsanitize</code>
+- [ ] <code>-gorace</code>
+- [ ] <code>-r</code>
+@@
+#### Q71. You have a slice that consists of six employee IDs. You must drop the ID <code>ID465</code> from the slice. Here's the starter code:
+@@
+- [x] Pass <code>idx := 3</code> and add the following function:
+- [ ] Pass <code>idx := 4</code> and add the following function:
+- [ ] Pass <code>idx := 3</code> and add the following function:
+- [ ] Pass <code>idx := 4</code> and add the following function:
+@@
+#### Q72. What is correct about a type switch in relation to a struct?
+@@
+- [x] A type switch can be performed on structs, in addition to the default types available
+- [ ] A type switch can be performed only on functions
+- [ ] A type switch can only be performed on numeric data types
+- [ ] A type switch can be performed only on the basic, default types
+@@
+#### Q73. What is an interface?
+@@
+- [x] A set of method signatures and a type that can hold any value
+- [ ] A way to communicate and interact with goroutines
+- [ ] A defined set of methods
+- [ ] A set of share library package
+@@
   `;
 
   const dataArray = data.split('####').slice(1);
