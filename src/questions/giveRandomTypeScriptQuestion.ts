@@ -595,7 +595,53 @@ class Departments {
 - [ ] A more efficient alternative to npm for managing package dependencies and package versions, but are limited to TypeScript projects
 - [ ] Dynamic links to external Git repositories containing TypeScript code. The code is cloned locally and built as needed without technically being part of your repository
 @@
+#### Q76. What feature of TypeScript  satisfies these demands?
+@@
+improve code flexibility, make components reusable, remove duplication
+@@
+- [x] Generics
+- [ ] Typing
+- [ ] OOP
+- [ ] Interface
+@@
+#### Q77. What are generic type parameters?
+@@
+- [x] generic types specified inside angle brackets
+- [ ] generic type aliases specified inside angle brackets
+- [ ] generic types arguments
+- [ ] none of these
+@@
+### Q78. These <T, K, A> syntax represents?
+@@
+- [x] multiple generic types in in a single definition
+- [ ] wrong use of generic types
+- [ ] different generic types
+- [ ] none of these
+@@
+Note: By convention, programmers usually use a single letter to name a generic type.
+ This is not a syntax rule, and you can name generics like any other type in TypeScript, but this convention helps to immediately convey to those reading your code that a generic type does not require a specific type.
+@@
+#### Q79. What is wrong here?
+@@
+Generics can appear in functions, types, classes, interfaces, variables. 
+@@
+- [x] variables
+- [ ] types
+- [ ] classes
+- [ ] interfaces
+@@
+#### Q80. Why do we need generics here?
+@@
+function identity<T>(value: T): T {
+  return value;
+}
 
+const result = identity(123);
+@@
+- [x] because in TypeScript without  generics the value would be one single type. So, we wouldn't be able to use any type we want here.
+- [ ] because in TypeScript without generics the value wouldn't work.
+- [ ] because JavaSript, which is  underneath TypeScript, doesn' t allow this.
+- [ ] all of the options are correct
 `;
 
   const dataArray = data.split('####').slice(1);
