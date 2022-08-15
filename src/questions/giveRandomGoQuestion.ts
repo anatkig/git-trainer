@@ -641,75 +641,75 @@ func main() {
 - [ ] array, slice, channel
 - [ ] array, slice, map
 @@
-#### Q62. What is correct about initializing a variable in a <code>switch</code> statement?
+#### Q62. What is correct about initializing a variable in a 'switch' statement?
 @@
-- [x] A new variable can be initialized within the <code>switch</code> statement to be evaluated against the condition in the accompanying cases.
-- [ ] A variable to be used within a <code>switch</code> statement must be declared within the case.
-- [ ] A variable cannot be included within a <code>switch</code> statement, whether the variable is a new statement being initialized or a previously declared variable.
-- [ ] Only an existing variable declared before the <code>switch</code> statement is made can be evaluated against the condition in the accompanying cases.
+- [x] A new variable can be initialized within the 'switch' statement to be evaluated against the condition in the accompanying cases.
+- [ ] A variable to be used within a 'switch' statement must be declared within the case.
+- [ ] A variable cannot be included within a 'switch' statement, whether the variable is a new statement being initialized or a previously declared variable.
+- [ ] Only an existing variable declared before the 'switch' statement is made can be evaluated against the condition in the accompanying cases.
 @@
-#### Q63. While using <code>html/templates</code> with Go, which control structure can you use in the HTML file to iterate over <code>AllMessages</code> and render each using <code>{{.}}</code>?
+#### Q63. While using 'html/templates' with Go, which control structure can you use in the HTML file to iterate over 'AllMessages' and render each using '{{.}}'?
 @@
-- [x] <code>{{range .AllMessages}} {{.}} {{end}}</code>
-- [ ] <code>{{for .AllMessages}} {{.render}} {{end}}</code>
-- [ ] <code>{{loop .AllMessages}} {{.}} {{end}}</code>
-- [ ] <code>{{start .AllMessages}} {{.render}} {{end}}</code>
+- [x] '{{range .AllMessages}} {{.}} {{end}}'
+- [ ] '{{for .AllMessages}} {{.render}} {{end}}'
+- [ ] '{{loop .AllMessages}} {{.}} {{end}}'
+- [ ] '{{start .AllMessages}} {{.render}} {{end}}'
 @@
 #### Q64. What package contains functions that allow files to be opened on the filesystem?
 @@
-- [x] <code>os</code>
-- [ ] <code>path</code>
-- [ ] <code>file</code>
-- [ ] <code>io</code>
+- [x] 'os'
+- [ ] 'path'
+- [ ] 'file'
+- [ ] 'io'
 @@
-#### Q65. You have a <code>for</code> loop in a separate function <code>sub</code> along with the rest of the code as follows:
+#### Q65. You have a 'for' loop in a separate function 'sub' along with the rest of the code as follows:
 @@
-- [x] Change <code>x := 6</code> to <code>x = 6</code>.
-- [ ] Convert the <code>sub</code> function into a recursive function without altering the body of the <code>for</code> loop.
-- [ ] After the line <code>x := 6</code>, save the value of <code>x</code> in a new variable <code>t</code> (<code>t := x</code>) and perform <code>t--</code>.
-- [ ] Define <code>x := 6</code> before the <code>for</code> loop inside the function <code>sub</code>.
+- [x] Change 'x := 6' to 'x = 6'.
+- [ ] Convert the 'sub' function into a recursive function without altering the body of the 'for' loop.
+- [ ] After the line 'x := 6', save the value of 'x' in a new variable 't' ('t := x') and perform 't--'.
+- [ ] Define 'x := 6' before the 'for' loop inside the function 'sub'.
 @@
-#### Q66. You created a basic function <code>length</code> that returns the length of an array and the main function lets you print the length by calling it inside <code>Println</code> as shown:
+#### Q66. You created a basic function 'length' that returns the length of an array and the main function lets you print the length by calling it inside 'Println' as shown:
 @@
-- [x] You passed only <code>vs</code> inside the function call; replace it with <code>vs...</code>.
+- [x] You passed only 'vs' inside the function call; replace it with 'vs...'.
 - [ ] You defined the integer array with curly brackets; use round brackets instead.
-- [ ] You defined <code>args ...int</code> inside the function definition; replace it with <code>args int</code>.
-- [ ] You left <code>[]</code> blank while defining the integer array; fill these brackets with <code>...</code>.
+- [ ] You defined 'args ...int' inside the function definition; replace it with 'args int'.
+- [ ] You left '[]' blank while defining the integer array; fill these brackets with '...'.
 @@
-#### Q67. You stored a user password in a variable <code>passD</code> with value <code>@Uih56roam</code>. The organization policy doesn't allow the program to store the password in its original format. How can you encode the password using <code>base 64 encoding</code>?
+#### Q67. You stored a user password in a variable 'passD' with value '@Uih56roam'. The organization policy doesn't allow the program to store the password in its original format. How can you encode the password using 'base 64 encoding'?
 @@
-- [x] Import <code>b64 "encoding/base64"</code> and use <code>b64.StdEncoding.EncodeToString([]byte(passD))</code>
-- [ ] Import <code>"encoding.base64"</code> and use <code>encoding.base64.EncodeToString([]byte(passD))</code>
-- [ ] Import <code>"base64"</code> and use <code>base64.StdEncoding.EncodeToString([]byte(passD))</code>
-- [ ] Import <code>b64 "base64"</code> and use <code>base64.EncodeToString([]byte(passD))</code>
+- [x] Import 'b64 "encoding/base64"' and use 'b64.StdEncoding.EncodeToString([]byte(passD))'
+- [ ] Import '"encoding.base64"' and use 'encoding.base64.EncodeToString([]byte(passD))'
+- [ ] Import '"base64"' and use 'base64.StdEncoding.EncodeToString([]byte(passD))'
+- [ ] Import 'b64 "base64"' and use 'base64.EncodeToString([]byte(passD))'
 @@
 #### Q68. Why will the following code panic at runtime?
 @@
 - [x] The jobs channel was not closed, which causes the program to enter into a deadlock.
 - [ ] The jobs channel capacity was not used up.
-- [ ] The <code>fmt</code> package is imported, but never used.
+- [ ] The 'fmt' package is imported, but never used.
 - [ ] The jobs channel is halted and will continue to be halted until it receives a value from the channel.
 @@
-#### Q69. What is the result of running the <code>go mod vendor</code> command?
+#### Q69. What is the result of running the 'go mod vendor' command?
 @@
-- [x] It creates a directory <code>vendor</code> that holds the metadata for all the packages
-- [ ] A creates a directory <code>vendorpkgs</code> that holds copies of all the packages
-- [ ] It creates a directory <code>vendor</code> that holds a markdown and a text file
-- [ ] It creates a file <code>vendor/license.md</code> that holds the license information for all the packages
+- [x] It creates a directory 'vendor' that holds the metadata for all the packages
+- [ ] A creates a directory 'vendorpkgs' that holds copies of all the packages
+- [ ] It creates a directory 'vendor' that holds a markdown and a text file
+- [ ] It creates a file 'vendor/license.md' that holds the license information for all the packages
 @@
 #### Q70. Which flag must you add in the command line to find a data race in the program and print a report?
 @@
-- [x] <code>-race</code>
-- [ ] <code>-fsanitize</code>
-- [ ] <code>-gorace</code>
-- [ ] <code>-r</code>
+- [x] '-race'
+- [ ] '-fsanitize'
+- [ ] '-gorace'
+- [ ] '-r'
 @@
-#### Q71. You have a slice that consists of six employee IDs. You must drop the ID <code>ID465</code> from the slice. Here's the starter code:
+#### Q71. You have a slice that consists of six employee IDs. You must drop the ID 'ID465' from the slice. Here's the starter code:
 @@
-- [x] Pass <code>idx := 3</code> and add the following function:
-- [ ] Pass <code>idx := 4</code> and add the following function:
-- [ ] Pass <code>idx := 3</code> and add the following function:
-- [ ] Pass <code>idx := 4</code> and add the following function:
+- [x] Pass 'idx := 3' and add the following function:
+- [ ] Pass 'idx := 4' and add the following function:
+- [ ] Pass 'idx := 3' and add the following function:
+- [ ] Pass 'idx := 4' and add the following function:
 @@
 #### Q72. What is correct about a type switch in relation to a struct?
 @@

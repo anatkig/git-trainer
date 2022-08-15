@@ -208,7 +208,6 @@ const giveRandomGitQuestion = (dataBlockNumber: number) => {
       git reset --hard origin/myCurrentBranch
       '''
     - [x] ⠀
-@@
       '''bash
       git fetch --all
       git reset --hard origin/master
