@@ -1877,6 +1877,160 @@ For example, if you had an event listener inside of a class, you would probably 
  - [ ] objects to Set (not primitives)
  - [ ] primitives to WeakSet
  - [ ] weak objects
+ @@
+ #### Q139. You must refactor your object methods to use shorthand declaration. Given the following object definition, what code option shows how you can define the class using literal method shorthand declaration?
+@@
+const foo = {<br>   bar: function() { return "Test Test" }<br>};
+@@
+- [x] <code>const foo = { bar() {return "Test Test"} }</code>
+- [ ] <code>const foo = { funct bar(){return "Test Test"}; }</code>
+- [ ] <code>const foo = { bar{return "Test Test"}; }</code>
+- [ ] <code>const foo { bar.funct(){return "Test Test"}; }</code>
+@@
+#### Q140. You created a new function that will asynchronously generate an image file and return a promise. You use the <code>.then()</code> method to add two callbacks, one for success and one for failure. When the <code>.then()</code> function executes, what will it return?
+@@
+- [x] A new promise object
+- [ ] A boolean value
+- [ ] An error message
+- [ ] A callback status
+@@
+#### Q141. Which statement correctly assigns the years variable to match the expected behavior on the last line of the following code snippet?
+@@
+const years = ???<br>console.log(years['02'] != years[2]) // true
+@@
+- [x] <code>const years = [1950, 1960, 1970];</code>
+- [ ] <code>const years = (1950, 1960, 1970);</code>
+- [ ] <code>const years = {1950, 1960, 1970};</code>
+- [ ] <code>const years = [1950, 1960];</code>
+@@
+#### Q142. After the following code is executed, what is printed to the console?
+@@
+function list() {  <br>  return [].slice.call(arguments);<br>}<br>var leadingThirtysevenList = list.bind(null, 37);<br>var list2 = leadingThirtysevenList();<br>console.log(list2);
+@@
+- [x] <code>[37]</code>
+- [ ] <code>null</code>
+- [ ] <code>[]</code>
+- [ ] <code>undefined</code>
+@@
+#### Q143. To allow your web application to handle any pending events, you wrote a function that executes repeatedly every 1,000 milliseconds after the function's initial execution finishes. Why might you use <code>setTimeout</code> instead of <code>setInterval</code> in this situation?
+@@
+- [x] <code>setTimeout</code> guarantees a minimum amount of time until the function execution is executed.
+- [ ] <code>setTimeout</code> must be called to properly call <code>setInterval</code> repeatedly with each cycle.
+- [ ] <code>setInterval</code> only executes once, while <code>setTimeout</code> <code>sleeps</code> the main thread of execution every designated unit of time.
+- [ ] <code>setTimeout</code> can be canceled to allow for pending events to execute, while <code>setInterval</code> runs indefinitely and cannot be canceled.
+@@
+#### Q144. What is the scope of a <code>use strict</code> directive?
+@@
+- [x] Either the source file or function that contains the directive
+- [ ] The function that contains the directive
+- [ ] All loaded JavaScript
+- [ ] The source file that contains the directive
+@@
+#### Q145. How are class expressions and class declarations similar?
+@@
+- [x] Both must use the <code>class</code> keyword to create classes.
+- [ ] Both must use the <code>constructor</code> method.
+- [ ] Both can redefine the same class without raising an error.
+- [ ] Both must provide a name for their classes.
+@@
+#### Q146. What term describes JavaScript's ability to treat non-Boolean values as Booleans?
+@@
+- [x] Coercion
+- [ ] Casting
+- [ ] Assertion
+- [ ] Weak typing
+@@
+#### Q147. What is the value of x after executing the following code snippet?
+@@
+let x = 0;<br>function foo(){<br>  x ^= 1;<br>}<br>foo();<br>foo();<br>foo();
+@@
+- [x] <code>1</code>
+- [ ] <code>undefined</code>
+- [ ] <code>0</code>
+- [ ] <code>3</code>
+@@
+#### Q148. You are having an issue fetching a key shared with a specific symbol from the symbol registry. What is something that you could use so that you are able to retrieve that information?
+@@
+- [x] Use the <code>Symbol.keyfor()</code> method
+- [ ] Use the <code>Symbol.match()</code> method
+- [ ] Use the <code>Symbol.findkey()</code> method
+- [ ] Use the <code>Symbol.search()</code> method
+@@
+#### Q149. How would you completely fix the following faulty attempt to import all members from a module?<br><br><code>import {*} as myModule, myDefault from 'my-module.js';</code>
+@@
+- [x] Remove the attempted default module import and remove curly braces
+- [ ] Remove the attempted default module import and remove the naming of <code>myModule</code>
+- [ ] Remove the <code>from 'my-module.js</code>
+- [ ] Remove curly braces
+@@
+#### Q150. Typed arrays split their implementation into what two components?
+@@
+- [x] Buffers and views
+- [ ] Buffers and arrays
+- [ ] Hash maps and views
+- [ ] Stacks and views
+@@
+#### Q151. What is the syntax for creating a generator function using the <code>GeneratorFunction</code> constructor?
+@@
+- [x] Object.getPrototypeOf(function*(){}).constructor
+- [ ] GeneratorFunction().constructor
+- [ ] Object.getGenerator(function*(){}).constructor
+- [ ] Object.GeneratorFunction().constructor
+@@
+#### Q152. Which steps would you take to create multiple views on the same binary data?
+@@
+- [x] Create a buffer to hold the data and pass the buffer to two different types of TypedArray constructors. 
+- [ ] Create two buffers to hold the data in different formats and pass the buffer to its respective type of TypedArray constructor. 
+- [ ] Create a view to hold the data and pass the view to two different types of Buffer constructors. 
+- [ ] Create two views to hold the data in different formats and pass the view to its respective type of Buffer constructor. 
+@@
+#### Q153. Why might you use typed arrays instead of standard arrays?
+@@
+- [x] You must quickly and easily manipulate raw binary data. 
+- [ ] You need an array of data elements that are immutable. 
+- [ ] You are dealing with larger data elements, such as 128-bit unsigned integers. 
+- [ ] You only have boolean data types in the array.
+@@
+#### Q154. Why would you use a tagged template?
+@@
+- [x] To parse template literals with a function
+- [ ] To execute a function based on a previous tag
+- [ ] To find previously used multi-line strings used in the template literal
+- [ ] To return an object's properties that were used previously in the template literal
+@@
+#### Q155. You have two objects with multiple objects nested inside. What is the best approach for determining if these objects are equal (have the same shape and values)?
+@@
+- [x] Iterate through the object, key by key, and assert strict equality <code>===</code> on every corresponding value. Iterate through all the nested objects to do the same until you find a missing key:value pair or confirm equality.
+- [ ] Use the deep-equals operator (<code>===</code>) in <code>strict</code> mode. This will automatically compare each corresponding nested object.
+- [ ] Use <code>Object.is()</code>, the built-in comparison function for JavaScript objects.
+- [ ] Use <code>Object.deepEquals()</code>, a function brought over from JavaScript libraries in ECMAScript 2017.
+@@
+#### Q156. Consider the following object:
+@@
+const obj = { jan: 150, aug: 200, dec: 300 };
+@@
+- [x] for (const val in obj) {<br>  console.log('\${obj[val]}');<br>}
+- [ ] for (const val of obj) {<br>  console.log('\${obj[val]}');<br>}
+- [ ] for (const val in obj) {<br>  console.log('\${val}');<br>}
+- [ ] for (const val of obj) {<br>  console.log(val);<br>}
+@@
+#### Q157. When inheriting from a parent class, what does the <code>super</code> keyword do in the child's constructor?
+@@
+- [x] <code>super</code> invokes the parent's constructor, and by extension, defines the lexical context and this object for the child class.
+- [ ] <code>super</code> instantiates the parent class and copies the properties over as virtual properties on the child class.
+- [ ] <code>super</code> instantiates the parent class and deep copies the properties over to the child class.
+- [ ] <code>super</code> invokes the parent constructor, and then performs a deep copy of the parent properties over to the child class to make a wholly new object.
+@@
+#### Q158. In the following code snippet, <code>getConfig</code> is a function with the purpose of providing different parts of your application with the data on the config object at the time of invocation. When invoked this way, <code>getConfig</code> instead returns <code>undefined</code>. What change is required to get the intended functionality?
+@@
+let config = {<br>  data: { "number": 99 },<br>  getConfig: function() { return this.data; }<br>};<br>let getConfig = config.getConfig;<br>getConfig();
+@@
+- [x] Bind the function's this value to config.
+- [ ] Pass the reference of <code>config.getConfig</code> where the data is needed.
+- [ ] Add an invocation of <code>super()</code> to the function to get the member variables of the parent object.
+- [ ] Use an arrow function instead as the definition for <code>getConfig</code> to ensure that the function inherits config's scope.
+@@
+
 `;
   const dataArray = data.split('####').slice(1);
 
