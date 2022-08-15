@@ -414,6 +414,188 @@ employee.code = 123; // Compiler Error: Property 'code' does not exist on type '
   - [ ] None of the above
   - [ ] tsc --module amd mymodule.ts
   - [ ] tsc -m amd mymodule.ts
+  @@
+  #### Q56. Why might you use type definitions for external libraries?
+@@
+- [x] They allow you to work with the same signatures and types defined by external code	
+- [ ] They reduce the size of the generated JavaScript of your application 
+- [ ] They cannot be upgraded without having typings	
+- [ ] They allow you to catch type conversion errors at runtime	
+@@
+#### Q57. When using Typescript, where should you import modules from?
+@@
+- [x] The filepath of the module without the extension	
+- [ ] The parent module of the child module
+- [ ] The module library	
+- [ ] The module directory	
+@@
+#### Q58. Why would you use a decorator in TypeScript?
+@@
+- [x] To add both annotations and metadata in the code
+- [ ] To make shorthand, non-compiling annotations
+- [ ] To serve as a substitute for generic types
+- [ ] To easily change the output of a function
+@@
+#### Q59. You are developing a TypeScript file that will help the engineers debug some JavaScript. The TypeScript file is not functioning properly because some variable names are being overwritten. How can you fix this issue?
+@@
+- [x] Variables in the global scope can be overwritten, so you must rewrite the code to include module definitions to create more local scope for the variables.	
+- [ ] Variables in the local scope can be overwritten, so you must rewrite the code to declare each variable as an anonymous type.
+- [ ] Variables in the TypeScript language can be re-assigned, so you must include exclude statements before each variable definition.	
+- [ ] Variables in the TypeScript language can be multi-declared, so you must rewrite the code to include singular type statements before each variable definition.	
+@@
+#### Q60. You must convert a program to use modules. Given the following file, animals.ts, how can you rewrite the code so that the Cheetah and Tiger modules can be referenced without the top layer namespace as a wrapper?
+@@
+export namespace Animals {
+    export class Cheetah { /* ... */ }
+    export class Tiger { /* ... */ }
+}
+@@
+- [x] export class Cheetah { /* ... */ }
+export class Tiger { /* ... */ }
+- [ ] export module Animals{ 
+  class Cheetah { /* ... */ }
+  class Tiger { /* ... */ }
+}
+- [ ] export => Animals;
+class Cheetah { /* ... */ }
+class Tiger { /* ... */ }
+- [ ] export any Animals;
+class Cheetah { /* ... */ }
+class Tiger { /* ... */ }
+@@
+#### Q61. What is true of the structural type system?
+@@
+- [x] It states that two objects are equal if they have the same structural properties, regardless of whether they have the same root class.	
+- [ ] It is a model of inheritance that allows classes to inherit from multiple parents	
+- [ ] It allows you to declare discriminated unions with the type declaration keyword
+- [ ] It allows you to dynamically add or delete properties on JavaScript objects at runtime	
+@@
+#### Q62. You create an ambient module and store its declaration in a file named aModule.d.ts. 
+What code would correctly create a reference path for this ambient module in your TypeScript file?
+@@
+- [x] /// <reference path = "aModule.d.ts" /> 
+- [ ] ///reference path = "aModule.d.ts" 
+- [ ] reference path = "aModule.d.ts"
+- [ ] <reference path = "aModule.d.ts" /> 
+@@
+#### Q63. Consider the following tuple elements:
+let tpls: [number, number, boolean, boolean] = [39, 78, false, true];
+While destructuring the above code, which code declaration will capture all four values without throwing any error or using the value undefined? 
+@@
+- [x] let [t1, ...t2] = tpls;
+- [ ] let [t1, t2, ...t3, ...t4] = tpls;
+- [ ] let [t1, t2, t3, t4, t5] = tpls;
+- [ ] let [t1, t2, t3] = tpls;
+@@
+#### Q64. What flag can be enabled to provide insight into what happens during the module resolution process?
+@@
+- [x] Trace Resolution flag	
+- [ ] No Resolve flag	
+- [ ] Traceroute flag
+- [ ] Tracer Flag	
+@@
+#### Q65. What do you input from the command line to update TypeScript, assuming it is installed globally?
+@@
+- [x] npm install -g typescript
+- [ ] tsc install
+- [ ] npm upgrade -g TypeScript
+- [ ] tsc update
+@@
+#### Q66. What will the following code log to the console?
+@@
+const favoriteNumberPromise = new Promise(resolve => {
+  resolve(7);
+  resolve(12);
+});
+
+favoriteNumberPromise.then(num => console.log('My favorite number is \${num}'));
+@@
+- [x] My favorite number is 7
+- [ ] My favorite number is 12
+- [ ] *
+- [ ] Nothing
+@@
+#### Q67. What is the purpose of a TypeScript declaration file?
+@@
+- [x] They allow you to share the types associated with publicly visible signatures of your TypeScript library.	
+- [ ] They help optimize TypeScript build speeds by telling the compiler what methods and types to expect.
+- [ ] They allow other libraries to include your code at the lowest possible overhead.	
+- [ ] They allow the TypeScript compiler to compile files that include references to code it hasn't processed yet.	
+@@
+#### Q68. You are calling a 'computeAsync' method that returns a Promise using the code below:
+@@
+try {
+  this.computeAsync(x).then(r => console.log('Result = ' + r));
+} catch (Error) {
+  console.error('An error occurred but was caught', Error);
+}
+For some inputs you get errors that are not handled in your catch block. What is the most likely explanation?
+@@
+- [x] Your code is not correctly handling rejected promises and should be using '.catch()' instead of a try / catch.	
+- [ ] The 'computeAsync' method is not calling the 'resolve' or 'reject' methods for some input values.
+- [ ] Your code is not correctly handling rejected promises and should be using '.finally()' instead of a try / catch.	
+- [ ] The promise is not being evaluated correctly because its result value is not being stored in a variable.	
+@@
+#### Q69. When coding in TypeScript, what must the name of a decorator match?
+@@
+- [x] The name of a function that will be called at runtime
+- [ ] The name of an accessor called at runtime
+- [ ] The name of a parameter to be passed to a function
+- [ ] The name of method inside a class
+@@
+#### Q70. Your teammate is referencing a .d.ts file for each of his modules. Instead of defining each module in its own .d.ts file with top-level export declarations, how else can he simplify the module design for easier importing?
+@@
+- [x] Create one larger .d.ts file and use the module keyword and the quoted name of the module.	
+- [ ] Create one larger .ts intersection file and use the union keyword and the single quoted name of the union.
+- [ ] Create one larger .tsx file and use the namespace keyword and the single quoted name of the namespace.	
+- [ ] Create one larger .ts file and use the namespace keyword and the double quoted name of the namespace.
+@@
+#### Q71. You are referencing a class named 'ExternalClass' declared in another library. You get a compiler error when trying to run the following code: 'const instance = new ExternalClass();' What is one possible reason why your code might not compile?
+@@
+- [x] 'ExternalClass' is declared as abstract.
+- [ ] 'ExternalClass' is built for legacy browser support but your project targets ECMAScript 6.
+- [ ] 'ExternalClass' does not have a constructor defined.
+- [ ] 'ExternalClass' was defined by a project referencing a different version of TypeScript.
+@@
+#### Q72. How do TypeScript classes and interfaces compare in their compiled form?
+@@
+- [x] Interfaces are not preserved in the generated JavaScript code. Classes generate JavaScript class definitions.	
+- [ ] While not exactly the same, classes and interfaces generate roughly similar amounts of JavaScript after compilation	
+- [ ] Classes are not not preserved in the generated JavaScript code. Interfaces generate JavaScript interface definitions.	
+- [ ] Classes and interfaces generate the exact same JavaScript code as a result of compilation.
+@@
+#### Q73. You must keep the outdated output instead of clearing the screen. What compiler option do you use?&nbsp;
+@@
+- [x] tsc --preserveWatchOutput
+- [ ] tsc src/*.ts --pretty
+- [ ] tsc --watch
+- [ ] tsc src/*.ts --format
+@@
+#### Q74. You are a developer working in TypeScript on APIs for a company's web application. How would you alter the following code to utilize the 'apiUri' function as a Typescript decorator?
+@@
+class Departments {
+  ...
+ }
+ 
+ function apiUri(constructor) {
+   ...
+ }
+ 
+ apiUri(Departments)
+@@
+- [x] @apiUri<br>class Departments {<br>  ...<br>}
+- [ ] '&amp;apiUri(Departments)'
+- [ ] function : &lt;decorator&gt; apiUri(constructor) {<br>  ...<br>}
+- [ ] function apiUri &lt;T&gt;(constructor: T)  &lt;T&gt;{<br>  ...<br>}
+@@
+#### Q75. What is a TypeScript project reference?
+@@
+- [x] Subdivisions within a larger TypeScript codebase that allow for portions of the project to be built independently and referenced by other portions	
+- [ ] A way to include Git submodules in order to incorporate third-party code while minimizing and automating pains commonly associated with managing submodules
+- [ ] A more efficient alternative to npm for managing package dependencies and package versions, but are limited to TypeScript projects
+- [ ] Dynamic links to external Git repositories containing TypeScript code. The code is cloned locally and built as needed without technically being part of your repository
+@@
+
 `;
 
   const dataArray = data.split('####').slice(1);
