@@ -927,7 +927,8 @@ const giveRandomCSSQuestion = (dataBlockNumber: number) => {
   - [ ] The first value is the first choice, and must be followed by at least one alternative option before adding the generic font.
   - [ ] The first value is the first choice, followed by a maximum of three alternatives.
 @@
-  Note: a variant of the question above.
+A font stack is a list of fonts in the CSS font-family declaration. The fonts are listed in order of preference that you would like them to appear in case of a problem, such as a font not loading. 
+A font stack allows you to control the look of the fonts on the web page even if the site visitor's computer doesn't have the initial font that you called for.
 @@
   #### Q78. What is one disadvantage of using a web font service?
 @@
@@ -1711,31 +1712,24 @@ const giveRandomCSSQuestion = (dataBlockNumber: number) => {
   '''
 @@
   - [ ] A
-@@
   '''css
   section > p {
     color: blue;
   }
   '''
-@@
   - [ ] B
-@@
   '''css
   p {
     color: blue;
   }
   '''
-@@
   - [x] C
-@@
   '''css
   section + p {
     color: blue;
   }
   '''
-@@
   - [ ] D
-@@
   '''css
   p + section {
     color: blue;
