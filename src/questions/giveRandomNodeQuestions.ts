@@ -679,6 +679,167 @@ var util = require('util');
    - [ ] os.homedir()
    - [ ] os.loadavg()
    - [ ] os.platform()
+   @@
+   #### Q82. Which built-in Node module can be used for testing?
+@@
+- [x] assert
+- [ ] chai
+- [ ] jest
+- [ ] mocha
+@@
+#### Q83. What happens if you execute the 'node' command <strong>without</strong> any arguments?
+@@
+- [x] Node will use its 'repl' module to start a REPL session.
+- [ ] Node will run the index.js file in the current directory if one exists.
+- [ ] Node will interactively ask you about your script name.
+- [ ] Node will print an error stating that arguments are required.
+@@
+#### Q84. How can you read the content of a large file without buffering it in memory?
+@@
+- [x] Use 'fs.createReadStream'
+- [ ] Use 'fs.createWriteStream'
+- [ ] Use 'fs.readFileChunk'
+- [ ] Use 'stream.readFile'
+@@
+#### Q85. How do you start a REPL session in Node.js?
+@@
+- [x] Use the 'node' command without a script.
+- [ ] Use the 'v8' command.
+- [ ] Use the 'noderepl' command.
+- [ ] Use the 'node' command with a '--repl' option.
+@@
+#### Q86. Which of the following is a valid Node HTTP server that accepts connection on port 3000?
+@@
+- [x] 'require('http').createServer(() =&gt; {}).listen(3000)'
+- [ ] 'require('http').listen(3000).on('connection', () =&gt; {})'
+- [ ] 'require('http').createServer(3000, () =&gt; {})'
+- [ ] 'require('http')().listen(3000).on('connection, () =&gt; {});'
+@@
+#### Q87. With the EventEmitter class in scope, what will the following code do?
+@@
+const myEmitter = new EventEmitter();
+''myEmitter.on('MyEvent', (args) =&gt; 
+{'    console.log(args);'});
+''myEmitter.once('MyEvent', (args) =&gt; {'    console.log(args);
+  '});''myEmitter.emit('MyEvent', 'Hello');
+  'myEmitter.emit('MyEvent', 'Hello Again');
+@@
+- [x] It will print:
+Hello
+Hello
+Hello Again
+- [ ] It will print&nbsp;
+Hello
+Hello
+Hello Again
+Hello Again
+- [ ] It will throw a circular event emitting error.
+- [ ] It will print:
+Hello
+Hello Again
+@@
+#### Q88. What is wrong with the following code snippet?
+@@
+const url = require('url');
+''const urlObject = {'    protocol: 'https','    hostname: 'www.example.com','    pathname: 'my-article','    hash: 'overview','};
+''const formattedUrl = url.formatUrl(urlObject);''console.log(formattedUrl);
+@@
+- [x] The 'formatUrl' method is invalid; 'format' should be used instead.
+- [ ] The 'formatUrl' method requires a second parameted to specify the URL type.
+- [ ] The 'pathname' parameter is invalid; 'path' should be used instead.
+- [ ] The 'url' library does not offer URL formatting methods; the 'build' method should be used instead.
+@@
+#### Q89. How can you remove a file using Node's 'fs' module?
+@@
+- [x] 'fs.unlink'
+- [ ] 'fs.removeFile'
+- [ ] 'fs.remove'
+- [ ] 'fs.deleteFile'
+@@
+#### Q90. Which 'fs' module method can be used to get an array of files?
+@@
+- [x] 'fs.readdir'
+- [ ] 'fs.readFiles'
+- [ ] 'fs.getFiles'
+- [ ] 'fs.open'
+@@
+#### Q91. What is the difference between the 'readFileSync' and 'openSync' methods?
+@@
+- [x] When using 'readFileSync', the open, read, and close operations are performed automatically, while 'openSync' only opens the file so you can perform operations on it.
+- [ ] The 'readFileSync' method is used to programmatically read the file contents, while 'openSync' is used to preview the file contents using the Node.js command line.
+- [ ] The 'openSync' method is used to open folders for listing their contents, while the 'readFileSync' is used to read individual files.
+- [ ] The 'openSync' method needs to be called before 'readFileSync' to prepare the file for reading.
+@@
+#### Q92. In which situation can you use the 'DiffieHellman' class in Node.js?
+@@
+- [x] When creating Diffie-Hellman public key exchanges to establish a shared secret key
+- [ ] When you need to generate public and private keys for the Rivest–Shamir–Adleman (RSA) algorithm
+- [ ] When you need to factorize large prime numbers in an efficient manner
+- [ ] When hashing data using the Diffie-Hellman algorithm to secure passwords in a database
+@@
+#### Q93. You are working on a Node.js application, implementing several 'npm' scripts. You would like to define a script called 't-notify' that prints 'Final testing process starting up'. You do not have any other existing scripts added to your package.json file yet.&nbsp;
+@@
+- [x] "scripts": {'        "t-notify": "echo Final testing process starting up"'    },
+- [ ] "scripts": {'        "t-notify": "Final testing process starting up"'    },
+- [ ] "scripts": {'        t-notify: "Final testing process starting up"'    },
+- [ ] "run": {'        t-notify: "Final testing process starting up"'    },
+@@
+#### Q94. What can you do with the Verify class in Node.js?
+@@
+- [x] Verify digital signatures
+- [ ] Verify the integrity of a file
+- [ ] Verify the owner of a file
+- [ ] Verify the status of the running process
+@@
+#### Q95. How can you declare a new worker thread in Node.js?
+@@
+- [x] const { Worker } = <strong>require('worker_threads')</strong>'const worker1 = <strong>new Worker</strong>('./workerService.js');
+- [ ] const { Worker } = <strong>require('worker_threads')</strong>'const worker1 = <strong>Worker.create</strong>('./workerService.js');
+- [ ] const { Worker } = <strong>require('workers')</strong>'const worker1 = <strong>new Worker</strong>('./workerService.js');
+- [ ] const { Worker } = <strong>require('worker_threads')</strong>'const worker1 = <strong>new WorkerThread</strong>('./workerService.js');
+@@
+#### Q96. How would you create a new instance of the 'DiffieHellman' class?
+@@
+- [x] By using the 'createDiffieHellman' method from the 'crypto' module
+- [ ] By using the 'getDH' method from the 'crypto' module
+- [ ] By using the new keyword to directly instantiate a new DiffieHellman class
+- [ ] By using the 'createDH' method from the 'crypto' module
+@@
+#### Q97. How would you create a hash digest using the 'Hash' class in Node.js?
+@@
+- [x] const crypto = require('crypto');'const hash = crypto.createHash('sha256');''hash.update('Text to hash.');'const hashedOutput = hash.digest('base64');
+- [ ] const crypto = require('crypto');'const hash = crypto.createHash('sha256');''hash.update('Text to hash.');'const hashedOutput = hash.final('base64');
+- [ ] const crypto = require('crypto');'const hash = crypto.createHash();''hash.setAlgorithm('sha256');'hash.update('Text to hash.');'const hashedOutput = hash.digest('base64');
+- [ ] const crypto = require('crypto');'const hash = new Hash('sha256');''hash.update('Text to hash.');'const hashedOutput = hash.digest('base64');
+@@
+#### Q98. Which version string means "all versions greater than or equal to 1.2.3, but less than 2.0.0?"
+@@
+- [x] '^1.2.3'
+- [ ] '&gt;=1.2.3'
+- [ ] '1.*'
+- [ ] '~1.2.3'
+@@
+#### Q99. What is true about installing packages using 'npm'?
+@@
+- [x] Packages existing on the local file system can be installed.
+- [ ] Tarballs of the type '.tgz' cannot be installed.
+- [ ] Tarballs can only be installed from the local file system.
+- [ ] Packages from GitHub cannot be directly installed.
+@@
+#### Q100. Which command prints all local packages that need updating?
+@@
+- [x] 'npm outdated'
+- [ ] 'npm update'
+- [ ] 'npm view'
+- [ ] 'npm verify'
+@@
+#### Q101. If the application needs to read the value of an environment variable, what is required to access the 'process' variable?
+@@
+- [x] The 'process' variable is automatically available in any Node.js file.
+- [ ] The 'process' variable is attached to the globally available 'window' object.
+- [ ] The 'process' module needs to be imported.
+- [ ] The 'system' module needs to be imported.
+@@
   `;
 
   const dataArray = data.split('####').slice(1);
