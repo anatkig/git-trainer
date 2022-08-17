@@ -152,13 +152,16 @@ const giveRandomHTMLQuestion = (dataBlockNumber: number) => {
   #### Q16. What should fill the blank in the HTML code bellow?
 @@
   '''html
-  <form method="post" action="mailto:info@@linkedin.com" ____="text/plain"></form>
+  <form method="post" action="mailto:info@linkedin.com" ____="text/plain"></form>
   '''
 @@
   - [x] enctype
   - [ ] media
   - [ ] type
   - [ ] rel
+@@
+The enctype attribute specifies how the form-data should be encoded when submitting it to the server.
+Note: The enctype attribute can be used only if method="post".
 @@
   #### Q17. What is the correct markup for 'alt' attribute of an image?
 @@
@@ -647,10 +650,10 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
  @@
   #### Q42. What is the correct way to code a link that, when clicked, will send an email to 'email@example.com' with a subject of "Hello"?
 @@
-  - [ ] '<a href="mailto:email@@example.com&subject=Hello">Click me</a>'
-  - [ ] '<a href="mailto:email@@example.com">Hello</a>'
-  - [x] '<a href="mailto:email@@example.com?subject=Hello">Click me</a>'
-  - [ ] '<a href="mailto:email@@example.com?&subject=Hello">Click me</a>'
+  - [ ] '<a href="mailto:email@example.com&subject=Hello">Click me</a>'
+  - [ ] '<a href="mailto:email@example.com">Hello</a>'
+  - [x] '<a href="mailto:email@example.com?subject=Hello">Click me</a>'
+  - [ ] '<a href="mailto:email@example.com?&subject=Hello">Click me</a>'
 @@
   #### Q43. Which tag is the root element of an HTML document?
 @@
@@ -1199,7 +1202,7 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
   <address>
     6410 Via Real <br />
     Carpinteria, CA 93013<br />
-    <a href="mailto:info@@linkedin.com">info@@linkedin.com</a>
+    <a href="mailto:info@linkedin.com">info@linkedin.com</a>
   </address>
   '''
   - [ ] B
@@ -1208,7 +1211,7 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
   <address><em>
     6410 Via Real <br>
     Carpinteria, CA 93013<br>
-    <a href="mailto:info@@linkedin.com">info@@linkedin.com</a>
+    <a href="mailto:info@linkedin.com">info@linkedin.com</a>
   </em></address>
   '''
   - [ ] C
@@ -1218,7 +1221,7 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
     <em>
       6410 Via Real <br />
       Carpinteria, CA 93013<br />
-      <a href="mailto:info@@linkedin.com">info@@linkedin.com</a>
+      <a href="mailto:info@linkedin.com">info@linkedin.com</a>
     </em>
   </p>
   '''
@@ -1229,7 +1232,7 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
     <em>
       6410 Via Real <br />
       Carpinteria, CA 93013<br />
-      <a href="mailto:info@@linkedin.com">info@@linkedin.com</a>
+      <a href="mailto:info@linkedin.com">info@linkedin.com</a>
     </em>
   </p>
   '''
