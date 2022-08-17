@@ -108,7 +108,7 @@ const giveRandomNodeQuestion = (dataBlockNumber: number) => {
   - [x] time
   - [ ] print
 @@
-  **Explanation:** From official docs: [reference](https://nodejs.org/api/console.html)
+The console.time() method starts a timer you can use to track how long an operation takes.
 @@
   #### Q13. Which object is used to manage the cache of required modules?
 @@
@@ -188,6 +188,8 @@ const giveRandomNodeQuestion = (dataBlockNumber: number) => {
   - [x] exec("ps -ef")
   - [ ] exec("ps", "-ef")
   - [ ] fork("ps -ef")
+@@
+The “-ef” option of the “ps” command is used to print all the processes running on the system in the standard format.
 @@
   #### Q22. Which console method can be used to print the stack trace to the point of its execution?
 @@
@@ -360,12 +362,20 @@ const giveRandomNodeQuestion = (dataBlockNumber: number) => {
   - [x] crypto
   - [ ] TLS
 @@
+Open SSL is an all-around cryptography library that offers open-source application of the TLS protocol. 
+First released in 1998, it is available for Linux, Windows, macOS, and BSD systems.
+OpenSSL allows users to perform various SSL related tasks, including CSR (Certificate Signing Request) and private keys generation and SSL certificate installation. 
+@@
   #### Q43. Which line imports a promise-based version of the readFile method?
 @@
   - [x] const { readFile } = require(fs).promises
   - [ ] const { readFile } = require(fs)
   - [ ] const { readFilePromises: readFile } = require(fs)
   - [ ] const { readFile } = require(promises)
+@@
+So, anytime you have multiple async operations to coordinate in some way, I immediately want to go to promises. 
+And, the best way to use promises to coordinate a number of async operations is to make each async operation return a promise.
+The lowest level async operation you show is fs.readFile().
 @@
   #### Q44. According to the rules of semantic versioning, what does a release incrementing the third number in an npm version string communicate to users about the release changes?
 @@
@@ -840,7 +850,74 @@ const url = require('url');
 - [ ] The 'process' module needs to be imported.
 - [ ] The 'system' module needs to be imported.
 @@
-  `;
+#### Q102. what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible?
+@@
+- [x] event loop
+- [ ] multiple threads
+- [ ] libuv
+- [ ] v8
+@@
+#### Q103. In this phase of the event loop callbacks scheduled by setTimeout() and setInterval() are executed.
+@@
+- [x] timers
+- [ ] pending callbacks
+- [ ] check
+- [ ] close callbacks
+@@
+#### Q104. This phase of the event  loop starts after 'poll'.
+@@
+- [x] check
+- [ ] idle, prepare
+- [ ] pending callbacks
+- [ ] timers
+@@
+#### Q105. This phase of the event  loop starts after 'close callbacks'.
+@@
+- [x] timers
+- [ ] idle, prepare
+- [ ] pending callbacks
+- [ ] check
+#### Q106. This phase of the event  loop  is between  'idle, prepare' and 'check'.
+@@
+- [x] poll
+- [ ] idle, prepare
+- [ ] pending callbacks
+- [ ] check
+#### Q107. This phase of the event loop starts before 'close callbacks'.
+@@
+- [x] check
+- [ ] timers
+- [ ] poll
+- [ ] pending callbacks
+@@
+#### Q108. This phase of the event loop starts before 'idle, prepare'.
+@@
+- [x] pending callbacks
+- [ ] timers
+- [ ] poll
+- [ ] close  callbacks
+@@
+#### Q109. This phase of the event loop is only used internally.
+@@
+- [x] idle, prepare
+- [ ] timers
+- [ ] poll
+- [ ] close  callbacks
+@@
+#### Q110. This phase of the event loop executes I/O callbacks deferred to the next loop iteration.
+@@
+- [x] pending callbacks
+- [ ] timers
+- [ ] poll
+- [ ] check
+@@
+#### Q111. Any time you call <?> in a given phase, all callbacks passed to <?> will be resolved before the event loop continues.
+  @@
+  - [x] process.nextTick()
+  - [ ] process.continue()
+  - [ ] setImmediate()
+  - [ ] setImmediate(callback)
+`;
 
   const dataArray = data.split('####').slice(1);
 
