@@ -61,6 +61,9 @@ const giveRandomHTMLQuestion = (dataBlockNumber: number) => {
   - [ ] 'itemscope' 'itemref="http://schema.org/PostalAddress"'
   - [ ] 'itemid="address"' 'itemtype="http://schema.org/PostalAddress"'
 @@
+The global attribute itemtype specifies the URL of the vocabulary that will be used to define itemprop's (item properties) in the data structure.
+itemscope is used to set the scope of where in the data structure the vocabulary set by itemtype will be active.
+@@
   #### Q8. When should you use the '<aside>' element?
 @@
   - [x] when the content can be removed without detracting from the page's message
@@ -320,75 +323,7 @@ Note: The enctype attribute can be used only if method="post".
 @@
   [Source: HTML &lt;picture> Tag](https://www.w3schools.com/tags/tag_picture.asp)
 @@
-  #### Q25. What code will produce this table?
-@@
-  ![Table with yellow background](images/ss-4.png?raw=true)
-@@
-  - [ ] A
-  '''html
-  <table>
-    <scope cols="2" style="background-color: yellow">
-    <tr>
-      <th>Col 1</th>
-      <th>Col 2</th>
-      <th>Col 3</th>
-    </tr>
-    <tr>
-      <td>first</td>
-      <td>second</td>
-      <td>third</td>
-    </tr>
-  </table>
-  '''
-  - [x] B
-  '''html
-  <table>
-    <colgroup span="2" style="background-color: yellow">
-    <tr>
-      <th>Col 1</th>
-      <th>Col 2</th>
-      <th>Col 3</th>
-    </tr>
-    <tr>
-      <td>first</td>
-      <td>second</td>
-      <td>third</td>
-    </tr>
-  </table>
-  '''
-  - [ ] C
-  '''html
-  <table>
-    <group cols="2" style="background-color: yellow">
-    <tr scope="row">
-      <th>Col 1</th>
-      <th>Col 2</th>
-      <th>Col 3</th>
-    </tr>
-    <tr scope="row">
-      <td>first</td>
-      <td>second</td>
-      <td>third</td>
-    </tr>
-  </table>
-  '''
-  - [ ] D
-  '''html
-  <table>
-    <columns colspan="2" style="background-color: yellow">
-    <tr>
-      <th>Col 1</th>
-      <th>Col 2</th>
-      <th>Col 3</th>
-    </tr>
-    <tr>
-      <td>first</td>
-      <td>second</td>
-      <td>third</td>
-    </tr>
-  </table>
-  '''
-@@
+ 
   #### Q26. What is the '<hr>'tag typically used for? / Alt.: What is the semantic meaning of the '<hr>' tag?
 @@
   - [ ] This tag is depreciated (alt.: deprecated) and should not be used.
@@ -416,6 +351,10 @@ Note: The enctype attribute can be used only if method="post".
   - [x] 'itemprop="aggregateRating" itemtype="http://schema.org/AggregateRating"'
   - [ ] 'itemid="aggregateRating" itemtype="http://schema.org/AggregateRating"'
   - [ ] 'itemid="aggregateRating" itemref="http://schema.org/AggregateRating"'
+@@
+The itemprop global attribute is used to add properties to an item. Every HTML element can have an itemprop attribute specified, and an itemprop consists of a name-value pair. 
+Each name-value pair is called a property, and a group of one or more properties forms an item. 
+Property values are either a string or a URL and can be associated with a very wide range of elements including <audio>, <embed>, <iframe>, <img>, <link>, <object>, <source> , <track>, and <video>.
 @@
   #### Q28. Which HTML snippet links back to the very top of a webpage?
 @@
@@ -558,49 +497,6 @@ Note: The enctype attribute can be used only if method="post".
   - [ ] type
   - [ ] device
   - [x] media
-@@
-  #### Q36. What is the semantically correct way to mark up this layout?
-@@
-  ![quote](images/ss-5.png?raw=true)
-@@
-  - [ ] A
-  '''html
-  <p>
-    "Making money is what you have to do to sustain a business—being driven to make something of value
-    and purpose is much more powerful."
-  </p>
-  <p><em>Lynda Weinman</em></p>
-  '''
-  - [ ] B
-  '''html
-  <blockquote>
-    <q
-      >"Making money is what you have to do to sustain a business—being driven to make something of
-      value and purpose is much more powerful."</q
-    >
-    <cite><em>Lynda Weinman</em></cite>
-  </blockquote>
-  '''
-  - [x] C
-  '''html
-  <blockquote>
-    <p>
-      "Making money is what you have to do to sustain a business—being driven to make something of
-      value and purpose is much more powerful."
-    </p>
-    <cite>Lynda Weinman</cite>
-  </blockquote>
-  '''
-  - [ ] D
-  '''html
-  <section>
-    <q
-      >"Making money is what you have to do to sustain a business—being driven to make something of
-      value and purpose is much more powerful."</q
-    >
-    <cite>Lynda Weinman</cite>
-  </section>
-  '''
 @@
   #### Q37. Which choice uses the correct terminology in describing this markup: '<p>info</p>'?
 @@
