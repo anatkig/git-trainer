@@ -917,6 +917,18 @@ const url = require('url');
   - [ ] process.continue()
   - [ ] setImmediate()
   - [ ] setImmediate(callback)
+  @@
+  #### Q112. The exports is an object. 
+  So, you can attach <?> to it.
+   @@
+   - [x] properties or methods
+   - [ ] methods
+   - [ ] properties
+   - [ ] anything
+   @@
+   exports.SimpleMessage = 'Hello world';
+    //or
+    module.exports.SimpleMessage = 'Hello world';
 `;
 
   const dataArray = data.split('####').slice(1);
