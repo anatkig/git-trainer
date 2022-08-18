@@ -323,7 +323,13 @@ Note: The enctype attribute can be used only if method="post".
 @@
   [Source: HTML &lt;picture> Tag](https://www.w3schools.com/tags/tag_picture.asp)
 @@
- 
+ #### Q25. What is the difference between <i> and <em>?
+ @@
+ - [x] <i> - makes text italic, <em> - makes text italic but with added semantics importance
+ - [ ] <em> - makes text italic, <i> - makes text italic but with added semantics importance
+ - [ ] no difference
+ - [ ] <em> - makes text italic, <i> - is deprecated
+ @@
   #### Q26. What is the '<hr>'tag typically used for? / Alt.: What is the semantic meaning of the '<hr>' tag?
 @@
   - [ ] This tag is depreciated (alt.: deprecated) and should not be used.
@@ -436,56 +442,12 @@ Property values are either a string or a URL and can be associated with a very w
 @@
   '<acronym>' has been removed in HTML5 and shouldn't be used anymore. Instead web developers should use the '<abbr>' element.
 @@
-  #### Q34. What is the correctly nested markup for this list?
+#### Q34. Which tag highlights the text?
 @@
-  ![Sample list](images/ss-6.png?raw=true)
-@@
-  - [ ] A
-  '''html
-  <ul>
-    <li>
-      office
-      <ol style="circle">
-        <li>staple</li>
-        <li>paper</li>
-      </ol>
-    </li>
-    <li>
-      groceries
-      <ol style="circle">
-        <li>milk</li>
-      </ol>
-    </li>
-  </ul>
-  '''
-  - [x] B
-  '''html
-  <ul>
-    <li>
-      Office Supplies
-      <ul>
-        <li>Stapler</li>
-        <li>Paper clips</li>
-      </ul>
-    </li>
-    <li>
-      Groceries
-      <ul>
-        <li>Milk</li>
-      </ul>
-    </li>
-  </ul>
-  '''
-  - [ ] C
-  '''html
-  <ul>
-    <li>office</li>
-    <li>staple</li>
-    <li>paper</li>
-    <li>groceries</li>
-    <li>milk</li>
-  </ul>
-  '''
+- [x] <mark>
+- [ ] <big>
+- [ ] <em>
+- [ ] <sup>
 @@
   #### Q35. What should fill the blank below?
 @@
@@ -497,6 +459,13 @@ Property values are either a string or a URL and can be associated with a very w
   - [ ] type
   - [ ] device
   - [x] media
+@@
+#### Q36. Which tag  decreases the font size of the text by one unit?
+@@
+- [x] <small>
+- [ ] <sub>
+- [ ] <i>
+- [ ] <sm>
 @@
   #### Q37. Which choice uses the correct terminology in describing this markup: '<p>info</p>'?
 @@
@@ -1088,54 +1057,16 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
   </nav>
   '''
 @@
-  #### Q76. Which choice is the best way to mark up this layout?
+#### Q76. How many different kinds of Doctypes are available?
 @@
-  ![Image of footer](images/ss-8.png?raw=true)
+- [x] 3
+- [ ] 2
+- [ ] 1
+- [ ] 4
 @@
-  - [x] A
-  '''html
-  <h4>Mailing Address</h4>
-  <address>
-    6410 Via Real <br />
-    Carpinteria, CA 93013<br />
-    <a href="mailto:info@linkedin.com">info@linkedin.com</a>
-  </address>
-  '''
-  - [ ] B
-  '''html
-  <h4><strong>Mailing Address</h4>
-  <address><em>
-    6410 Via Real <br>
-    Carpinteria, CA 93013<br>
-    <a href="mailto:info@linkedin.com">info@linkedin.com</a>
-  </em></address>
-  '''
-  - [ ] C
-  '''html
-  <h4>Mailing Address</h4>
-  <p>
-    <em>
-      6410 Via Real <br />
-      Carpinteria, CA 93013<br />
-      <a href="mailto:info@linkedin.com">info@linkedin.com</a>
-    </em>
-  </p>
-  '''
-  - [ ] D
-  '''html
-  <p><strong>Mailing Address</strong></p>
-  <p>
-    <em>
-      6410 Via Real <br />
-      Carpinteria, CA 93013<br />
-      <a href="mailto:info@linkedin.com">info@linkedin.com</a>
-    </em>
-  </p>
-  '''
-@@
-  [Source: W3Schools](https://www.w3schools.com/tags/tag_address.asp)
-@@
-  'The <address> tag defines the contact information for the author/owner of a document or an article. The contact information can be an email address, URL, physical address, phone number, social media handle, etc. The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element.'
+Strict Doctype 
+Transitional Doctype
+Frameset Doctype
 @@
   #### Q77. What is the primary purpose of HTML?
 @@
@@ -1326,32 +1257,25 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
 @@
   #### Q93. Which choice is the best way to code three choices within a form so that the user can select multiple items?
 @@
-  - [ ] :
-@@
+  - [ ]
   '''html
   <input type="radio" name="example" /> Choice 1 <br />
   <input type="radio" name="example" /> Choice 2 <br />
   <input type="radio" name="example" /> Choice 3
   '''
-@@
-  - [x] :
-@@
+  - [x]
   '''html
   <input type="checkbox" name="example" /> Choice 1 <br />
   <input type="checkbox" name="example" /> Choice 2 <br />
   <input type="checkbox" name="example" /> Choice 3
   '''
-@@
   - [ ] :
-@@
   '''html
   <label><input type="checkbox" name="example" /> Choice 1</label><br />
   <label><input type="checkbox" name="example" /> Choice 2</label><br />
   <label><input type="checkbox" name="example" /> Choice 3</label>
   '''
-@@
-  - [ ] :
-@@
+  - [ ] 
   '''html
   <label><input type="radio" name="example" /> Choice 1</label><br />
   <label><input type="radio" name="example" /> Choice 2</label><br />
@@ -1604,7 +1528,15 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
   - [x] The '<main>' element represents the dominant content of your document. There can be only one '<main>' element that is not hidden.
   - [ ] The '<article>' element represents the dominant content of your document. There can be only one '<article>' element that is not hidden.
 @@
-  [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)`;
+  [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main)
+  @@
+  #### Q108. What is the difference between fixed and absolute positioning?
+  @@
+  - [x] absolute: here the element is positioned relative to its parent element, fixed: here the elements are positioned relative to the <html> element
+  - [ ] fixed: here the element is positioned relative to its parent element, absolute: here the elements are positioned relative to the <html> element
+  - [ ] absolute: here the element is positioned relative to its parent element, fixed: here the elements are positioned relative to the <body> element
+  - [ ] the difference  is unimportant
+  `;
 
   const dataArray = data.split('####').slice(1);
 
