@@ -1143,8 +1143,122 @@ const giveRandomReactQuestion = (dataBlockNumber: number) => {
   - [x] destructuring assignment
 @@
   [Reference](https://javascript.info/destructuring-assignment)
+  @@
+  #### Q101. What should we put to the following gaps in order to render the component correctly?
+  @@
+  function FancyBorder({<?>}) {
+    return (
+      <div>
+        {<?>}   
+      </div>
+    );
+  }
+  
+  function WelcomeDialog() {
+    return (
+      <FancyBorder color="blue">
+        <div>Dorime</div>
+      </FancyBorder>
+    );
+  }
+  
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+  root.render(<WelcomeDialog />);
+@@
+- [x] children 
+- [ ] any meaningful word
+- [ ] props
+- [ ] props.child
+  @@
+  #### Q102. What is a render prop?
+  @@
+  - [x] a technique for sharing code between React components using a prop whose value is a function
+  - [ ] a prop  of a component where you can pass objects
+  - [ ] a technique for sharing code using a prop whose value is a component
+  - [ ] a prop for rendering into ReactDom
+  @@
+  A component with a render prop takes a function that returns a React element and calls it instead of implementing its own render logic.
+  @@
+  #### Q103. What is missing in the following code?
+  @@
+  class NameWrapper extends Component {
+    state = { 
+       name: 'Dan Abramov' 
+    };
+    render() {
+      <?>
+    }
+  }
+  const Name = () => (
+    <NameWrapper render={name => <h2>Hi, {name}!</h2>} />
+  );
+  @@
+  - [x] return this.props.render(this.state.name);
+  - [ ] return render(this.state.name);
+  - [ ] return this.props.render(state.name);
+  - [ ] return render(name);
+  @@
+  #### Q104. What was replaced in react-router-dom version 6?
+  @@
+  - [x] Switch 
+  - [ ] HashRouter
+  - [ ] Nothing  
+  - [ ] Routes
+  @@
+  #### Q105. What is RTK Query?
+  @@
+  - [x]  a powerful data fetching and caching tool.
+   It is designed to simplify common cases for loading data in a web application, eliminating the need to hand-write data fetching & caching logic yourself.
+  - [ ] a pattern and library for managing and updating application state. 
+  - [ ] a recommended approach for writing Redux logic. It contains packages and functions that we think are essential for building a Redux app. 
+  - [ ] a set of tools that helps simplify Redux development.
+   It includes utilities for creating and managing Redux stores, as well as for writing Redux actions and reducers.
+  @@
+  #### Q106. What are the in three fundamental principles of Redux?
+  @@
+  - [x] <Changes are made with pure functions> <Single source of truth​> <State is read-only​ >
+  - [ ] <Changes are made with pure functions> <Unidirectional directional data flow​> <State is immutable​ >
+  - [ ] <Changes are made with predefined functions> <Single source of truth​> <State is read-only​ >
+  - [ ] <Changes are made with pure functions> <Single source of truth​> <State cannot be accessed from outside​ >
+  @@
+  #### Q107. Which hook does this?
+  @@
+  Accepts a value and returns a new copy of the value that will defer to more urgent updates. 
+  If the current render is the result of an urgent update, like user input, React will return the previous value and then render the new value after the urgent render has completed.
+  @@
+  - [x] useDeferredValue
+  - [ ] useTransition
+  - [ ] useSyncExternalStore
+  - [ ] useImperativeHandle
+  @@
+  #### Q108. Which hook does this?
+  @@
+  Customizes the instance value that is exposed to parent components when using ref. As always, imperative code using refs should be avoided in most cases.
+  It should be used with forwardRef.
+  @@
+  - [x] useImperativeHandle
+  - [ ] useTransition
+  - [ ] useSyncExternalStore
+  - [ ] useDeferredValue
+  @@
+  #### Q109. Which hook does this?
+  @@
+  Returns a stateful value for the pending state of the transition, and a function to start it.  Lets you mark updates in the provided callback as transitions.
+  @@
+  - [x] useTransition
+  - [ ] useImperativeHandle
+  - [ ] useSyncExternalStore
+  - [ ] useDeferredValue
+  @@
+  #### Q110. The React.lazy function lets you render a dynamic import as a regular component. What is missing  in the following code?
+  @@
+  const OtherComponent = React.lazy(<?> import('./OtherComponent'));
+  @@
+  - [x] () => 
+  - [ ] props
+  - [ ] render
+  - [ ] children
   `;
-
   const dataArray = data.split('####').slice(1);
 
   const finalDataArray = randomQuestionLogic(dataArray, dataBlockNumber);
