@@ -467,30 +467,12 @@ const giveRandomCSSQuestion = (dataBlockNumber: number) => {
   - [ ] normal declarations in author stylesheets
   - [ ] important declarations in author stylesheets
 @@
-  #### Q37. The flex-direction property is used to specify the direction that flex items are displayed. What are the values used to specify the direction of the items in the following examples?
+#### Q37. In the syntax of the CSS variable (var(--name, value)) what is the value?
 @@
-  ![quote](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-1.png)
-@@
-  - [x]
-    - Example 1: 'flex-direction: row;'
-    - Example 2: 'flex-direction: row-reverse;'
-    - Example 3: 'flex-direction: column;'
-    - Example 4: 'flex-direction: column-reverse;'
-  - [ ]
-    - Example 1: 'flex-direction: row-reverse;'
-    - Example 2: 'flex-direction: row;'
-    - Example 3: 'flex-direction: column-reverse;'
-    - Example 4: 'flex-direction: column;'
-  - [ ]
-    - Example 1: 'flex-direction: row;'
-    - Example 2: 'flex-direction: row-reverse;'
-    - Example 3: 'flex-direction: column;'
-    - Example 4: 'flex-direction: reverse-column;'
-  - [ ]
-    - Example 1: 'flex-direction: column;'
-    - Example 2: 'flex-direction: column-reverse;'
-    - Example 3: 'flex-direction: row;'
-    - Example 4: 'flex-direction: row-reverse;'
+- [x] The fallback value (used if the variable is not found)
+- [ ] The value for the variable (used to override the variable)
+- [ ] it shouldn't be there
+- [ ] the fallback value for the color (so that the color is not empty)
 @@
   #### Q38. There are two sibling combinators that can be used to select elements contained within the same parent element; the general sibling combinator (~) and the adjacent sibling combinator (+). Referring to example below, which elements will the styles be applied to?
 @@
@@ -1253,6 +1235,8 @@ A font stack allows you to control the look of the fonts on the web page even if
   - [ ] The paragraph will be gray. The link will be the browser default, black.
   - [x] Only the paragraph will be gray.
 @@
+Looks like links only inherit if they don't have attribute 'href'.
+@@
   #### Q98. Which answer is an example of a type selector (also sometimes referred to as an element selector)?
 @@
   - [ ] '.header {...}'
@@ -1531,9 +1515,8 @@ A font stack allows you to control the look of the fonts on the web page even if
   - [ ] A, C
   - [ ] A, B, C, D
 @@
-  #### Q111. In this image, the blue box and sample text are both contained within the same parent element. The blue box is floated on the left margin of the container. Why is it not contained with the container?
-@@
-  ![Sample text](https://raw.githubusercontent.com/ram-sah/LinkedIn-Assessments/master/CSS/images/rm-3.png)
+  #### Q111. The blue box and sample text are both contained within the same parent element. 
+  The blue box is floated on the left margin of the container. Why is it not contained with the container?
 @@
   - [ ] Floating the blue box increased its height.
   - [ ] Floating the blue box on the left also moves it down.
@@ -1555,7 +1538,6 @@ A font stack allows you to control the look of the fonts on the web page even if
   '''
 @@
   - [ ] A
-@@
   '''css
   .overlay {
     position: static;
@@ -1566,9 +1548,7 @@ A font stack allows you to control the look of the fonts on the web page even if
     background-color: rgba(0, 0, 0, 0.5);
   }
   '''
-@@
   - [ ] B
-@@
   '''css
   .overlay {
     position: absolute;
@@ -1579,9 +1559,7 @@ A font stack allows you to control the look of the fonts on the web page even if
     background-color: rgba(0, 0, 0, 0.5);
   }
   '''
-@@
   - [ ] C
-@@
   '''css
   .overlay {
     position: static;
@@ -1592,9 +1570,7 @@ A font stack allows you to control the look of the fonts on the web page even if
     background-color: rgba(0, 0, 0, 0.5);
   }
   '''
-@@
   - [x] D
-@@
   '''css
   .overlay {
     position: absolute;
@@ -1754,19 +1730,15 @@ A font stack allows you to control the look of the fonts on the web page even if
   '''
 @@
   - [ ] A
-@@
   '''css
   #inner {
     width: 50%;
   }
-@@
   #outer {
     width: 100%;
   }
   '''
-@@
   - [ ] B
-@@
   '''css
   #inner {
     left: 0;
@@ -1774,17 +1746,13 @@ A font stack allows you to control the look of the fonts on the web page even if
     position: center;
   }
   '''
-@@
   - [ ] C
-@@
   '''css
   #inner {
     text-align: center;
   }
   '''
-@@
   - [x] D
-@@
   '''css
   #inner {
     width: 50%;
@@ -1801,14 +1769,12 @@ A font stack allows you to control the look of the fonts on the web page even if
     border: 2px dashed brown;
     position: relative;
   }
-@@
   #puppy {
     position: absolute;
     right: 80px;
     bottom: 0px;
   }
   '''
-@@
   '''html
   <div class="pen">
     <span id="puppy">🐶</span>
@@ -1827,8 +1793,6 @@ A font stack allows you to control the look of the fonts on the web page even if
   - [ ] 'a.hover {...}'
   - [ ] 'a hover {...}'
 @@
-  [Reference](https://stackoverflow.com/questions/1935820/set-ahover-based-on-class)
-@@
   #### Q124. Which missing code will give "Cellar Door" a shadow?
 @@
   '''css
@@ -1840,16 +1804,13 @@ A font stack allows you to control the look of the fonts on the web page even if
         text-shadow: 3px 5px 10px #000;
       }
     </style>
-@@
     <h1 _____> Cellar Door</h1>
   '''
-@@
+  @@
   - [x] 'class="text-shadow"'
   - [ ] 'id="cellar-door"'
   - [ ] 'id="text-shadow"'
   - [ ] 'class="cellar-door"'
-@@
-  [Reference](https://www.w3schools.com/html/html_classes.asp)
 @@
   #### Q125. Which choice is a valid example of a comment in CSS?
 @@
@@ -1898,7 +1859,6 @@ A font stack allows you to control the look of the fonts on the web page even if
         ':active' styles are applied on mouse click.
         ':hover' styles are applied on mouse over.
         ':focus' styles are applied on mouse click and hold, or when a Tab key on a keyboard is used to navigate through links.
-@@
   - [x] ':visited' styles are applied after the link has been opened.
         ':active' styles are applied on mouse click only and before mouse release.
         ':hover' styles are applied on mouse over.
@@ -1997,6 +1957,70 @@ div.example1 {
 - [ ] Linear Gradients
 - [ ] Radial Gradients
 - [ ] Both Linear adn Radial
+#### Q139. What is user agent stylesheet?
+@@
+- [x] default style sheet provided by the browser 
+- [ ] stylesheet defined by the user
+- [ ] stylesheet provided by a library
+- [ ] default style sheet provided by the website
+@@
+User agent style sheets are overridden by anything that you set in your own style sheet. 
+They are just the rock bottom: in the absence of any style sheets provided by the page or by the user, the browser still has to render the content somehow, and the user agent style sheet just describes this.
+@@
+#### Q140. What does the following code do?
+@@
+.shadow {
+  box-shadow:         inset 0 0 10px #000000;
+}
+@@
+- [x] creates inner shadow
+- [ ] creates shadow on the right
+- [ ] adds blur
+- [ ] adds nothing as the shadow size is not specified
+@@
+#### Q141. In the following box-shadow syntax what is the first value responsible for?
+@@
+.shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+@@
+- [x] The horizontal offset
+- [ ] The vertical offset
+- [ ] The blur radius
+- [ ] The spread radius
+@@
+#### Q142. In the following box-shadow syntax what is the second value responsible for?
+@@
+.shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+@@
+- [x] The vertical offset
+- [ ] The spread radius 
+- [ ] The blur radius
+- [ ] The horizontal offset
+@@
+#### Q143. In the following box-shadow syntax what is the third value responsible for?
+@@
+.shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+@@
+- [ ] The vertical offset
+- [ ] The spread radius 
+- [x] The blur radius
+- [ ] The horizontal offset
+@@
+#### Q144. In the following box-shadow syntax what is the fourth value responsible for?
+@@
+.shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+@@
+- [ ] The vertical offset
+- [x] The spread radius 
+- [ ] The blur radius
+- [ ] The horizontal offset
   `;
 
   const dataArray = data.split('####').slice(1);
