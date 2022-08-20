@@ -52,9 +52,11 @@ const FrontCounter = ({
       <div>
         Rate: <strong> {persent}% </strong>
       </div>
-      <div>
-        Level: <strong>{level}</strong>
-      </div>
+      {topic && (
+        <div>
+          Level: <strong>{level}</strong>
+        </div>
+      )}
     </div>
   );
 };
