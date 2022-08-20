@@ -220,15 +220,15 @@ Note: The enctype attribute can be used only if method="post".
   - [x] es-es
   - [ ] spanish
 @@
-  #### Q21. Review the text in the red box in the image shown. What is the best way to code this in HTML?
+  #### Q21. In the following code what does width=device-width do?
 @@
-  ![Image of footer](images/ss-3.png?raw=true)
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 @@
-  - [ ] ordered list
-  - [x] unordered list inside a nav element
-  - [ ] ordered list inside a nav element
-  - [ ] unordered list
-@@
+- [x] sets the width of the page to follow the screen-width of the device (which will vary depending on the device
+- [ ] sets the initial zoom level when the page is first loaded by the browser
+- [ ] gives the browser instructions on how to control the page's dimensions and scaling
+- [ ] introduced a method to let web designers take control over the viewport
+
   #### Q22. What is the best way to code three choices within a form so that the user can select only one item?
 @@
   - [ ] A
@@ -507,48 +507,12 @@ The accesskey global attribute provides a hint for generating a keyboard shortcu
   [Source](https://www.interviewbit.com/html-mcq/)
   [Source](https://www.w3.org/TR/2010/WD-html-markup-20100624/html.html)
 @@
-  #### Q44. Which code snippet creates the layout shown, starting at '<table>' and ending at '</table>'?
+  #### Q44. Which  element defines a set of rows summarizing the columns of the table?
 @@
-  ![Table](images/ss-1.png?raw=true 'table')
-@@
-  - [ ] A
-  '''html
-  <tr>
-    <td>Table cell 1</td>
-    <td>Table cell 2</td>
-  </tr>
-  <tr>
-    <td rowspan="2">Table cell 3</td>
-  </tr>
-  '''
-  - [ ] B
-  '''html
-  <tr>
-    <td>Table cell 1</td>
-    <td>Table cell 2</td>
-    <td>Table cell 3</td>
-  </tr>
-  '''
-  - [x] C
-  '''html
-  <tr>
-    <td>Table cell 1</td>
-    <td>Table cell 2</td>
-  </tr>
-  <tr>
-    <td colspan="2">Table cell 3</td>
-  </tr>
-  '''
-  - [ ] D
-  '''html
-  <tr>
-    <td>Table cell 1</td>
-    <td>Table cell 2</td>
-  </tr>
-  <tr>
-    <td>Table cell 3</td>
-  </tr>
-  '''
+- [x] <tfoot> 
+- [ ] <thead> 
+- [ ] <td> 
+- [ ] <caption> 
 @@
   #### Q45. Which choice is NOT a legal value for the **name** attribute within a '<meta>' tag?
 @@
@@ -1060,25 +1024,12 @@ Frameset Doctype
 @@
   [Reference (MDN)](https://www.w3schools.com/tags/tag_noscript.asp)
 @@
-  #### Q79. How will this code render by default in most web browsers?
+  #### Q79. Which element specifies the  title of a table?
 @@
-  '''html
-  <details>
-    <h4>Mixed Berry Tart.</h4>
-    <p>
-      Raspberries, blueberries, and strawberries on top of a creamy filling served in a crispy tart.
-    </p>
-  </details>
-  '''
-@@
-  - [X] A
-        ![A](images/Q84-1.jpg)
-  - [] B
-        ![B](images/Q84-2.jpg)
-  - [ ] C
-        ![C](images/Q84-3.jpg)
-  - [ ] D
-        ![D](images/Q84-4.jpg)
+- [x] <caption>
+- [ ] <th>
+- [ ] <thead>
+- [ ] <td>
 @@
   #### Q80. What is the difference between the '<svg>' and '<canvas>'?
 @@
