@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './statistics.css';
 import FrontCounter from '../front-counter/FrontCounter';
+import { skillsToFunctions } from '../../constants/constants';
+import { SkillToFuncMapType } from '../../types/types';
 
 const Statistics = ({ topic }: { topic: string }) => {
   const [todayDATA, setTodayDATA] = useState([0, 0]);
@@ -11,8 +13,8 @@ const Statistics = ({ topic }: { topic: string }) => {
       ? JSON.parse(localStorage.getItem(`total${topic}`) as string)
       : [0, 0]
   );
-  const [level, setLevel] = useState(0);
-  const [currentNumOfQuesiont, setCurrentNumOfQuesiont] = useState(0);
+  const [level, setLevel] = useState('');
+  const [currentNumOfQuesion, setCurrentNumOfQuesion] = useState(0);
 
   useEffect(() => {
     setTotalCounter(
@@ -26,11 +28,14 @@ const Statistics = ({ topic }: { topic: string }) => {
     setCurrentTopicStatistics(JSON.parse(localStorage.getItem(`statistics${topic}`) as string));
 
     if (topic) {
-      const currentTopicStatisticsQuestionsNum = JSON.parse(
-        localStorage.getItem(`${topic}questionsNum`) as string
-      );
-      setCurrentNumOfQuesiont(currentTopicStatisticsQuestionsNum);
-      setLevel(Math.floor(totalCounter[0] / currentTopicStatisticsQuestionsNum));
+      const question = skillsToFunctions[topic as keyof SkillToFuncMapType](0);
+
+      const currentTopicStatisticsQuestionsNum = question.split('$$$')[1];
+
+      if (currentTopicStatisticsQuestionsNum) {
+        setCurrentNumOfQuesion(currentTopicStatisticsQuestionsNum);
+        setLevel(String(Math.floor(totalCounter[0] / Number(currentTopicStatisticsQuestionsNum))));
+      }
     }
   }, [topic]);
 
@@ -57,7 +62,11 @@ const Statistics = ({ topic }: { topic: string }) => {
     <div id="statistics">
       <div className="stat-item">
         <strong>Today:</strong>{' '}
-        <FrontCounter counterOfCorrect={todayDATA[0]} counterOfAttempts={todayDATA[1]} />
+        <FrontCounter
+          counterOfCorrect={todayDATA[0]}
+          counterOfAttempts={todayDATA[1]}
+          level={level}
+        />
       </div>
       {currentTopicStatistics?.map((date) => (
         <div className="stat-item" key={Object.keys(date)[0]}>
@@ -80,7 +89,8 @@ const Statistics = ({ topic }: { topic: string }) => {
       <div className="stat-item">
         {' '}
         <strong>
-          Questions to the next level left: {totalCounter[0] % currentNumOfQuesiont}
+          Questions to the next level left:{' '}
+          {currentNumOfQuesion - (totalCounter[0] % currentNumOfQuesion) + 1}
         </strong>{' '}
       </div>
     </div>

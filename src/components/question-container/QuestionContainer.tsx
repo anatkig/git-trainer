@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import giveRandomQuestion from '../../questions/giveRandomQuestion';
 import FrontCounter from '../front-counter/FrontCounter';
+import { skillsToFunctions } from '../../constants/constants';
+import { SkillToFuncMapType } from '../../types/types';
 import './question-container.css';
 
 const QuestionContainer = ({ topic }: { topic: string }) => {
@@ -38,7 +40,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   const [counterOfAttempts, setCounterOfAttempts] = useState(0);
   const [rightRowCounter, setRightRowCounter] = useState(0);
   const [dataBlockNumber, setDataBlockNumber] = useState(0);
-  const [level, setLevel] = useState(0);
+  const [level, setLevel] = useState('');
 
   useEffect(() => {
     setQuestion(giveRandomQuestion(dataBlockNumber));
@@ -59,11 +61,10 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
 
   useEffect(() => {
     if (topic) {
-      const currentTopicStatisticsQuestionsNum = JSON.parse(
-        localStorage.getItem(`${topic}questionsNum`) as string
-      );
+      const question = skillsToFunctions[topic as keyof SkillToFuncMapType](0);
 
-      setLevel(Math.floor(counterOfCorrect / currentTopicStatisticsQuestionsNum));
+      const currentTopicStatisticsQuestionsNum = question.split('$$$')[1];
+      setLevel(String(Math.floor(counterOfCorrect / Number(currentTopicStatisticsQuestionsNum))));
     }
   }, [topic]);
 
@@ -178,21 +179,23 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
         counterOfAttempts={counterOfAttempts}
         level={level}
       />
-      <div id="question">{questionArray[0]}</div>
-      <div id="addition-to-question">
+      <div id="question" key="quesion">
+        {questionArray[0]}
+      </div>
+      <div id="addition-to-question" key="addition">
         {additionToQuestion.map((addition: string, index: number) => (
-          <div key={addition + index}>
+          <div key={`${addition}${index}`}>
             {addition.split('\n').map((line) => (
               <div key={line}>{line}</div>
             ))}
           </div>
         ))}
       </div>
-      <div id="answers">
+      <div id="answers" key="answers">
         <ol>
           {optionsArray &&
             optionsArray.map((answer: string, index: number) => (
-              <li className="answer-option" key={answer + index}>
+              <li className="answer-option" key={`${answer}${index}`}>
                 <button
                   onClick={(event: React.MouseEvent) => handleAnswerButtonClick(event, answer)}
                   style={{
@@ -205,12 +208,12 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
             ))}
         </ol>
       </div>
-      <div id="explanation" style={{ display: showExplanation }}>
+      <div id="explanation" style={{ display: showExplanation }} key="explanation">
         {explanation.map((element: string, index: number) => (
-          <div key={element + index}>{element}</div>
+          <div key={`${element}${index}`}>{element}</div>
         ))}
       </div>
-      <div style={{ display: showExplanation }}>
+      <div style={{ display: showExplanation }} key="button">
         <button id="next-button" onClick={handleNextButtonClick}>
           Next=&gt;
         </button>

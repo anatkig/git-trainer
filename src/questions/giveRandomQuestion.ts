@@ -26,10 +26,6 @@ const giveRandomQuestion = (dataBlockNumber: number) => {
   const additionToQuestion = questionArray.slice(1, optionsStartIndex);
   const explanation = questionArray.slice(optionEndIndex);
 
-  const questionsNum = questionAndQuestionNumArr[1];
-
-  localStorage.setItem(`${topic}questionsNum`, JSON.stringify(questionsNum));
-
   return [questionArray, optionsArray, additionToQuestion, explanation];
 };
 

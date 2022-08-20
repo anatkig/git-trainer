@@ -8,7 +8,7 @@ const FrontCounter = ({
 }: {
   counterOfCorrect: number;
   counterOfAttempts: number;
-  level?: number;
+  level?: string;
 }) => {
   const [persent, setPersent] = useState(0);
 
@@ -24,9 +24,11 @@ const FrontCounter = ({
       <div>
         Rate: <strong> {persent}% </strong>
       </div>
-      <div>
-        Level: <strong>{level}</strong>
-      </div>
+      {level && (
+        <div>
+          Level: <strong>{level}</strong>
+        </div>
+      )}
     </div>
   );
 };
