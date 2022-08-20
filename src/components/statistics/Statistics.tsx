@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import "./statistics.css";
-import FrontCounter from "../front-counter/FrontCounter";
+import { useState, useEffect } from 'react';
+import './statistics.css';
+import FrontCounter from '../front-counter/FrontCounter';
 
 const Statistics = ({ topic }: { topic: string }) => {
   const [todayDATA, setTodayDATA] = useState([0, 0]);
@@ -11,6 +11,8 @@ const Statistics = ({ topic }: { topic: string }) => {
       ? JSON.parse(localStorage.getItem(`total${topic}`) as string)
       : [0, 0]
   );
+  const [level, setLevel] = useState(0);
+  const [currentNumOfQuesiont, setCurrentNumOfQuesiont] = useState(0);
 
   useEffect(() => {
     setTotalCounter(
@@ -22,6 +24,14 @@ const Statistics = ({ topic }: { topic: string }) => {
 
   useEffect(() => {
     setCurrentTopicStatistics(JSON.parse(localStorage.getItem(`statistics${topic}`) as string));
+
+    if (topic) {
+      const currentTopicStatisticsQuestionsNum = JSON.parse(
+        localStorage.getItem(`${topic}questionsNum`) as string
+      );
+      setCurrentNumOfQuesiont(currentTopicStatisticsQuestionsNum);
+      setLevel(Math.floor(totalCounter[0] / currentTopicStatisticsQuestionsNum));
+    }
   }, [topic]);
 
   useEffect(() => {
@@ -46,7 +56,7 @@ const Statistics = ({ topic }: { topic: string }) => {
   return (
     <div id="statistics">
       <div className="stat-item">
-        <strong>Today:</strong>{" "}
+        <strong>Today:</strong>{' '}
         <FrontCounter counterOfCorrect={todayDATA[0]} counterOfAttempts={todayDATA[1]} />
       </div>
       {currentTopicStatistics?.map((date) => (
@@ -59,9 +69,19 @@ const Statistics = ({ topic }: { topic: string }) => {
         </div>
       ))}
       <div className="stat-item">
-        {" "}
-        <strong>Total:</strong>{" "}
-        <FrontCounter counterOfCorrect={totalCounter[0]} counterOfAttempts={totalCounter[1]} />
+        {' '}
+        <strong>Total:</strong>{' '}
+        <FrontCounter
+          counterOfCorrect={totalCounter[0]}
+          counterOfAttempts={totalCounter[1]}
+          level={level}
+        />
+      </div>
+      <div className="stat-item">
+        {' '}
+        <strong>
+          Questions to the next level left: {totalCounter[0] % currentNumOfQuesiont}
+        </strong>{' '}
       </div>
     </div>
   );

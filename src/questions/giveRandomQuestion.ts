@@ -7,7 +7,11 @@ const giveRandomQuestion = (dataBlockNumber: number) => {
 
   const question = skillsToFunctions[topic as keyof SkillToFuncMapType](dataBlockNumber);
 
-  const questionArray = question.split('@@').filter((question: string) => question.trim());
+  const questionAndQuestionNumArr = question.split('$$$');
+
+  const questionArray = questionAndQuestionNumArr[0]
+    .split('@@')
+    .filter((question: string) => question.trim());
 
   const options = questionArray?.filter(
     (element: string) => element.includes('[x]') && element.includes('[ ]')
@@ -21,6 +25,10 @@ const giveRandomQuestion = (dataBlockNumber: number) => {
 
   const additionToQuestion = questionArray.slice(1, optionsStartIndex);
   const explanation = questionArray.slice(optionEndIndex);
+
+  const questionsNum = questionAndQuestionNumArr[1];
+
+  localStorage.setItem(`${topic}questionsNum`, JSON.stringify(questionsNum));
 
   return [questionArray, optionsArray, additionToQuestion, explanation];
 };

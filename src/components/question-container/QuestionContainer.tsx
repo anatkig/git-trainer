@@ -38,6 +38,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   const [counterOfAttempts, setCounterOfAttempts] = useState(0);
   const [rightRowCounter, setRightRowCounter] = useState(0);
   const [dataBlockNumber, setDataBlockNumber] = useState(0);
+  const [level, setLevel] = useState(0);
 
   useEffect(() => {
     setQuestion(giveRandomQuestion(dataBlockNumber));
@@ -55,6 +56,16 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   useEffect(() => {
     setTodayDate(new Date().toDateString());
   }, [topic, counterOfCorrect, counterOfAttempts]);
+
+  useEffect(() => {
+    if (topic) {
+      const currentTopicStatisticsQuestionsNum = JSON.parse(
+        localStorage.getItem(`${topic}questionsNum`) as string
+      );
+
+      setLevel(Math.floor(counterOfCorrect / currentTopicStatisticsQuestionsNum));
+    }
+  }, [topic]);
 
   useEffect(() => {
     let updateOnCorrect = 0;
@@ -162,7 +173,11 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   };
   return (
     <div id="question-container">
-      <FrontCounter counterOfCorrect={counterOfCorrect} counterOfAttempts={counterOfAttempts} />
+      <FrontCounter
+        counterOfCorrect={counterOfCorrect}
+        counterOfAttempts={counterOfAttempts}
+        level={level}
+      />
       <div id="question">{questionArray[0]}</div>
       <div id="addition-to-question">
         {additionToQuestion.map((addition: string, index: number) => (
