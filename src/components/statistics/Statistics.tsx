@@ -65,7 +65,7 @@ const Statistics = ({ topic }: { topic: string }) => {
         <FrontCounter
           counterOfCorrect={todayDATA[0]}
           counterOfAttempts={todayDATA[1]}
-          level={level}
+          topic={topic}
         />
       </div>
       {currentTopicStatistics?.map((date) => (
@@ -83,7 +83,7 @@ const Statistics = ({ topic }: { topic: string }) => {
         <FrontCounter
           counterOfCorrect={totalCounter[0]}
           counterOfAttempts={totalCounter[1]}
-          level={level}
+          topic={topic}
         />
       </div>
       <div className="stat-item">

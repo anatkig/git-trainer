@@ -1,8 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import giveRandomQuestion from '../../questions/giveRandomQuestion';
 import FrontCounter from '../front-counter/FrontCounter';
-import { skillsToFunctions } from '../../constants/constants';
-import { SkillToFuncMapType } from '../../types/types';
 import './question-container.css';
 
 const QuestionContainer = ({ topic }: { topic: string }) => {
@@ -40,7 +38,6 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   const [counterOfAttempts, setCounterOfAttempts] = useState(0);
   const [rightRowCounter, setRightRowCounter] = useState(0);
   const [dataBlockNumber, setDataBlockNumber] = useState(0);
-  const [level, setLevel] = useState('');
 
   useEffect(() => {
     setQuestion(giveRandomQuestion(dataBlockNumber));
@@ -58,15 +55,6 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
   useEffect(() => {
     setTodayDate(new Date().toDateString());
   }, [topic, counterOfCorrect, counterOfAttempts]);
-
-  useEffect(() => {
-    if (topic) {
-      const question = skillsToFunctions[topic as keyof SkillToFuncMapType](0);
-
-      const currentTopicStatisticsQuestionsNum = question.split('$$$')[1];
-      setLevel(String(Math.floor(counterOfCorrect / Number(currentTopicStatisticsQuestionsNum))));
-    }
-  }, [topic]);
 
   useEffect(() => {
     let updateOnCorrect = 0;
@@ -177,7 +165,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
       <FrontCounter
         counterOfCorrect={counterOfCorrect}
         counterOfAttempts={counterOfAttempts}
-        level={level}
+        topic={topic}
       />
       <div id="question" key="quesion">
         {questionArray[0]}
@@ -185,15 +173,15 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
       <div id="addition-to-question" key="addition">
         {additionToQuestion.map((addition: string, index: number) => (
           <div key={`${addition}${index}`}>
-            {addition.split('\n').map((line) => (
-              <div key={line}>{line}</div>
+            {addition.split('\n').map((line, index) => (
+              <div key={`${line}${index}`}>{line}</div>
             ))}
           </div>
         ))}
       </div>
       <div id="answers" key="answers">
         <ol>
-          {optionsArray &&
+          {optionsArray.length &&
             optionsArray.map((answer: string, index: number) => (
               <li className="answer-option" key={`${answer}${index}`}>
                 <button
