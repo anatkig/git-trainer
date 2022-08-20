@@ -19,7 +19,8 @@ const randomQuestionLogic = (dataArray: string[], dataBlockNumber: number) => {
   const rightEntries =
     dataBlockNumber < dataBlocks.length ? [...dataBlocks[dataBlockNumber]] : dataArray;
 
-  const finalDataArray = [...rightEntries, ...wrongEntries];
+  const totalDataArray = [...rightEntries, ...wrongEntries];
+  const finalDataArray = totalDataArray.map((entry) => entry + `$$$${dataArray.length}`);
 
   return finalDataArray;
 };
