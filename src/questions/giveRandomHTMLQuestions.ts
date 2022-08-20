@@ -85,45 +85,17 @@ itemscope is used to set the scope of where in the data structure the vocabulary
   - [ ] form
   - [ ] spellcheck
 @@
-  #### Q11. What is the best way to code the sample shown?
-@@
-  ![Sample text](images/ss-2.png?raw=true)
-@@
-  - [ ] A
-  '''html
-  <details>
-    <summary>Parmesan Deviled Eggs</summary>
-    <p>
-      These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-    </p>
-  </details>
-  '''
-  - [ ] B
-  '''html
-  <h4>▸ Parmesan Deviled Eggs</h4>
-  <p>
-    These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-  </p>
-  '''
-  - [x] C
-  '''html
-  <details open>
-    <summary>Parmesan Deviled Eggs</summary>
-    <p>
-      These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-    </p>
-  </details>
-  '''
-  - [ ] D
-  '''html
-  <details>
-    <h4>▸ Parmesan Deviled Eggs</h4>
-    <p>
-      These delectable little bites are made with organic eggs, fresh Parmesan, and chopped pine nuts.
-    </p>
-  </details>
-  '''
-@@
+  #### Q11. Which target attribute value is missing from the list of link's target attribute values?
+  @@
+  _self - Default. Opens the document in the same window/tab as it was clicked
+  _blank - Opens the document in a new window or tab
+  _parent - Opens the document in the parent frame
+  @@
+  - [x] _top - Opens the document in the full body of the window
+  - [ ] _set - Opens the document in the full body of the window
+  - [ ] _open - Opens the document in a new document
+  - [ ] _bottom - Opens the document at the bottom of the current page
+  @@
   #### Q12. What is the purpose of the '<samp>' element?
 @@
   - [ ] It connects the web browser to a SA-MP server.
