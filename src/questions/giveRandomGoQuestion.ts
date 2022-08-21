@@ -55,7 +55,26 @@ const giveRandomGoQuestion = (dataBlockNumber: number) => {
   - [ ] 2
   - [ ] a random value
 @@
-  [IOTA in Go (Golang)](https://golangbyexample.com/iota-in-golang/)
+Iota in Go is used to represent constant increasing sequences. When repeated in a constant, its value gets incremented after each specification.
+
+package main
+import (
+   "fmt"
+)
+co
+nst (
+   first = iota
+   second = iota
+   third = iota
+)
+func main() {
+   fmt.Println(first, second, third)
+}
+
+Output
+If we run the command go run main.go, then we will get the following output in the terminal.
+
+0 1 2
 @@
   #### Q6. Which is the _only_ valid import statement in Go?
 @@
@@ -177,9 +196,9 @@ const giveRandomGoQuestion = (dataBlockNumber: number) => {
   - [ ] A
   '''go
   // Calculate a + b
-  // - a: int
-  // - b: int
-  // - returns: int
+  // a: int
+  // b: int
+  // returns: int
   func Add(a, b int) {
     return a + b
   }
@@ -599,6 +618,7 @@ const giveRandomGoQuestion = (dataBlockNumber: number) => {
 - [ ] None of the above
 @@
 #### Q56. Which of the following function can be used to copy a slice to another slice in Go?
+@@
 - [x] copy()
 - [ ] append()
 - [ ] resize()
@@ -641,6 +661,10 @@ func main() {
 - [ ] array, slice, channel
 - [ ] array, slice, map
 @@
+ The range keyword is mainly used in for loops in order to iterate over all the elements of a map, slice, channel, or an array.
+ When it iterates over the elements of an array and slices then it returns the index of the element in an integer form.
+ And when it iterates over the elements of a map then it returns the key of the subsequent key-value pair. 
+@@
 #### Q62. What is correct about initializing a variable in a 'switch' statement?
 @@
 - [x] A new variable can be initialized within the 'switch' statement to be evaluated against the condition in the accompanying cases.
@@ -669,12 +693,16 @@ func main() {
 - [ ] After the line 'x := 6', save the value of 'x' in a new variable 't' ('t := x') and perform 't--'.
 - [ ] Define 'x := 6' before the 'for' loop inside the function 'sub'.
 @@
-#### Q66. You created a basic function 'length' that returns the length of an array and the main function lets you print the length by calling it inside 'Println' as shown:
+#### Q66. <?> in Golang is a user-defined type that allows to group/combine items of possibly different types into a single type. 
+Any real-world entity which has some set of properties/fields can be represented as a <?> . 
 @@
-- [x] You passed only 'vs' inside the function call; replace it with 'vs...'.
-- [ ] You defined the integer array with curly brackets; use round brackets instead.
-- [ ] You defined 'args ...int' inside the function definition; replace it with 'args int'.
-- [ ] You left '[]' blank while defining the integer array; fill these brackets with '...'.
+- [x] struct
+- [ ] slice
+- [ ] map
+- [ ] list
+@@
+ A struct is a user-defined type that contains a collection of fields. It is used to group related data to form a single unit.
+ A Go struct can be compared to a lightweight class without the inheritance feature.
 @@
 #### Q67. You stored a user password in a variable 'passD' with value '@Uih56roam'. The organization policy doesn't allow the program to store the password in its original format. How can you encode the password using 'base 64 encoding'?
 @@
@@ -683,12 +711,17 @@ func main() {
 - [ ] Import '"base64"' and use 'base64.StdEncoding.EncodeToString([]byte(passD))'
 - [ ] Import 'b64 "base64"' and use 'base64.EncodeToString([]byte(passD))'
 @@
-#### Q68. Why will the following code panic at runtime?
+#### Q68. What is a struct tag?
 @@
-- [x] The jobs channel was not closed, which causes the program to enter into a deadlock.
-- [ ] The jobs channel capacity was not used up.
-- [ ] The 'fmt' package is imported, but never used.
-- [ ] The jobs channel is halted and will continue to be halted until it receives a value from the channel.
+- [x] additional meta data information inserted into struct fields
+- [ ] a user-defined type that contains a collection of fields
+- [ ] additional meta data information inserted into struct object
+- [ ] a user-defined type that contains a collection of struct types
+@@
+e.g.: type User struct {
+	Name string \`example:"name"\`
+}
+example:"name" - struct tag
 @@
 #### Q69. What is the result of running the 'go mod vendor' command?
 @@
@@ -704,12 +737,22 @@ func main() {
 - [ ] '-gorace'
 - [ ] '-r'
 @@
-#### Q71. You have a slice that consists of six employee IDs. You must drop the ID 'ID465' from the slice. Here's the starter code:
+#### Q71. What is the purpose of make() function?
 @@
-- [x] Pass 'idx := 3' and add the following function:
-- [ ] Pass 'idx := 4' and add the following function:
-- [ ] Pass 'idx := 3' and add the following function:
-- [ ] Pass 'idx := 4' and add the following function:
+- [x] to create a slice
+- [ ] to create a struct
+- [ ] to create a maker
+- [ ] to create a map
+@@
+func make([]type, length, capacity) []type
+
+package main
+import "fmt"
+func main() {
+    slice := make([]string, 3, 5)
+    fmt.Println("Length", len(slice))
+    fmt.Println("Capacity", cap(slice))
+}
 @@
 #### Q72. What is correct about a type switch in relation to a struct?
 @@
@@ -725,6 +768,47 @@ func main() {
 - [ ] A defined set of methods
 - [ ] A set of share library package
 @@
+#### @74. What is a goroutine?
+@@
+- [x] a function that executes simultaneously with other goroutines in a program and are lightweight threads managed by Go
+- [ ] a function that executes in sequence with other goroutines in a program and are lightweight threads managed by Go
+- [ ] a function that executes  with other goroutines in a program and are lightweight processes managed by Go
+- [ ] a function that executes s in a program  managed by Go
+@@
+#### Q75. What is the name for the event when  a group of goroutines are waiting for each other and none of them is able to proceed?
+@@
+- [x] deadlock
+- [ ] slowdown
+- [ ] that is impossible in go
+- [ ] that is possible in go but doesn't have a name
+@@
+#### Q76. How to create a deferred funtion in go?
+@@
+- [x] use defer keyword
+- [ ] use callback
+- [ ] defer the execution with a timeout
+- [ ] use delay keyword
+@@
+ e.g.: defer fmt.PrintIn("Hello")
+@@
+#### Q77. Which keyword is missing in the following code?
+@@
+package main
+
+import "fmt"
+
+var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+
+func main() {
+	for i, v := <?> pow {
+		fmt.Printf("2**%d = %d\n", i, v)
+	}
+}
+@@
+- [x] range
+- [ ] loop
+- [ ] in
+- [ ] of
   `;
 
   const dataArray = data.split('####').slice(1);
