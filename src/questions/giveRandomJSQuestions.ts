@@ -2000,6 +2000,9 @@ import {*} as myModule, myDefault from 'my-module.js';
 - [ ] To find previously used multi-line strings used in the template literal
 - [ ] To return an object's properties that were used previously in the template literal
 @@
+a tagged template literal looks just like a template literal, except for the name at the start, right before the first back tick.
+e.g.: html\`<div class='item'>\${item}</div>\`
+@@
 #### Q155. You have two objects with multiple objects nested inside. What is the best approach for determining if these objects are equal (have the same shape and values)?
 @@
 - [x] Iterate through the object, key by key, and assert strict equality === on every corresponding value. Iterate through all the nested objects to do the same until you find a missing key:value pair or confirm equality.
@@ -2032,7 +2035,35 @@ let config = {<br>  data: { "number": 99 },<br>  getConfig: function() { return 
 - [ ] Add an invocation of super() to the function to get the member variables of the parent object.
 - [ ] Use an arrow function instead as the definition for getConfig to ensure that the function inherits config's scope.
 @@
-
+#### Q159. Which regular expression symbol matches a single white space character?
+@@
+- [x] \s
+- [ ] \w
+- [ ] \t
+- [ ] \S
+@@
+#### 160. Which regular expression symbol matches the preceding item "x" 0 or more times?
+@@
+- [x] x*
+- [ ] x+
+- [ ] x.
+- [ ] x?
+@@
+#### 161. Which regular expression symbol matches the end of input?
+@@
+- [x] $
+- [ ] ^
+- [ ] .
+- [ ] +
+@@
+#### 162. Which regular expression correctly matches the "fox" in the following string?
+@@
+'A quick fox'
+@@
+- [x] /\w+$/
+- [ ] /\b\w+\b/g
+- [ ]  /\w+(?= fox)/
+- [ ] /^\w+$/
 `;
   const dataArray = data.split('####').slice(1);
 
