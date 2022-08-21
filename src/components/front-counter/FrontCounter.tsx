@@ -25,12 +25,11 @@ const FrontCounter = ({
       const question = skillsToFunctions[topic as keyof SkillToFuncMapType](0);
 
       const currentTopicStatisticsQuestionsNum = question.split('$$$')[1];
-
       if (currentTopicStatisticsQuestionsNum) {
         setLevel(String(Math.floor(totalCounter[0] / Number(currentTopicStatisticsQuestionsNum))));
       }
     }
-  }, [topic]);
+  }, [topic, totalCounter]);
 
   useEffect(() => {
     setTotalCounter(
