@@ -1079,18 +1079,12 @@ Frameset Doctype
 @@
   'formaction — The URL that processes the information submitted by the button. Overrides the action attribute of the button's form owner. Does nothing if there is no form owner.' [Source](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-formaction)
 @@
-  #### Q84. Which is the best markup to produce this text?
+  #### Q84. What does PNG stand for?
 @@
-  'x<y&z>w'
-@@
-  - [ ] '<p>x<y&z>w</p>'
-  - [x] '<p>x\<y&z\>w</p>'
-  - [ ] '<p>x<<y&&z>>w'
-  - [ ] '<p>x<y&z>w</p>'
-@@
-  'This question has an issue, however this answer will count as correct'
-@@
-  'It's too strange question because all of that methods doesn't work. The good method is &amp, &lt, &gt using.'
+- [x] Portable Network Graphics
+- [ ] Public Network Graphs
+- [ ] Portable Nested Graphics
+- [ ] Portable Net Graphics
 @@
   #### Q85. What is wrong with this code snippet?
 @@
