@@ -9,6 +9,7 @@ import giveRandomGoQuestion from '../questions/giveRandomGoQuestion';
 import { SkillToFuncMapType } from '../types/types';
 import giveRandomTypeScriptQuestion from '../questions/giveRandomTypeScriptQuestion';
 import giveRandomDockerQuestion from '../questions/giveRandomDockerQuestion';
+import giveRandomOOPQuestion from '../questions/giveRandomOOPQuestion';
 
 export const skills = [
   'CSS',
@@ -21,6 +22,7 @@ export const skills = [
   'Go',
   'TypeScript',
   'Docker',
+  'OOP',
   'Mixed',
 ];
 
@@ -35,6 +37,7 @@ export const skillsToFunctions: SkillToFuncMapType = {
   Go: giveRandomGoQuestion,
   TypeScript: giveRandomTypeScriptQuestion,
   Docker: giveRandomDockerQuestion,
+  OOP: giveRandomOOPQuestion,
   Mixed: (dataBlockNumber: number): string =>
     [
       giveRandomCSSQuestion,

@@ -9,5 +9,6 @@ export interface SkillToFuncMapType {
   Go: function;
   TypeScript: function;
   Docker: function;
+  OOP: function;
   Mixed: function;
 }
