@@ -1870,7 +1870,7 @@ Looks like links only inherit if they don't have attribute 'href'.
 @@
   [Reference](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes)
 @@
- ### Q128. Which CSS property allows you to specify an image to be used instead of the normal border around an element?
+ #### Q128. Which CSS property allows you to specify an image to be used instead of the normal border around an element?
  @@
  - [x] border-image
  - [ ] border-picture
@@ -1951,7 +1951,7 @@ div.example1 {
 - [ ] Conic Gradients
 - [ ] Both Linear and Radial  
 @@
-#### @138. Which gradients rotate color around a center point?
+#### Q138. Which gradients rotate color around a center point?
 @@
 - [x] Conic Gradients
 - [ ] Linear Gradients
