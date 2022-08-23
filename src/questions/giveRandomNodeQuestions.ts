@@ -929,6 +929,414 @@ const url = require('url');
    exports.SimpleMessage = 'Hello world';
     //or
     module.exports.SimpleMessage = 'Hello world';
+    @@
+    #### Q113. Which of the following statements are true?
+    @@
+    - [x] Node.js is a server-side language.
+    - [ ] Node.js is a client-side language.
+    - [ ] Node.js is both a server and client-side language.
+    - [ ] None of the above.
+    @@
+    
+     #### Q114. _____ is an interactive shell that processes Node.
+    @@
+    - [x] REPL
+    - [ ] REAL
+    - [ ] RESP
+    - [ ] None of the above
+    @@
+    
+     #### Q115. What is the full form of REPL?
+    @@
+    - [x] Read Eval Print Loop
+    - [ ] Research Eval Program Learn
+    - [ ] Read Earn Point Learn
+    - [ ] Read Eval Point Loop
+    @@
+    
+     #### Q116. Node.js is written in which language?
+    @@
+    - [x] JavaScript
+    - [ ] C++
+    - [ ] C
+    - [ ] Java
+    @@
+    
+     #### Q117. How can we install the node body-parser module?
+    @@
+    - [x] npm install body-parser
+    - [ ] node install body-parser
+    - [ ] node.js install body-parser
+    - [ ] None of the above
+    @@
+    
+     #### Q118. Which of the following are examples of node modules?
+    @@
+    - [x] All of the above
+    - [ ] Express
+    - [ ] Body-parser
+    - [ ] Socket.io
+    @@
+    
+     #### Q119. To include the HTTP server in the node module, what function do we use?
+    @@
+    - [x] require()
+    - [ ] get()
+    - [ ] createServer()
+    - [ ] None of the above
+    @@
+    
+     #### Q120. How can we expose node modules?
+    @@
+    - [x] exports
+    - [ ] expose
+    - [ ] requires
+    - [ ] None of the above
+    @@
+    
+     #### Q121. What method is used to return the current working directory of the process?
+    @@
+    - [x] cwd()
+    - [ ] pwd()
+    - [ ] cmd()
+    - [ ] None of the above
+    @@
+    
+     #### Q122. Default scope in Node.js application is?
+    @@
+    - [x] Local
+    - [ ] Global
+    - [ ] Local to Object
+    - [ ] None of the above
+    @@
+    
+     #### Q123. How many node objects methods are available?
+    @@
+    - [x] 18
+    - [ ] 21
+    - [ ] 19
+    - [ ] 20
+    @@
+    
+     #### Q124. We can kill a process in Node.js using the keyboard shortcut?
+    @@
+    - [x] Ctrl + C
+    - [ ] Ctrl + B
+    - [ ] Ctrl + K
+    - [ ] None of the above
+    @@
+    
+     #### Q125. What is the full form of npm?
+    @@
+    - [x] Node Package Manager
+    - [ ] Node Project Manager
+    - [ ] New Project Manager
+    - [ ] New Package Manager
+    @@
+    
+     #### Q126. How can we initiate a NodeJS file called Hello in Node?
+    @@
+    - [x] node Hello.js
+    - [ ] Hello,js
+    - [ ] javascript Hello.js
+    - [ ] node Hello
+    @@
+    
+     #### Q127. NodeJS is supported on which of the following platforms?
+    @@
+    - [x] All of the above
+    - [ ] Windows
+    - [ ] MAC OS
+    - [ ] Unix/Linux
+    @@
+    
+     #### Q128. ____ is a debugging tool for NodeJS?
+    @@
+    - [x] Node Inspector
+    - [ ] REPL
+    - [ ] Node Console
+    - [ ] None of the above
+    @@
+    
+     #### Q129. The node object property which is used to return the node just before the current node is?
+    @@
+    - [x] previousSibling
+    - [ ] localName
+    - [ ] index
+    - [ ] None of the above
+    @@
+    
+     #### Q130. The advantages of using node modules are?
+    @@
+    - [x] All of the above
+    - [ ] Provides a means of dividing up tasks
+    - [ ] Provides a means of reuse of program code
+    - [ ] Provides a means of testing individual parts of the program
+    @@
+    
+     #### Q131. Which of the following are examples of NodeJS streams types?
+    @@
+    - [x] All of the above
+    - [ ] Writable
+    - [ ] Duplex
+    - [ ] Readable
+    @@
+    
+     #### Q132. The command to install nodemon in NodeJS is?
+    @@
+    - [x] npm install -g nodemon
+    - [ ] node install -g nodemon
+    - [ ] npm nodemon
+    - [ ] node nodemon
+    @@
+    
+     #### Q133. Which of the following are built-in node modules?
+    @@
+    - [x] All of the above
+    - [ ] zlib
+    - [ ] https
+    - [ ] dgram
+    @@
+    
+     #### Q134. _ variable in REPL session of NodeJS is used for?
+    @@
+    - [x] It is used to get the last result
+    - [ ] It is used to store the result
+    - [ ] It is used to get the last command that was used
+    - [ ] None of the above
+    @@
+    
+     #### Q135. Which of the following statements are true?
+    @@
+    - [x] Statement 2 is true and statement 1 is false.
+    - [ ] Both statements are true.
+    - [ ] Both statements are false.
+    - [ ] Statement 1 is true and statement 2 is false.
+    @@
+    
+     #### Q136. When does a stream fire a data event?
+    @@
+    - [x] When there is data to read.
+    - [ ] When there is data to write
+    - [ ] When there is no data available
+    - [ ] None of the above
+    @@
+    
+     #### Q137. For path specific operations which of the following operations is required to be used?
+    @@
+    - [x] Path Module
+    - [ ] OS Module
+    - [ ] Fs Module
+    - [ ] None of the above
+    @@
+    
+     #### Q138. Which of the following operations can we do with the NodeJS events module?
+    @@
+    - [x] All of the above
+    - [ ] Create
+    - [ ] Listen for
+    - [ ] Fire
+    @@
+    
+     #### Q139. How can we check the installed version of Node?
+    @@
+    - [x] node –version
+    - [ ] npm –version
+    - [ ] npm getVersion
+    - [ ] None of the above
+    @@
+    
+     #### Q140. What command do we use to list all the node modules that are installed globally?
+    @@
+    - [x] npm ls -g
+    - [ ] node ls -g
+    - [ ] npm ls
+    - [ ] node ls
+    @@
+    
+     #### Q141. Which of the following is a valid HTTP method?
+    @@
+    - [x] All of the above
+    - [ ] get
+    - [ ] put
+    - [ ] post
+    @@
+    
+     #### Q142. Which of the following fs module is used to close a file?
+    @@
+    - [x] fs.close()
+    - [ ] fs.closeFile()
+    - [ ] fs.closePath()
+    - [ ] None of the above
+    @@
+    
+     #### Q143. Which of the following NodeJS module splits up a web address into readable parts?
+    @@
+    - [x] URL
+    - [ ] Express
+    - [ ] Cors
+    - [ ] None of the above
+    @@
+    
+     #### Q144. NodeJS uses an event-driven, non-blocking IO model?
+    @@
+    - [x] True
+    - [ ] False
+    - [ ] Cannot be determined
+    - [ ] None of the above
+    @@
+    
+     #### Q145. Which NodeJS statement is used to list all the locally installed NodeJS modules?
+    @@
+    - [x] Is
+    - [ ] list
+    - [ ] cwd
+    - [ ] None of the above
+    @@
+    
+     #### Q146. A visual development environment for NodeJS is?
+    @@
+    - [x] Node-Red
+    - [ ] Visual Studio
+    - [ ] IntelliJ
+    - [ ] NetBeans
+    @@
+    
+     #### Q147. Which of the following NodeJS modules is used for file uploads?
+    @@
+    - [x] formidable
+    - [ ] fs
+    - [ ] express
+    - [ ] files
+    @@
+    
+     #### Q148. Which node module is used to handle binary data?
+    @@
+    - [x] buffer
+    - [ ] binary
+    - [ ] crypto
+    - [ ] dgram
+    @@
+    
+     #### Q149. Which node module is used for zip and unzip functionalities?
+    @@
+    - [x] ZLIB
+    - [ ] buffer
+    - [ ] binary
+    - [ ] None of the above
+    @@
+    
+     #### Q150. Which of the following is used for cryptographic protocols to secure communication over the web?
+    @@
+    - [x] TLS/SSL
+    - [ ] TCP/IP
+    - [ ] Both A and B
+    - [ ] None of the above
+    @@
+    
+     #### Q151. Which node module is used to serve static resources in NodeJS?
+    @@
+    - [x] node-static
+    - [ ] static
+    - [ ] http
+    - [ ] None of the above
+    @@
+    
+     #### Q152. _____ is a software service that allows 2 or more applications to talk to each other?
+    @@
+    - [x] API
+    - [ ] REST
+    - [ ] Both A and B
+    - [ ] None of the above
+    @@
+    
+     #### Q153. Which of the following are StringDecoder class methods?
+    @@
+    - [x] Both A and B
+    - [ ] decoder.write()
+    - [ ] decoder.end()
+    - [ ] None of the above
+    @@
+    
+     #### Q154. Which of the following NodeJS modules is now deprecated?
+    @@
+    - [x] punycode
+    - [ ] os
+    - [ ] express
+    - [ ] None of the above
+    @@
+    
+     #### Q155. What does the fs module stand for?
+    @@
+    - [x] File System
+    - [ ] File Store
+    - [ ] File Service
+    - [ ] None of the above
+    @@
+    
+     #### Q156. Which of the following are the benefits of using modules?
+    @@
+    - [x] All of the above
+    - [ ] Provides a means of dividing up tasks.
+    - [ ] Provides a means of resuing program codes
+    - [ ] Provides a means of testing individual parts of a program.
+    @@
+    
+     #### Q157. Applications built on NodeJS can access which of the following types of databases?
+    @@
+    - [x] Both A and B
+    - [ ] NoSQL Databases
+    - [ ] SQL Databases
+    - [ ] None of the above
+    @@
+    
+     #### Q158. Which of the following are NodeJS global objects?
+    @@
+    - [x] All of the above
+    - [ ] __dirname
+    - [ ] __filename
+    - [ ] Buffer
+    @@
+    
+     #### Q159. JSON was natively constructed on which language?
+    @@
+    - [x] Javascript
+    - [ ] Java
+    - [ ] C++
+    - [ ] None of the above
+    @@
+    
+     #### Q160. Which NodeJS object specifies the name of the directory which contains the code?
+    @@
+    - [x] __dirname
+    - [ ] Buffer
+    - [ ] __filename
+    - [ ] None of the above
+    @@
+    
+     #### Q161. What function is used to fire an event?
+    @@
+    - [x] emit()
+    - [ ] fire()
+    - [ ] calc()
+    - [ ] None of the above
+    @@
+    
+     #### Q162. Which of the following parameters is taken by the buffer.toString method?
+    @@
+    - [x] All of the above
+    - [ ] encoding
+    - [ ] start
+    - [ ] end
+    @@
+    
+     #### Q163. What is a callback?
+    @@
+    - [x] The callback is an asynchronous equivalent for a function
+    - [ ] The callback is a technique in which a method calls back the caller method
+    - [ ] Both A and B
+    - [ ] None of the above
+    @@
 `;
 
   const dataArray = data.split('####').slice(1);
