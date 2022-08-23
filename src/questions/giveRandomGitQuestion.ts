@@ -956,10 +956,10 @@ const giveRandomGitQuestion = (dataBlockNumber: number) => {
 @@
     #### Q117. After staging changes to several files, you realize the changes to the confin.properties file are incorrect, and need to be removed from the stage and working directory. What command can you use to remove the staged changes to the file?
 @@
-    - [ ] git reset HEAD^ -- config.properties
+    - [ ] git reset HEAD^ --config.properties
     - [x] git rm config.properties
     - [ ] git rf config.properties
-    - [ ] git checkout HEAD -- config.properties
+    - [ ] git checkout HEAD --config.properties
 @@
     #### Q118. After a recent release with a stack trace, an issue is create that indicates the problem is with a newly added configuration property named MaxConnections. What command can find all commits that add or remove the string MaxConnections?
 @@
@@ -1093,13 +1093,17 @@ const giveRandomGitQuestion = (dataBlockNumber: number) => {
     - [ ] git label v1.4 
     - [ ] git tag -l v1.4 
     @@
-    #### Q136. You are working on a project that has two key branches : main and dev . You perform all work on dev and once there is a release, you plan to push the code from dev to main expecting a fast-forward merge commit every time. 
+    #### Q136. You are working on a project that has two key branches : main and dev . 
+    You perform all work on dev and once there is a release, you plan to push the code from dev to main expecting a fast-forward merge commit every time. 
     Why is this an unreasonable expectation?
     @@
     - [x] The merge commit will not be a fast-forward commit every time, because the HEAD of dev is not always a direct descendant of the HEAD on main.
     - [ ] The merge commit will never be a fast-forward commit, because dev, being the development branch, does not support fast-forward commits by default. 
     - [ ] The merge commit will never be a fast-forward commit, because main, being the release branch, does not support fast-forward commits by default.
     - [ ] The merge commit will never be a fast-forward commit, because the HEAD of main is not a direct descendant of the HEAD on dev.
+    @@
+    Fast forward merge can be performed when there is a direct linear path from the source branch to the target branch. 
+    In fast-forward merge, git simply moves the source branch pointer to the target branch pointer without creating an extra merge commit.
     @@
     #### Q137. A developer on your team commits their latest changes and immediately pushes them to the repository. However, they included in their commits a file with sensitive authentication information. 
     How could they have avoided this situation?
@@ -1187,6 +1191,45 @@ const giveRandomGitQuestion = (dataBlockNumber: number) => {
     - [ ] git push feature/test origin
     - [ ] git push --dry-run upstream feature/test
     @@
+    #### Q148. What is the following called?
+    @@
+     It can be performed when there is a direct linear path from the source branch to the target branch.
+     In it, git simply moves the source branch pointer to the target branch pointer without creating an extra merge commit.
+    @@
+    - [x]  fast-forward merge
+    - [ ]  quick merge
+    - [ ]  fast-tracked merge
+    - [ ]  speedy merge
+    @@
+    #### Q149. What is the difference between git revert and other 'undo' commands such as git reset and git checkout?
+    @@
+    - [x]  git checkout and git reset, move the HEAD and branch ref pointers to a specified commit.
+     Git revert also takes a specified commit but git revert does not move ref pointers to this commit.
+    - [ ]  git reset move the HEAD and branch ref pointers to a specified commit.
+    Git revert also takes a specified commit but git revert does not move ref pointers to this commit.
+    Git checkout is not one of 'undo".
+    - [ ] git checkout and git reset, move the HEAD and branch ref pointers to a specified commit.
+     Git revert does not move ref pointers to this commit.
+    - [ ] git checkout and git reset, move the HEAD and branch ref pointers.
+    Git revert also takes a specified commit but git revert does not move ref pointers to this commit.
+    @@
+    A revert operation will take the specified commit, inverse the changes from that commit, and create a new "revert commit".
+     The ref pointers are then updated to point at the new revert commit making it the tip of the branch.
+     @@
+     #### Q150. How does git merge --squash work?
+     @@
+     - [ ] git checkout master
+           git merge --squash <feature branch>
+           git commit -m <"your commit message">
+     - [ ] git checkout <your branch>
+           git merge --squash master
+           git commit -m <"your commit message">
+     - [ ] git checkout <your branch>
+           git merge --squash
+           git commit -m <"your commit message">
+     - [ ] git checkout master
+           git merge --squash 
+           git commit -m <"your commit message">
     `;
 
   const dataArray = data.split('####').slice(1);
