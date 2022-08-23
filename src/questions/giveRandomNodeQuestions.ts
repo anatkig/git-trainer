@@ -362,6 +362,8 @@ The “-ef” option of the “ps” command is used to print all the processes 
   - [x] crypto
   - [ ] TLS
 @@
+TLS - Transport Layer Security
+SSL - Secure Sockets Layer 
 Open SSL is an all-around cryptography library that offers open-source application of the TLS protocol. 
 First released in 1998, it is available for Linux, Windows, macOS, and BSD systems.
 OpenSSL allows users to perform various SSL related tasks, including CSR (Certificate Signing Request) and private keys generation and SSL certificate installation. 
@@ -697,7 +699,7 @@ var util = require('util');
 - [ ] jest
 - [ ] mocha
 @@
-#### Q83. What happens if you execute the 'node' command <strong>without</strong> any arguments?
+#### Q83. What happens if you execute the 'node' command without any arguments?
 @@
 - [x] Node will use its 'repl' module to start a REPL session.
 - [ ] Node will run the index.js file in the current directory if one exists.
@@ -720,17 +722,17 @@ var util = require('util');
 @@
 #### Q86. Which of the following is a valid Node HTTP server that accepts connection on port 3000?
 @@
-- [x] 'require('http').createServer(() =&gt; {}).listen(3000)'
-- [ ] 'require('http').listen(3000).on('connection', () =&gt; {})'
-- [ ] 'require('http').createServer(3000, () =&gt; {})'
-- [ ] 'require('http')().listen(3000).on('connection, () =&gt; {});'
+- [x] 'require('http').createServer(() => {}).listen(3000)'
+- [ ] 'require('http').listen(3000).on('connection', () => {})'
+- [ ] 'require('http').createServer(3000, () => {})'
+- [ ] 'require('http')().listen(3000).on('connection, () => {});'
 @@
 #### Q87. With the EventEmitter class in scope, what will the following code do?
 @@
 const myEmitter = new EventEmitter();
-''myEmitter.on('MyEvent', (args) =&gt; 
+''myEmitter.on('MyEvent', (args) => 
 {'    console.log(args);'});
-''myEmitter.once('MyEvent', (args) =&gt; {'    console.log(args);
+''myEmitter.once('MyEvent', (args) => {'    console.log(args);
   '});''myEmitter.emit('MyEvent', 'Hello');
   'myEmitter.emit('MyEvent', 'Hello Again');
 @@
@@ -803,10 +805,10 @@ const url = require('url');
 @@
 #### Q95. How can you declare a new worker thread in Node.js?
 @@
-- [x] const { Worker } = <strong>require('worker_threads')</strong>'const worker1 = <strong>new Worker</strong>('./workerService.js');
-- [ ] const { Worker } = <strong>require('worker_threads')</strong>'const worker1 = <strong>Worker.create</strong>('./workerService.js');
-- [ ] const { Worker } = <strong>require('workers')</strong>'const worker1 = <strong>new Worker</strong>('./workerService.js');
-- [ ] const { Worker } = <strong>require('worker_threads')</strong>'const worker1 = <strong>new WorkerThread</strong>('./workerService.js');
+- [x] const { Worker } = require('worker_threads')'const worker1 = new Worker('./workerService.js');
+- [ ] const { Worker } = require('worker_threads')'const worker1 = Worker.create('./workerService.js');
+- [ ] const { Worker } = require('workers')'const worker1 = new Worker('./workerService.js');
+- [ ] const { Worker } = require('worker_threads')'const worker1 = new WorkerThread('./workerService.js');
 @@
 #### Q96. How would you create a new instance of the 'DiffieHellman' class?
 @@
@@ -825,7 +827,7 @@ const url = require('url');
 #### Q98. Which version string means "all versions greater than or equal to 1.2.3, but less than 2.0.0?"
 @@
 - [x] '^1.2.3'
-- [ ] '&gt;=1.2.3'
+- [ ] '>=1.2.3'
 - [ ] '1.*'
 - [ ] '~1.2.3'
 @@
@@ -1233,7 +1235,9 @@ const url = require('url');
     - [ ] Both A and B
     - [ ] None of the above
     @@
-    
+    SSL - Secure Sockets Layer 
+    TLS - Transport Layer Security
+    @@
      #### Q151. Which node module is used to serve static resources in NodeJS?
     @@
     - [x] node-static
@@ -1435,6 +1439,13 @@ readable.on('data', (chunk) => {
     In a flowing mode, to read data from a stream, it’s possible to listen to data event and attach a callback.
      When a chunk of data is available, the readable stream emits a data event and your callback executes.
      In paused mode, you just need to call read() on the stream instance repeatedly until every chunk of data has been read.
+     @@
+     #### Q171. What does TLS stand for? 
+     @@
+     - [x] Transport Layer Security
+     - [ ] Transfer Layer Security
+     - [ ] Transportation Layer Security
+     - [ ] Transform Layer Security
 `;
 
   const dataArray = data.split('####').slice(1);
