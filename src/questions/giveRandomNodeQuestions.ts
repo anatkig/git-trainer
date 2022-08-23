@@ -1357,15 +1357,19 @@ const url = require('url');
     @@
     #### Q166. Match the streams with their description.
     @@
-   A streams to which we can write data. For example, fs.createWriteStream() lets us write data to a file using streams.
-   B streams from which data can be read. For example: fs.createReadStream() lets us read the contents of a file.
-   C streams that are both Readable and Writable. For example, net.Socket
-   D streams that can modify or transform the data as it is written and read. For example, in the instance of file-compression, you can write compressed data and read decompressed data to and from a file.
+   A streams to which we can write data. 
+   For example, fs.createWriteStream() lets us write data to a file using streams.
+   B streams from which data can be read.
+    For example: fs.createReadStream() lets us read the contents of a file.
+   C streams that are both Readable and Writable. 
+   For example, net.Socket
+   D streams that can modify or transform the data as it is written and read.
+    For example, in the instance of file-compression, you can write compressed data and read decompressed data to and from a file.
     @@
-    - [x] A - Writable, B - Readable, C - Duplex, D - Transform
-    - [ ] A - Duplex, B - Readable, C - Writable, D - Transform  
-    - [ ] A - Readable, B - Writable, C - Duplex, D - Transform    
-    - [ ] A - Writable, B - Transform, C - Duplex, D - Readable
+    - [x] A -Writable, B -Readable, C -Duplex, D -Transform
+    - [ ] A -Duplex, B -Readable, C -Writable, D -Transform  
+    - [ ] A -Readable, B -Writable, C -Duplex, D -Transform    
+    - [ ] A -Writable, B -Transform, C -Duplex, D -Readable
     @@
     #### Q167. How to create a readable stream? Choose the correct order of the lines.
     @@
