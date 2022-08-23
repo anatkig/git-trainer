@@ -1337,6 +1337,100 @@ const url = require('url');
     - [ ] Both A and B
     - [ ] None of the above
     @@
+
+    #### Q164. Streams are a way to handle reading/writing files, network communications, or any kind of end-to-end information exchange in an efficient way.
+    What makes streams really powerful?
+    @@
+    - [x] streams read chunks of data piece by piece, processing its content without keeping it all in memory
+    - [ ] streams read chunks of all at once, processing its content without keeping it all in memory
+    - [ ] streams read chunks of data piece by piece, processing its content and keep it all in memory
+    - [ ] streams read chunks of data piece by piece, without processing its content keeping it all in memory
+    @@
+    Using streams to process smaller chunks of data, makes it possible to read larger files.
+    @@
+    #### Q165. Which is not an advantage of using streams?
+    @@
+    - [x] Space efficiency: they occupy little space on your disc
+    - [ ] Memory efficiency: you don’t need to load large amounts of data in memory before you are able to process it
+    - [ ] Time efficiency: it takes significantly less time to start processing data as soon as you have it, rather than having to wait with processing until the entire payload has been transmitted
+    - [ ] They all are advantages
+    @@
+    #### Q166. Match the streams with their description.
+    @@
+   A streams to which we can write data. For example, fs.createWriteStream() lets us write data to a file using streams.
+   B streams from which data can be read. For example: fs.createReadStream() lets us read the contents of a file.
+   C streams that are both Readable and Writable. For example, net.Socket
+   D streams that can modify or transform the data as it is written and read. For example, in the instance of file-compression, you can write compressed data and read decompressed data to and from a file.
+    @@
+    - [x] A - Writable, B - Readable, C - Duplex, D - Transform
+    - [ ] A - Duplex, B - Readable, C - Writable, D - Transform  
+    - [ ] A - Readable, B - Writable, C - Duplex, D - Transform    
+    - [ ] A - Writable, B - Transform, C - Duplex, D - Readable
+    @@
+    #### Q167. How to create a readable stream? Choose the correct order of the lines.
+    @@
+    - [x] const Stream = require('stream')
+          const readableStream = new Stream.Readable()
+          readableStream.push('ping!')
+          readableStream.push('pong!')
+    - [ ] const readableStream = new Stream.Readable()
+          readableStream.push('ping!')
+          readableStream.push('pong!')
+          const Stream = require('stream')
+    - [ ] readableStream.push('pong!')
+          const Stream = require('stream')
+          readableStream.push('ping!')
+          const readableStream = new Stream.Readable()
+    - [ ] readableStream.push('pong!')
+          const Stream = require('stream')
+          const readableStream = new Stream.Readable()
+          readableStream.push('ping!')
+    @@
+    #### Q168. You shouldn't mix async functions with this because currently, there is no way to catch a rejection when it is <?>ted within an event handler, causing hard to track bugs and memory leaks.
+    @@
+    - [x] EventEmitter
+    - [ ] Your ass
+    - [ ] Writable Streams
+    - [ ] assert library
+    @@
+    #### Q169. What is missing in the following code?
+    @@
+    const { Readable } = require('stream');
+
+async function * generate() {
+  yield 'hello';
+  yield 'streams';
+}
+
+const readable = Readable.<?>(generate());
+
+readable.on('data', (chunk) => {
+  console.log(chunk);
+});
+    @@
+    - [x] from
+    - [ ] on
+    - [ ] of
+    - [ ] listen
+    @@
+    stream.Readable.from(iterable, [options]) it’s a utility method for creating Readable Streams out of iterators, which holds the data contained in iterable. 
+    Iterable can be a synchronous iterable or an asynchronous iterable. 
+    The parameter options is optional and can, among other things, be used to specify a text encoding.
+    @@
+    #### Q170. According to Streams API, readable streams effectively operate in one of two modes: flowing and paused.
+    Match the modes and their descriptions.
+    @@
+    A - data is read from the underlying system automatically and provided to an application as quickly as possible using events via the EventEmitter interface.
+    B - the stream.read() method must be called explicitly to read chunks of data from the stream.
+    @@
+    - [x] A - flowing mode B - paused mode
+    - [ ] A - paused mode B - flowing mode
+    - [ ] there are tree modes actually
+    - [ ] the currect mode names are incorrect
+    @@
+    In a flowing mode, to read data from a stream, it’s possible to listen to data event and attach a callback.
+     When a chunk of data is available, the readable stream emits a data event and your callback executes.
+     In paused mode, you just need to call read() on the stream instance repeatedly until every chunk of data has been read.
 `;
 
   const dataArray = data.split('####').slice(1);
