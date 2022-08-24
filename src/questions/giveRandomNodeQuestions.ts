@@ -789,6 +789,9 @@ const url = require('url');
 - [ ] When you need to factorize large prime numbers in an efficient manner
 - [ ] When hashing data using the Diffie-Hellman algorithm to secure passwords in a database
 @@
+The DiffieHellman class is a utility for creating Diffie-Hellman key exchanges.
+Instances of the DiffieHellman class can be created using the crypto.createDiffieHellman() function.
+@@
 #### Q93. You are working on a Node.js application, implementing several 'npm' scripts. You would like to define a script called 't-notify' that prints 'Final testing process starting up'. You do not have any other existing scripts added to your package.json file yet.&nbsp;
 @@
 - [x] "scripts": {'        "t-notify": "echo Final testing process starting up"'    },
@@ -810,6 +813,9 @@ const url = require('url');
 - [ ] const { Worker } = require('workers')'const worker1 = new Worker('./workerService.js');
 - [ ] const { Worker } = require('worker_threads')'const worker1 = new WorkerThread('./workerService.js');
 @@
+Worker thread is a continuous parallel thread that runs and accepts messages until the time it is explicitly closed or terminated.
+Messages to a worker thread can be sent from the parent thread or its child worker threads
+@@
 #### Q96. How would you create a new instance of the 'DiffieHellman' class?
 @@
 - [x] By using the 'createDiffieHellman' method from the 'crypto' module
@@ -817,6 +823,8 @@ const url = require('url');
 - [ ] By using the new keyword to directly instantiate a new DiffieHellman class
 - [ ] By using the 'createDH' method from the 'crypto' module
 @@
+
+
 #### Q97. How would you create a hash digest using the 'Hash' class in Node.js?
 @@
 - [x] const crypto = require('crypto');'const hash = crypto.createHash('sha256');''hash.update('Text to hash.');'const hashedOutput = hash.digest('base64');
@@ -837,6 +845,8 @@ const url = require('url');
 - [ ] Tarballs of the type '.tgz' cannot be installed.
 - [ ] Tarballs can only be installed from the local file system.
 - [ ] Packages from GitHub cannot be directly installed.
+@@
+Tarball is a jargon term for a TAR archive - a group of files collected together as one.
 @@
 #### Q100. Which command prints all local packages that need updating?
 @@
@@ -1431,8 +1441,8 @@ readable.on('data', (chunk) => {
     A - data is read from the underlying system automatically and provided to an application as quickly as possible using events via the EventEmitter interface.
     B - the stream.read() method must be called explicitly to read chunks of data from the stream.
     @@
-    - [x] A - flowing mode B - paused mode
-    - [ ] A - paused mode B - flowing mode
+    - [x] A -flowing mode B -paused mode
+    - [ ] A -paused mode B -flowing mode
     - [ ] there are tree modes actually
     - [ ] the currect mode names are incorrect
     @@
@@ -1446,6 +1456,7 @@ readable.on('data', (chunk) => {
      - [ ] Transfer Layer Security
      - [ ] Transportation Layer Security
      - [ ] Transform Layer Security
+     @@
 `;
 
   const dataArray = data.split('####').slice(1);
