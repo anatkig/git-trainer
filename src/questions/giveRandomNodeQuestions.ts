@@ -1120,6 +1120,9 @@ Tarball is a jargon term for a TAR archive - a group of files collected together
     
      #### Q135. Which of the following statements are true?
     @@
+     1. NodeJS is multithreaded.
+     2. The Buffer class is a global class that can be accessed without importing a buffer module.
+    @@
     - [x] Statement 2 is true and statement 1 is false.
     - [ ] Both statements are true.
     - [ ] Both statements are false.
