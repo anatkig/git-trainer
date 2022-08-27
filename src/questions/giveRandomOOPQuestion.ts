@@ -78,7 +78,9 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
   - [x] Virtual function 
   - [ ] Inline function 
   - [ ] Undefined function 
-  @@  
+  @@
+  A virtual function is a member function that you expect to be redefined in derived classes.   
+  @@
   #### Q12. Can you use C language to demonstrate Polymorphism? 
   @@  
   - [x] True 
@@ -207,14 +209,6 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] None
 @@
 
- #### Q29. Identify the operators which cannot be overloaded.
-@@
-- [x] Both A and B
-- [ ] ?:
-- [ ] .(dot operator)
-- [ ] >>
-@@
-
  #### Q30. Another name of overloading is?
 @@
 - [x] Ad-hoc polymorphism
@@ -246,6 +240,24 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Data binding
 - [ ] Data transfer
 @@
+#### Q32. What is the difference between Early Binding and Late Binding? Choose the correct statements.
+@@
+A -When perform Late Binding, an object is assigned to a variable declared to be of a specific object type. 
+B -Early binding objects are basically a strong type objects or static type objects.  
+C -The biggest advantage of using Early Binding is for performance and ease of development.
+D -In Late binding functions, methods, variables and properties are detected and checked only at the run-time. 
+E -Early Binding implies that the compiler does not know what kind of object or actual type of an object or which methods or properties an object contains until run time. 
+F -The biggest advantages of Late binding is that the Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects
+G -While Early Binding, methods, functions and properties which are detected and checked during compile time and perform other optimizations before an application executes.
+H -Late Binding implies that the compiler does not know what kind of object or actual type of an object or which methods or properties an object contains until run time.
+I -When perform Early Binding, an object is assigned to a variable declared to be of a specific object type. 
+J -The biggest advantage of using Late Binding is for performance and ease of development.
+@@
+- [x] Late Binding: D,H,F , Early Binding:  B,C,I
+- [ ] Late Binding: D,J,F , Early Binding:  A,C,I
+- [ ] Late Binding: D,H,E , Early Binding:  G,C,I
+- [ ] Late Binding: G,H,F , Early Binding:  B,C,J
+@@
 
  #### Q34. Total access specifiers in OOPS for C++ are?
 @@
@@ -255,12 +267,23 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] 4
 @@
 
- #### Q35. Choose the option below which can show polymorphism.
+ #### Q35. What is the difference between overriding and overloading?
 @@
-- [x] Overloading &lt;&lt;
-- [ ] Overloading ||
-- [ ] Overloading &&
-- [ ] Overloading +=
+- [x] Overloading occurs when two or more methods in one class have the same method name but different parameters.
+
+Overriding occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+Overriding allows a child class to provide the specific implementation of a method that is already present in its parent class.​
+- [ ]  Overriding occurs when two or more methods in one class have the same  parameters but different method name.
+
+Overloading occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
+- [ ] Overriding occurs when two or more methods in one class have the same method name but different parameters.
+
+Overloading occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
+- [ ] Overriding occurs when two or more methods in one class have the same method name but different parameters.
+Overriding occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
 @@
 
  #### Q36. Select the following which shows the correct constructor.
@@ -286,13 +309,12 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Encapsulation
 - [ ] Abstraction
 @@
-
- #### Q39. Choose the option below which is used to free the memory allocated for an object in C++.
+#### Q39. What is a virtual function?
 @@
-- [x] delete
-- [ ] Free()
-- [ ] unallocate()
-- [ ] collect
+- [x] a member function that you expect to be redefined in derived classes. 
+- [ ] a member function which is planned but doesn't exist yet.
+- [ ] a member function you don't expect to be redefined in derived classes.
+- [ ] a member function you of an abstract class.
 @@
 
  #### Q40. Identify the option below which is not a property of the object.
@@ -326,7 +348,9 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Hiding and hiding
 - [ ] None
 @@
-
+Abstraction is the method of hiding the unwanted information.
+Whereas encapsulation is a method to hide the data in a single entity or unit along with a method to protect information from outside.
+@@
  #### Q44. Choose the option below which is shown by function overriding
 @@
 - [x] Polymorphism
@@ -351,12 +375,14 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Inheritance
 @@
 
- #### Q47. Why is a virtual function mainly used to achieve?
+ #### Q47. What is a virtual function mainly used to achieve?
 @@
 - [x] Runtime polymorphism
 - [ ] Function code polymorphism
 - [ ] Interpreter polymorphism
 - [ ] Compile-time polymorphism
+@@
+A virtual function is a member function that you expect to be redefined in derived classes. 
 @@
 
  #### Q48. Virtual functions should be defined in?
@@ -383,22 +409,30 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] None
 @@
 
- #### Q51. Dynamic memory allocation can be done using?
+ #### Q51. The mechanism by which storage/memory/cells can be allocated to variables during the run time is called Dynamic Memory Allocation. 
+ Choose the advantages of using it?
 @@
-- [x] Both (a) and (b)
-- [ ] calloc()
-- [ ] malloc()
-- [ ] create()
+- [x] All of them.
+- [ ] When we do not know how much amount of memory would be needed for the program beforehand.
+When we want data structures without any upper limit of memory space.
+- [ ] When you want to use your memory space more efficiently.
+Example: If you have allocated memory space for a 1D array as array[20] and you end up using only 10 memory spaces then the remaining 10 memory spaces would be wasted and this wasted memory cannot even be utilized by other program variables.
+Dynamically created lists insertions and deletions can be done very easily just by the manipulation of addresses whereas in case of statically allocated memory insertions and deletions lead to more movements and wastage of memory.
+- [ ] When you want you to use the concept of structures and linked list in programming, dynamic memory allocation is a must.
 @@
-
- #### Q52. Total types of polymorphism in C++ are?
+#### Q52. What is missing in the following statement?
 @@
-- [x] 2
-- [ ] 1
-- [ ] 3
-- [ ] 4
+In object-oriented programming, a friend function, that is a "friend" of a given class, is a function that is given <?>.
 @@
-
+- [x] the same access as methods to private and protected data
+- [ ] the same access as methods to private and public data
+- [ ] the same access as methods to private and protected methods
+- [ ] the same access as functions to private and protected data
+@@
+A friend function is declared by the class that is granting access, so friend functions are part of the class interface, like methods. 
+Friend functions allow alternative syntax to use objects, for instance f(x) instead of x.f(), or g(x,y) instead of x.g(y). 
+Friend functions have the same implications on encapsulation as methods.
+@@
  #### Q53. Another name of the generic class is?
 @@
 - [x] Template class
@@ -485,14 +519,6 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Friend function
 - [ ] Static function
 - [ ] Const function
-@@
-
- #### Q64. What is cout?
-@@
-- [x] Object
-- [ ] Operator
-- [ ] Function
-- [ ] Macro
 @@
 
  #### Q65. Choose the option below which describes the overloading of functions.
