@@ -91,10 +91,10 @@ itemscope is used to set the scope of where in the data structure the vocabulary
   _blank - Opens the document in a new window or tab
   _parent - Opens the document in the parent frame
   @@
-  - [x] _top - Opens the document in the full body of the window
-  - [ ] _set - Opens the document in the full body of the window
-  - [ ] _open - Opens the document in a new document
-  - [ ] _bottom - Opens the document at the bottom of the current page
+  - [x] _top -Opens the document in the full body of the window
+  - [ ] _set -Opens the document in the full body of the window
+  - [ ] _open -Opens the document in a new document
+  - [ ] _bottom -Opens the document at the bottom of the current page
   @@
   #### Q12. What is the purpose of the '<samp>' element?
 @@
@@ -297,10 +297,10 @@ Note: The enctype attribute can be used only if method="post".
 @@
  #### Q25. What is the difference between <i> and <em>?
  @@
- - [x] <i> - makes text italic, <em> - makes text italic but with added semantics importance
- - [ ] <em> - makes text italic, <i> - makes text italic but with added semantics importance
+ - [x] <i> -makes text italic, <em> -makes text italic but with added semantics importance
+ - [ ] <em> -makes text italic, <i> -makes text italic but with added semantics importance
  - [ ] no difference
- - [ ] <em> - makes text italic, <i> - is deprecated
+ - [ ] <em> -makes text italic, <i> -is deprecated
  @@
   #### Q26. What is the '<hr>'tag typically used for? / Alt.: What is the semantic meaning of the '<hr>' tag?
 @@
@@ -1232,8 +1232,8 @@ Frameset Doctype
 @@
   - [ ] '<head class="Page Section Information" id="head"><title>Page Title</title></head>'
   - [ ] '<head><title>Page Title</title> <img src="favicon.icon" alt=""></head>'
-  - [x] '<head><title>Page Title</title> <data value="email">email@@example.com</data></head>'
-  - [ ] '<head><title>Page Title</title><address>email@@example.com</address></head>'
+  - [x] '<head><title>Page Title</title> <data value="email">email@example.com</data></head>'
+  - [ ] '<head><title>Page Title</title><address>email@example.com</address></head>'
 @@
   'The <head> HTML element contains machine-readable information (metadata) about the document, like its title.The <data> tag is used to add a machine-readable translation of a given content.'
   [Source 1](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head)/
