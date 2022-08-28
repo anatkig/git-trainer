@@ -1258,6 +1258,186 @@ const giveRandomReactQuestion = (dataBlockNumber: number) => {
   - [ ] props
   - [ ] render
   - [ ] children
+  @@
+#### Q111. Why does createStore take a state object as its second argument given that the root reducer has the ability to return the initial state?
+
+@@
+- [x] This argument is used to initialize the store with a saved state, either retrieved from the server or stored on the client.
+- [ ] This argument needs to be supplied when using middleware.
+- [ ] This argument provides a fixed state value that cannot be changed by reducers, which is useful for testing.
+- [ ] This argument is merged with the initial state returned by the root reducer.
+@@
+#### Q112. Your application has a problem. When a user clicks a button, a DOM event is caught by a listener set up by your application. The listener dispatches an action, and a reducer that is triggered by this action makes an AJAX call and updates the state. Upon seeing that the state is updated, the view updates as well. What is the problem here?
+@@
+- [x] Reducers are not allowed to generate side effects.
+- [ ] First the state should update, then the reducer should trigger.
+- [ ] The view should update before the state is updated, not after.
+- [ ] AJAX calls are not permitted anywhere inside a Redux application.
+@@
+ #### Q113. How is an immutable object defined?
+@@
+- [x] Properties can neither be added, deleted nor modified.
+- [ ] Properties can be added but not deleted.
+- [ ] Properties can be deleted but not added.
+- [ ] Properties can be added and deleted, but not modified.
+@@
+ #### Q114. Which method do you need to use to send actions to the store?
+@@
+- [x] dispatch<br>
+- [ ] apply<br>
+- [ ] send<br>
+- [ ] execute<br>
+@@
+ #### Q115. How can you obtain the current state?
+@@
+- [x] Using the  Store.getState function
+- [ ] By keeping a reference to the state object
+- [ ] By using the state argument in a callback passed to Store.subscribe
+- [ ] Using the globally available  state function
+@@
+ #### Q116. Given a reducer called reduce and two middleware functions, f and g, how do you configure the store to use both middleware functions?
+@@
+- [x] createStore(reduce, preloadedState, applyMiddleware(f, g))
+- [ ] It isn't possible as only a single middleware can be applied to a store.
+- [ ] createStore(applyMiddleware(g, f, reduce), preloadedState)
+- [ ] store.applyMiddleware(f); store.applyMiddleware(g);
+@@
+#### Q117. You are troubleshooting a complex application in which many actions are dispatched on a regular basis. You are able to consistently reproduce the bug, but then an unknown action conceals the bug a few seconds later. What is the best solution?
+@@
+- [x] Pause recording just after the bug appears
+- [ ] Make a branch of the application that fires fewer actions
+- [ ] Do your best to figure out the bug in the few seconds available
+- [ ] Reclock your computer so that everything on it happens 100x slower
+@@
+ #### Q118. If your reselect selector is recomputing even though the input state hasn't changed, what is the most likely reason?
+
+@@
+- [x] There is a bug in a reducer which makes it return a new object even though there is no state change.
+- [ ] There is a bug in one of the subscriber callbacks.
+- [ ] There is a bug in middleware used by the store.
+- [ ] There is a bug in the reselect library's memoization function.
+@@
+ #### Q119. What is the difference between redux-devtool and redux-devtools-extension?
+
+@@
+- [x] The former is a component that is included in an application, the latter is a browser extension.
+
+- [ ] The former monitors Redux applications, the latter monitors generic applications.
+
+- [ ] The former refers to older versions of Redux DevTools, the latter refers to newer versions.
+
+- [ ] The former is the main library, the latter is a collection of enhancements.
+
+@@
+ #### Q120. In which of the following scenarios is a deep copy of an object impossible?
+@@
+- [x] One property of the object is a reference to itself.
+
+- [ ] The object is a subtype of array.
+
+- [ ] The object is only one layer deep (it is shallow).
+
+- [ ] The object contains more than 2^16 properties.
+
+@@
+ #### Q121. What is the effect of creating an action?
+@@
+- [x] An action is a description of something that happened in the application. It has no effect unless dispatched.
+- [ ] An action maintains the binding between a UI control and its value in the state object
+- [ ] An action triggers a view update in response to state changes
+- [ ] Creating an action updates the state
+@@
+ #### Q122. Which of the following is a design constraint of Redux?
+
+@@
+- [x] It enforces unidirectional data flow between the store and state observers.
+
+- [ ] It has to be combined with another library like Immutable.js to support immutable data.
+
+- [ ] It can only be used for applications with a simple state structure.
+
+- [ ] It can only be used with React, not other frameworks.
+
+@@
+ #### Q123. Does Redux require all of the application state to be in the store?
+@@
+- [x] No, things like the internal state of UI components don't have to be in the store.
+- [ ] No, and it's best practice to keep as much state outside the store as possible
+- [ ] Yes, because all of the state has to be defined upfront when the store is initialized.
+- [ ] Yes, by convention all of the state has to be in the store.
+@@
+ #### Q124. How will you initialize the store with saved state from localStorage?
+
+@@
+- [x] Retrieve the state fromlocalStorage and pass it as the second argument to createStore
+
+- [ ] Use Store.getState immediately after creating the store, and modify the object it returns to match the saved state
+
+- [ ] Retrieve the saved state in the root reducer and return it when the root reducer'sstate argument is undefined
+
+- [ ] Write custom middleware to retrieve the saved state and use it as the initial state
+@@
+#### Q125. What will store.getState() return after the following code is executed?
+
+@@
+function reduce (state, action) {
+    if (typeof state == 'undefined') {
+        return { counter: 0 };
+    }
+    switch (action.type) {
+        case 'INCREMENT':
+            return { counter: state.counter + 1 };
+        default: 
+            return state;
+    }
+}
+let store = Redux.createStore(reduce, { counter: -100 });
+
+@@
+- [x] { counter: -100 }
+
+- [ ] undefined
+
+- [ ] { counter: 1 }
+
+- [ ] { counter: 0 }
+
+@@
+ #### Q126. Which of the following code snippets will shallow copy an object?
+@@
+- [x] a=&gt;Object.assign({ }, a)<br>
+- [ ] a=&gt;({… []})<br>
+- [ ] a=&gt;{ let b = a; return b;}<br>
+- [ ] a=&gt;a<br>
+@@
+ #### Q127. Is a reducer allowed to update the DOM?
+@@
+- [x] No, the reducer has to be a pure function.
+- [ ] Yes, but only if its action argument is the result of a UI event
+- [ ] Yes, combining state and UI updates in one function improves locality.
+- [ ] No, the reducer is only allowed to start server requests.
+@@
+ #### Q128. If you need to update some of the UI controls when the state changes, how can you achieve it?
+@@
+- [x] Connect subscribers to the store and update the UI controls when the relevant portion of the state changes.
+- [ ] Enable the two-way data binding mode of the store, and initialize it with the relevant UI controls.
+- [ ] Update the relevant UI controls in action creators prior to returning an action.
+- [ ] Update the relevant UI controls when handling actions in reducers.
+@@
+ #### Q129. You are working on a social network-like application. The reducer which handles the user's list of friends is performing very slowly. Which of the following options is NOT a viable solution to the reducer's slow performance?
+@@
+- [x] Letting it modify the state directly
+- [ ] Using shallow copying instead of deep copying
+- [ ] Using object equality checking instead of deep checking (dirty checking)
+- [ ] Modifying the reducer so the logic triggers in response to a narrower scope of actions
+@@
+ #### Q130. What is an action creator?
+@@
+- [x] A function that returns an action
+- [ ] An object that can be cloned to produce an action
+- [ ] A UI element with an event handler that triggers an action dispatch
+- [ ] A store subscriber that dispatches actions to the store
+@@
   `;
   const dataArray = data.split('####').slice(1);
 
