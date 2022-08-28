@@ -2132,6 +2132,588 @@ function foo(num=111) {
 @@
 in non-strict functions arguments works like this only if the function doesn't contain rest parameters, destructured parameters or default parameters.
 @@
+#### Q169. Javascript is an _______ language?
+@@
+- [x] Object-Oriented
+- [ ] Object-Based
+- [ ] Procedural
+- [ ] None of the above
+@@
+
+ #### Q170. Which of the following keywords is used to define a variable in Javascript?
+@@
+- [x] Both A and B
+- [ ] var
+- [ ] let
+- [ ] None of the above
+@@
+
+ #### Q171. Which of the following methods is used to access HTML elements using Javascript?
+@@
+- [x] Both A and B
+- [ ] getElementbyId()
+- [ ] getElementsByClassName()
+- [ ] None of the above
+@@
+
+ #### Q172. Upon encountering empty statements, what does the Javascript Interpreter do?
+@@
+- [x] Ignores the statements
+- [ ] Throws an error
+- [ ] Gives a warning
+- [ ] None of the above
+@@
+
+ #### Q173. Which of the following methods can be used to display data in some form using Javascript?
+@@
+- [x] All of the above
+- [ ] document.write()
+- [ ] console.log()
+- [ ] window.alert()
+@@
+
+ #### Q174. How can a datatype be declared to be a constant type?
+@@
+- [x] const
+- [ ] var
+- [ ] let
+- [ ] constant
+@@
+
+ #### Q175. What will be the output of the following code snippet?
+@@
+<script type="text/javascript">
+a = 5 + "9";
+document.write(a);
+</script>
+@@
+- [x] 59
+- [ ] Compilation Error
+- [ ] 14
+- [ ] Runtime Error
+@@
+
+ #### Q176. What will be the output of the following code snippet?
+@@
+<script type="text/javascript" language="javascript">
+  
+var a = "Scaler";
+var result = a.substring(2, 4);
+document.write(result);
+  
+</script>
+@@
+- [x] al
+- [ ] ale
+- [ ] cal
+- [ ] caler
+@@
+
+ #### Q177. What will be the output of the following code snippet?
+@@
+<script type="text/javascript" language="javascript">
+ 
+var x=12;
+var y=8;
+var res=eval("x+y");
+document.write(res);
+ 
+</script>
+@@
+- [x] 20
+- [ ] x+y
+- [ ] 128
+- [ ] None of the above
+@@
+
+ #### Q178. When the switch statement matches the expression with the given labels, how is the comparison done?
+@@
+- [x] Both the datatype and the result of the expression are compared.
+- [ ] Only the datatype of the expression is compared.
+- [ ] Only the value of the expression is compared.
+- [ ] None of the above.
+@@
+
+ #### Q179. What keyword is used to check whether a given property is valid or not?
+@@
+- [x] in
+- [ ] is in
+- [ ] exists
+- [ ] lies
+@@
+
+ #### Q180. What is the use of the &lt;noscript&gt; tag in Javascript?
+@@
+- [x] The contents are displayed by non-JS-based browsers.
+- [ ] Clears all the cookies and cache.
+- [ ] Both A and B.
+- [ ] None of the above.
+@@
+
+ #### Q181. What will be the output of the following code snippet?
+@@
+(function(){
+ setTimeout(()=> console.log(1),2000);
+ console.log(2);
+ setTimeout(()=> console.log(3),0);
+ console.log(4);
+})();
+@@
+- [x] 2 4 3 1
+- [ ] 1 2 3 4
+- [ ] 2 3 4 1
+- [ ] 4 3 2 1
+@@
+
+ #### Q182. What will be the output of the following code snippet?
+@@
+(function(a){
+ return (function(){
+   console.log(a);
+   a = 6;
+ })()
+})(21);
+@@
+- [x] 21
+- [ ] 6
+- [ ] NaN
+- [ ] None of the above
+@@
+
+ #### Q183. What will be the output of the following code snippet?
+@@
+function solve(arr, rotations){
+ if(rotations == 0) return arr;
+ for(let i = 0; i < rotations; i++){
+   let element = arr.pop();
+   arr.unshift(element);
+ }
+ return arr;
+}
+// solve([44, 1, 22, 111], 5);
+@@
+- [x] [111, 44, 1, 22]
+- [ ] [44, 1, 22, 111]
+- [ ] [111, 44, 1, 22]
+- [ ] [1, 22, 111, 44]
+@@
+
+ #### Q184. What will be the output for the following code snippet?
+@@
+<p id="example"></p>  
+<script>  
+function Func()  
+{  
+document.getElementById("example").innerHTML=Math.sqrt(81);  
+}  
+</script>
+@@
+- [x] 9
+- [ ] 81
+- [ ] Error
+- [ ] 0
+@@
+
+ #### Q185. When an operator’s value is NULL, the typeof returned by the unary operator is:
+@@
+- [x] Object
+- [ ] Boolean
+- [ ] Undefined
+- [ ] Integer
+@@
+
+ #### Q186. What will be the output of the following code snippet?
+@@
+var a = 1;  
+var b = 0;  
+while (a <= 3)  
+{  
+   a++;  
+   b += a * 2;  
+   print(b);
+}
+@@
+- [x] 4 10 18
+- [ ] 1 2 3
+- [ ] 1 4 7
+- [ ] None of the above
+@@
+
+ #### Q187. What does the Javascript “debugger” statement do?
+@@
+- [x] It acts as a breakpoint in a program.
+- [ ] It will debug all the errors in the program at runtime.
+- [ ] It will debug error in the current statement if any.
+- [ ] All of the above.
+@@
+
+ #### Q188. What will be the output of the following code snippet?
+@@
+var a = Math.max();
+var b = Math.min();
+print(a);
+print(b);
+@@
+- [x] -Infinity Infinity
+- [ ] Infinity -Infinity
+- [ ] Infinity Infinity
+- [ ] -Infinity -Infinity
+@@
+
+ #### Q189. What will be the output of the following code snippet?
+@@
+var a = Math.max() < Math.min();
+var b = Math.max() > Math.min();
+print(a);
+print(b);
+@@
+- [x] &nbsp;true false
+- [ ] false true
+- [ ] true true
+- [ ] false false
+@@
+
+ #### Q190. What will be the output of the following code snippet?
+@@
+var a = true + true + true * 3;
+print(a)
+@@
+- [x] 5
+- [ ] 3
+- [ ] 0
+- [ ] Error
+@@
+
+ #### Q191. What is the output of the following code snippet?
+@@
+print(NaN === NaN);
+@@
+- [x] false
+- [ ] true
+- [ ] undefined
+- [ ] Error
+@@
+
+ #### Q192. What will be the output of the following code snippet?
+@@
+print(typeof(NaN));
+@@
+- [x] Number
+- [ ] Object
+- [ ] String
+- [ ] None of the above
+@@
+
+ #### Q193. What does the ‘toLocateString()’ method do in JS?
+@@
+- [x] Returns a localized string representation of an object.
+- [ ] Returns a localised object representation.
+- [ ] Returns a parsed string.
+- [ ] None of the above.
+@@
+
+ #### Q194. The process in which an object or data structure is translated into a format suitable for transferral over a network, or storage is called?
+@@
+- [x] Object Serialization
+- [ ] Object Encapsulation
+- [ ] Object Inheritance
+- [ ] None of the above
+@@
+
+ #### Q195. Which function is used to serialize an object into a JSON string in Javascript?
+@@
+- [x] stringify()
+- [ ] parse()
+- [ ] convert()
+- [ ] None of the above
+@@
+
+ #### Q196. The 3 basic object attributes in Javascript are:
+@@
+- [x] Class, prototype, object's extensible flag.
+- [ ] Class, prototype, objects' parameters.
+- [ ] Class, parameters, object's extensible flag.
+- [ ] undefined
+@@
+
+ #### Q197. What will be the output of the following code snippet?
+@@
+let sum = 0; 
+const a = [1, 2, 3];
+a.forEach(getSum);
+print(sum);
+function getSum(ele) {
+   sum += ele;
+}
+@@
+- [x] 6
+- [ ] 1
+- [ ] 2
+- [ ] None of the above
+@@
+
+ #### Q198. What will be the output of the following code snippet?
+@@
+a = [1, 2, 3, 4, 5];
+print(a.slice(2, 4));
+@@
+- [x] 3, 4
+- [ ] 2, 3
+- [ ] 3, 4, 5
+- [ ] 2, 3, 4
+@@
+
+ #### Q199. What will be the output of the following code snippet?
+@@
+print(parseInt("123Hello"));
+print(parseInt("Hello123"));
+@@
+- [x] 123 NaN
+- [ ] 123Hello Hello123
+- [ ] NaN NaN
+- [ ] 123 123
+@@
+
+ #### Q200. Which of the following are closures in Javascript?
+@@
+- [x] All of the above
+- [ ] Variables
+- [ ] Functions
+- [ ] Objects
+@@
+
+ #### Q201. Which of the following is not a Javascript framework?
+@@
+- [x] Cassandra
+- [ ] Node
+- [ ] Vue
+- [ ] React
+@@
+
+ #### Q202. What will be the output of the following code snippet?
+@@
+var a = "hello";
+var sum = 0;
+for(var i = 0; i < a.length; i++) {
+   sum += (a[i] - 'a');
+}
+print(sum);
+@@
+- [x] NaN
+- [ ] 47
+- [ ] 0
+- [ ] None of the above
+@@
+
+ #### Q203. What keyword is used to declare an asynchronous function in Javascript?
+@@
+- [x] async
+- [ ] await
+- [ ] setTimeout
+- [ ] None of the above
+@@
+
+ #### Q204. How to stop an interval timer in Javascript?
+@@
+- [x] clearInterval
+- [ ] clearTimer
+- [ ] intervalOver
+- [ ] None of the above
+@@
+
+ #### Q205. What will be the output of the following code snippet?
+@@
+const set = new Set();
+set.add(5);
+set.add('Hello');
+set.add({ name: 'Scaler' });
+for (let item of set) {
+ console.log(item + 6);
+}
+@@
+- [x] 11 Hello6 [object Object]6
+- [ ] 11 NaN NaN
+- [ ] 11 NaN [object Object]
+- [ ] None of the above
+@@
+
+ #### Q206. How are objects compared when they are checked with the strict equality operator?
+@@
+- [x] Their references are compared
+- [ ] The contents of the objects are compared
+- [ ] Both A and B
+- [ ] None of the above
+@@
+
+ #### Q207. What does … operator do in JS?
+@@
+- [x] It is used to spread iterables to individual elements
+- [ ] It is used to describe a datatype of undefined size
+- [ ] No such operator exists
+- [ ] None of the above
+@@
+
+ #### Q208. What will be the output of the following code snippet?
+@@
+const example = ({ a, b, c }) => {
+ console.log(a, b, c);
+};
+example(0, 1, 2);
+@@
+- [x] Undefined Undefined Undefined
+- [ ] 0 1 2
+- [ ] 0 Undefined Undefined
+- [ ] None of the above
+@@
+
+ #### Q209. What will be the output of the following code snippet?
+@@
+let a = [1, 2, 3, 4, 5, 6];
+var left = 0, right = 5;
+var found = false;
+var target = 5;
+while(left <= right) {
+   var mid = Math.floor((left + right) / 2);
+   if(a[mid] == target) {
+       found = true;
+       break;
+   }
+   else if(a[mid] < target) {
+       left = mid + 1;
+   }
+   else {
+       right = mid - 1;
+   }
+}
+if(found) {
+   print("YES");
+}
+else {
+   print("NO");
+}
+@@
+- [x] YES
+- [ ] NO
+- [ ] Syntax Error
+- [ ] None of the above
+@@
+
+ #### Q210. What will be the output of the following code snippet?
+@@
+let s = "00000001111111";
+let l = 0, r = s.length - 1, ans = -1;
+while(l <= r) {
+   var mid = Math.floor((l + r) / 2);
+   if(s[mid] == '1') {
+       ans = mid;
+       r = mid - 1;
+   }
+   else {
+       l = mid + 1;
+   }
+}
+print(ans);
+@@
+- [x] 7
+- [ ] 8
+- [ ] 0
+- [ ] 1
+@@
+
+ #### Q211. What will be the output of the following code snippet?
+@@
+let n = 24;
+let l = 0, r = 100, ans = n;
+while(l <= r) {
+   let mid = Math.floor((l + r) / 2);
+   if(mid * mid <= n) {
+       ans = mid;
+       l = mid + 1;
+   }
+   else {
+       r = mid - 1;
+   }
+}
+print(ans);
+@@
+- [x] 4
+- [ ] 5
+- [ ] 6
+- [ ] 3
+@@
+
+ #### Q212. What will be the output of the following code snippet?
+@@
+const obj1 = {Name: "Hello", Age: 16};
+const obj2 = {Name: "Hello", Age: 16};
+print(obj1 === obj2);
+@@
+- [x] false
+- [ ] true
+- [ ] Undefined
+- [ ] None of the above
+@@
+
+ #### Q213. What happens when we run this code?
+@@
+function dog() {
+   print("I am a dog.");
+}
+dog.sound = "Bark";
+@@
+- [x] Nothing happens
+- [ ] Syntax Error
+- [ ] “I am a dog” gets printed
+- [ ] ReferenceError
+@@
+
+ #### Q214. How do we write a comment in javascript?
+@@
+- [x] //
+- [ ] /* */
+- [ ] #
+- [ ] $ $
+@@
+
+ #### Q215. Which object in Javascript doesn’t have a prototype?
+@@
+- [x] Base Object
+- [ ] All objects have a prototype
+- [ ] None of the objects have a prototype
+- [ ] None of the above
+@@
+
+ #### Q216. What will be the output of the following code snippet?
+@@
+function test(...args) {
+ console.log(typeof args);
+}
+test(12);
+@@
+- [x] Object
+- [ ] NaN
+- [ ] Number
+- [ ] Array
+@@
+
+ #### Q217. What will be the output of the following code snippet?
+@@
+const obj1 = {first: 20, second: 30, first: 50};
+console.log(obj1);
+@@
+- [x] {first: 50, second: 30}
+- [ ] {first: 20, second: 30}
+- [ ] {first: 20, second: 30, first: 50}
+- [ ] Syntax Error
+@@
+
+ #### Q218. Which of the following are not server-side Javascript objects?
+@@
+- [x] All of the above
+- [ ] Date
+- [ ] FileUpload
+- [ ] Function
+@@
 `;
   const dataArray = data.split('####').slice(1);
 
