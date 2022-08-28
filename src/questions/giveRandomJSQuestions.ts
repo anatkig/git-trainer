@@ -34,16 +34,16 @@ function addTax(total) {
 - [x] 'addTax(50);'
 - [ ] 'addTax 50;'
 @@
-[Reference functions in javascript](https://www.w3schools.com/js/js_functions.asp)
+#### Q4.What is the output of this code?
 @@
-#### Q4. Which statement is the correct way to create a variable called rate and assign it the value 100?
+let n = '11', s = 21;
+let c = (n+++s++);
+console.log(c);
 @@
-- [x] 'let rate = 100;'
-- [ ] 'let 100 = rate;'
-- [ ] '100 = let rate;'
-- [ ] 'rate = 100;'
-@@
-[Reference Javascript Assignment operators](https://www.w3schools.com/js/js_operators.asp)
+- [x] 32
+- [ ] 1222
+- [ ] 1121
+- [ ] SyntaxError: Unexpected identifier
 @@
 #### Q5. Which statement creates a new object using the Person constructor? Which statement creates a new Person object called "student"?
 @@
@@ -51,8 +51,6 @@ function addTax(total) {
 - [ ] 'var student = construct Person;'
 - [ ] 'var student = Person();'
 - [ ] 'var student = construct Person();'
-@@
-[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 @@
 #### Q6. When would the final statement in the code shown be logged to the console? When would 'results shown' be logged to the console?
 @@
@@ -68,8 +66,6 @@ console.log('Results shown');
 - [ ] after results are received from the HTTP request
 - [ ] after 10000 seconds
 - [x] immediately
-@@
-[Reference Javascript is synchronous and single threaded](https://stackoverflow.com/a/2035662/15067394)
 @@
 #### Q7. Which snippet could you add to this code to print "food" to the console?
 @@
@@ -208,11 +204,6 @@ console.log(bob.precip);
 @@
 NOTE: The first three are all partially correct and will match digits, but the **second option is the most correct** because it will **only** match **2 digit** time values (12:00:32). The first option would have worked if the repetitions range looked like '[0-9]{2}', however because of the **comma** '[0-9]{2,}' it will select 2 **or more** digits (120:000:321). The third option will any range of time digits, single _and_ multiple (meaning '1:2:3' will also match).
 @@
-**More resources:**
-@@
-1. [Repeating characters](https://regexone.com/lesson/repeating_characters)
-2. [Kleene operators](https://regexone.com/lesson/kleene_operators)
-@@
 #### Q13. What is the result in the console of running this code?
 @@
 '''js
@@ -231,18 +222,20 @@ new logThis();
 @@
 [Reference javascript classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 @@
-#### Q14. How would you reference the text 'avenue' in the code shown?
+#### Q14. What is the output of this code?
 @@
-'''js
-let roadTypes = ['street', 'road', 'avenue', 'circle'];
-'''
+function foo() {
+  return class Car {
+   constructor() { this.name = 'VW' }
+  }
+ }
+ let VW = foo();
+ console.log(new VW().name);
 @@
-- [ ] roadTypes.2
-- [ ] roadTypes\[3\]
-- [ ] roadTypes.3
-- [x] roadTypes\[2\]
-@@
-[Reference accessing javascript arrays](https://www.w3schools.com/js/js_arrays.asp)
+- [ ] undefined
+- [ ] SyntaxError: Unexpected identifier
+- [ ] TypeError: VW is not a constructor
+- [x] VW
 @@
 #### Q15. What is the result of running this statement?
 @@
@@ -345,7 +338,6 @@ console.log(a.length);
 - [ ] You can access values in a Map without iterating over the whole collection.
 @@
 **Explanation:** 'Map.prototype.size returns the number of elements in a Map, whereas Object does not have a built-in method to return its size.'
-[Reference map methods javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
 @@
 #### Q24. What is the value of dessert.type after executing this code?
 @@
@@ -1489,10 +1481,6 @@ for (let value of cipherText) {
 }
 '''
 @@
-1. [Reference MDN JavaScript Destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
-2. [Reference MDN JavaScript Array entries](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/entries)
-3. [Reference MDN JavaScript Remainder/Modulo](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder)
-@@
 #### Q112. Which Pokemon will be logged to the console?
 @@
 '''js
@@ -1880,7 +1868,7 @@ For example, if you had an event listener inside of a class, you would probably 
  @@
  #### Q139. You must refactor your object methods to use shorthand declaration. Given the following object definition, what code option shows how you can define the class using literal method shorthand declaration?
 @@
-const foo = {<br>   bar: function() { return "Test Test" }<br>};
+const foo = {   bar: function() { return "Test Test" }};
 @@
 - [x] const foo = { bar() {return "Test Test"} }
 - [ ] const foo = { funct bar(){return "Test Test"}; }
@@ -1896,7 +1884,7 @@ const foo = {<br>   bar: function() { return "Test Test" }<br>};
 @@
 #### Q141. Which statement correctly assigns the years variable to match the expected behavior on the last line of the following code snippet?
 @@
-const years = ???<br>console.log(years['02'] != years[2]) // true
+const years = ???console.log(years['02'] != years[2]) // true
 @@
 - [x] const years = [1950, 1960, 1970];
 - [ ] const years = (1950, 1960, 1970);
@@ -1905,7 +1893,7 @@ const years = ???<br>console.log(years['02'] != years[2]) // true
 @@
 #### Q142. After the following code is executed, what is printed to the console?
 @@
-function list() {  <br>  return [].slice.call(arguments);<br>}<br>var leadingThirtysevenList = list.bind(null, 37);<br>var list2 = leadingThirtysevenList();<br>console.log(list2);
+function list() {   return [].slice.call(arguments);}var leadingThirtysevenList = list.bind(null, 37);var list2 = leadingThirtysevenList();console.log(list2);
 @@
 - [x] [37]
 - [ ] null
@@ -1942,7 +1930,7 @@ function list() {  <br>  return [].slice.call(arguments);<br>}<br>var leadingThi
 @@
 #### Q147. What is the value of x after executing the following code snippet?
 @@
-let x = 0;<br>function foo(){<br>  x ^= 1;<br>}<br>foo();<br>foo();<br>foo();
+let x = 0; function foo(){ x ^= 1;} foo();foo(); foo();
 @@
 - [x] 1
 - [ ] undefined
@@ -2014,10 +2002,10 @@ e.g.: html\`<div class='item'>\${item}</div>\`
 @@
 const obj = { jan: 150, aug: 200, dec: 300 };
 @@
-- [x] for (const val in obj) {<br>  console.log('\${obj[val]}');<br>}
-- [ ] for (const val of obj) {<br>  console.log('\${obj[val]}');<br>}
-- [ ] for (const val in obj) {<br>  console.log('\${val}');<br>}
-- [ ] for (const val of obj) {<br>  console.log(val);<br>}
+- [x] for (const val in obj) {  console.log('\${obj[val]}');}
+- [ ] for (const val of obj) {  console.log('\${obj[val]}');}
+- [ ] for (const val in obj) {  console.log('\${val}');}
+- [ ] for (const val of obj) {  console.log(val);}
 @@
 #### Q157. When inheriting from a parent class, what does the super keyword do in the child's constructor?
 @@
@@ -2028,7 +2016,7 @@ const obj = { jan: 150, aug: 200, dec: 300 };
 @@
 #### Q158. In the following code snippet, getConfig is a function with the purpose of providing different parts of your application with the data on the config object at the time of invocation. When invoked this way, getConfig instead returns undefined. What change is required to get the intended functionality?
 @@
-let config = {<br>  data: { "number": 99 },<br>  getConfig: function() { return this.data; }<br>};<br>let getConfig = config.getConfig;<br>getConfig();
+let config = {  data: { "number": 99 },  getConfig: function() { return this.data; }};let getConfig = config.getConfig;getConfig();
 @@
 - [x] Bind the function's this value to config.
 - [ ] Pass the reference of config.getConfig where the data is needed.
@@ -2064,6 +2052,86 @@ let config = {<br>  data: { "number": 99 },<br>  getConfig: function() { return 
 - [ ] /\b\w+\b/g
 - [ ]  /\w+(?= fox)/
 - [ ] /^\w+$/
+@@
+#### Q163. What is the output of this code?
+@@
+let n = 11, s = '21';
+let c = (n+++s++);
+console.log(n, s)
+@@
+- [x] 12 22
+- [ ] 11 22
+- [ ] 11 21
+- [ ] SyntaxError: Unexpected identifier
+@@
+console log prints n and s! not c
+@@
+#### Q164. What is the output of this code?
+@@
+let n = 11, s = '21';
+let c = (n++s++);
+console.log(n, s);
+@@
+- [x] SyntaxError: Unexpected identifier
+- [ ] 12 22
+- [ ] 11 21
+- [ ] 1121
+@@
+JS increments n and s but doesn't know what to do with them afterwards.
+@@
+#### Q165. What is the state of p when it is printed to console?
+@@
+let p = new Promise(() => {
+
+  return 333;
+  });
+  console.log(p);
+@@
+- [x] pending
+- [ ] fulfilled
+- [ ] rejected
+- [ ] blocked
+@@
+#### Q166. What is the output of this code?
+@@
+const a1 = parseInt('f*ck');
+const a2 = parseInt('f*ck', 16);
+console.log(a1, a2);
+@@
+- [x] NaN 15
+- [ ] NaN NaN
+- [ ] NaN 16
+- [ ] NaN 0
+@@
+#### Q167. What is the output of this code?
+@@
+let a = [].fill.call(
+  { length: 3}, 4
+ );
+ console.log(a);
+@@
+- [x] {0:4,1:4,2:4,length:3}
+- [ ] {length: 1, length: 2, length: 3}
+- [ ] {0:4,1:4,2:4,3:4}
+- [ ] {length: 3,length: 3,length: 3,length: 3}
+@@
+fill takes three values: 1.value (here 4), 2.start (starting index), 3.end (ending index). this inside fill doesn't have to be Array.
+@@
+#### Q168. What is the output of this code?
+@@
+function foo(num=111) {
+  arguments[0] = 222;
+  return num;
+ }
+ console.log(foo(333));
+@@
+- [x] 333
+- [ ] 222
+- [ ] 111
+- [ ] SyntaxError: Unexpected token '='
+@@
+in non-strict functions arguments works like this only if the function doesn't contain rest parameters, destructured parameters or default parameters.
+@@
 `;
   const dataArray = data.split('####').slice(1);
 
