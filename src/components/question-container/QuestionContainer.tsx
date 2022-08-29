@@ -181,7 +181,7 @@ const QuestionContainer = ({ topic }: { topic: string }) => {
       </div>
       <div id="answers" key="answers">
         <ol>
-          {optionsArray.length &&
+          {optionsArray?.length &&
             optionsArray.map((answer: string, index: number) => (
               <li className="answer-option" key={`${answer}${index}`}>
                 <button
