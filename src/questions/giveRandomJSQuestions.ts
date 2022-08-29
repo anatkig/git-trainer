@@ -535,8 +535,6 @@ f2();
 - [ ] Nothing - this code will throw an error.
 - [ ] undefined
 @@
-[Reference closures in js \/ nested functions](https://javascript.info/closure)
-@@
 #### Q41. Which statement is true about Functional Programming?
 @@
 - [ ] Every object in the program has to be a function.
@@ -684,8 +682,6 @@ console.log(end);
 - [x] ReferenceError
 - [ ] undefined
 @@
-[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-@@
 #### Q53. What will this code log in the console?
 @@
 '''js
@@ -727,8 +723,6 @@ printA();
 - [ ] '1' then 'undefined'
 - [x] 'undefined' then 'undefined'
 - [ ] 'undefined' then '1'
-@@
-[Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 @@
 #### Q56. How does the 'forEach()' method differ from a 'for' statement?
 @@
@@ -2713,6 +2707,13 @@ console.log(obj1);
 - [ ] Date
 - [ ] FileUpload
 - [ ] Function
+@@
+#### Q219. A let or const variable is said to be in a <?> from the start of the block until code execution reaches the line where the variable is declared and initialized.
+@@
+- [x] temporal dead zone (TDZ)
+- [ ] temporally blocked state (TBS)
+- [ ] invisible
+- [ ] invisibility position (IV)
 @@
 `;
   const dataArray = data.split('####').slice(1);

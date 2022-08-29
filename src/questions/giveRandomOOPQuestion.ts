@@ -208,6 +208,13 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Lowers maintenance cost
 - [ ] None
 @@
+#### Q29. What is overloading?
+@@
+- [x] Overloading occurs when two or more methods in one class have the same method name but different parameters.
+- [ ] Overloading occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+- [ ] Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
+- [ ] Overloading occurs when two or more methods in one class have the same  parameters but different method name.
+@@
 
  #### Q30. Another name of overloading is?
 @@
@@ -240,25 +247,6 @@ const giveRandomOOPQuestion = (dataBlockNumber: number) => {
 - [ ] Data binding
 - [ ] Data transfer
 @@
-#### Q32. What is the difference between Early Binding and Late Binding? Choose the correct statements.
-@@
-A -When perform Late Binding, an object is assigned to a variable declared to be of a specific object type. 
-B -Early binding objects are basically a strong type objects or static type objects.  
-C -The biggest advantage of using Early Binding is for performance and ease of development.
-D -In Late binding functions, methods, variables and properties are detected and checked only at the run-time. 
-E -Early Binding implies that the compiler does not know what kind of object or actual type of an object or which methods or properties an object contains until run time. 
-F -The biggest advantages of Late binding is that the Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects
-G -While Early Binding, methods, functions and properties which are detected and checked during compile time and perform other optimizations before an application executes.
-H -Late Binding implies that the compiler does not know what kind of object or actual type of an object or which methods or properties an object contains until run time.
-I -When perform Early Binding, an object is assigned to a variable declared to be of a specific object type. 
-J -The biggest advantage of using Late Binding is for performance and ease of development.
-@@
-- [x] Late Binding: D,H,F , Early Binding:  B,C,I
-- [ ] Late Binding: D,J,F , Early Binding:  A,C,I
-- [ ] Late Binding: D,H,E , Early Binding:  G,C,I
-- [ ] Late Binding: G,H,F , Early Binding:  B,C,J
-@@
-
  #### Q34. Total access specifiers in OOPS for C++ are?
 @@
 - [x] 3
@@ -267,25 +255,17 @@ J -The biggest advantage of using Late Binding is for performance and ease of de
 - [ ] 4
 @@
 
- #### Q35. What is the difference between overriding and overloading?
+ #### Q35. What is overriding?
+ @@
+ Overloading occurs when two or more methods:
 @@
-- [x] Overloading occurs when two or more methods in one class have the same method name but different parameters.
-
-Overriding occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+- [x] Overriding occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
+- [ ] Overriding occurs when two or more methods in one class have the same  parameters but different method name.
+- [ ] Overriding occurs when two methods have the same method name and parameters. One of the methods is in the abstract class, and the other is in the child class.
+- [ ] Overriding occurs when two or more methods in one class have the same method name but different parameters.
+@@
 Overriding allows a child class to provide the specific implementation of a method that is already present in its parent class.​
-- [ ]  Overriding occurs when two or more methods in one class have the same  parameters but different method name.
-
-Overloading occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
-Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
-- [ ] Overriding occurs when two or more methods in one class have the same method name but different parameters.
-
-Overloading occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
-Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
-- [ ] Overriding occurs when two or more methods in one class have the same method name but different parameters.
-Overriding occurs when two methods have the same method name and parameters. One of the methods is in the parent class, and the other is in the child class.
-Overloading allows a child class to provide the specific implementation of a method that is already present in its parent class.​
 @@
-
  #### Q36. Select the following which shows the correct constructor.
 @@
 - [x] class_name()
@@ -308,6 +288,8 @@ Overloading allows a child class to provide the specific implementation of a met
 - [ ] Binding
 - [ ] Encapsulation
 - [ ] Abstraction
+@@
+In object-oriented programming (OOP), an inner class or nested class is a class declared entirely within the body of another class or interface. It is distinguished from a subclass.
 @@
 #### Q39. What is a virtual function?
 @@
@@ -332,7 +314,8 @@ Overloading allows a child class to provide the specific implementation of a met
 - [ ] Multiple inheritances
 - [ ] Language independent
 @@
-
+Single Level inheritance - A class inherits properties from a single class.
+@@
  #### Q42. In which of the following is memory allocated for the objects?
 @@
 - [x] RAM
@@ -505,13 +488,14 @@ Friend functions have the same implications on encapsulation as methods.
 - [ ] Member function
 @@
 
- #### Q62. Which type of inheritance is implemented in the following code below?
+#### Q62. What is defined  here?
 @@
-- [x] Multiple inheritances
-- [ ] Single inheritance
-- [ ] Multilevel inheritance
-- [ ] Hybrid inheritance
+<?> is used to free up the memory space allocated by the derived class object or instance while deleting instances of the derived class using a base class pointer object.
 @@
+- [x] virtual destructor
+- [ ] garbage collector
+- [ ] pointer unil
+- [ ] memory reallocation
 
  #### Q63. Choose the option below which is used to implement late binding.
 @@
@@ -519,6 +503,25 @@ Friend functions have the same implications on encapsulation as methods.
 - [ ] Friend function
 - [ ] Static function
 - [ ] Const function
+@@
+#### Q64. What is the difference between Early Binding and Late Binding? Choose the correct statements.
+@@
+A.In <?> functions, methods, variables and properties are detected and checked only at the run-time. 
+The biggest advantages of <?> is that the Objects of this type can hold references to any object, but lack many of the advantages of early-bound objects
+<?> implies that the compiler does not know what kind of object or actual type of an object or which methods or properties an object contains until run time.
+
+B.<?> objects are basically a strong type objects or static type objects.  
+The biggest advantage of using <?> is for performance and ease of development.
+When perform <?>, an object is assigned to a variable declared to be of a specific object type. 
+
+C.In <?> functions, methods, variables and properties are detected and checked only at the run-time. 
+The biggest advantage of using <?> is for performance and ease of development.
+<?> implies that the compiler does not know what kind of object or actual type of an object or which methods or properties an object contains until run time.
+@@
+- [x] A: Late Binding, B: Early Binding, C: wrong
+- [ ] A: Early Binding, B: Late Binding, C: wrong
+- [ ] A: wrong, B: Early Binding, C: Late Binding
+- [ ] A: Late Binding, B: wrong, C: Early Binding
 @@
 
  #### Q65. Choose the option below which describes the overloading of functions.
@@ -528,7 +531,8 @@ Friend functions have the same implications on encapsulation as methods.
 - [ ] Pseudo polymorphism
 - [ ] Transient polymorphism
 @@
-
+Ad hoc polymorphism is also known as function overloading or operator overloading because a polymorphic function can represent a number of unique and potentially heterogeneous implementations depending on the type of argument it is applied to.
+@@
  #### Q66. Who developed object-oriented programming?
 @@
 - [x] Alan Kay
@@ -543,7 +547,6 @@ Friend functions have the same implications on encapsulation as methods.
 - [ ] Inheritance
 - [ ] Polymorphism
 - [ ] Encapsulation
-@@
   `;
 
   const dataArray = data.split('####').slice(1);

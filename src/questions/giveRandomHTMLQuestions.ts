@@ -293,7 +293,10 @@ Note: The enctype attribute can be used only if method="post".
   - [ ] It displays image1.jpg at 1000px and higher and image2.jpg at 750px and higher, image3.jpg is a default in case '<picture>' is not supported.
   - [ ] It displays image1.jpg, image2.jpg and image3.jpg at 1000px and higher.
 @@
-  [Source: HTML &lt;picture> Tag](https://www.w3schools.com/tags/tag_picture.asp)
+The <picture> element contains two tags: one or more <source> tags and one <img> tag.
+
+The browser will look for the first <source> element where the media query matches the current viewport width, and then it will display the proper image (specified in the srcset attribute). 
+The <img> element is required as the last child of the <picture> element, as a fallback option if none of the source tags matches.
 @@
  #### Q25. What is the difference between <i> and <em>?
  @@
@@ -1453,6 +1456,16 @@ Frameset Doctype
   - [ ] fixed: here the element is positioned relative to its parent element, absolute: here the elements are positioned relative to the <html> element
   - [ ] absolute: here the element is positioned relative to its parent element, fixed: here the elements are positioned relative to the <body> element
   - [ ] the difference  is unimportant
+  @@
+  #### Q109. What does the following code show?
+  @@
+  <label for="file">Downloading progress:</label>
+  <progress id="file" value="32" max="100"> 32% </progress>
+  @@
+  - [ ] a progress bar with a label
+  - [ ] a list with numbers from 32 to 100
+  - [ ] 32%
+  - [ ] the syntax is wrong - the percentage is not specified
   `;
 
   const dataArray = data.split('####').slice(1);

@@ -477,25 +477,16 @@ const giveRandomReactQuestion = (dataBlockNumber: number) => {
   - [ ] if the component calls 'this.forceUpdate()'
   - [x] one of the component's siblings rerenders
 @@
-  #### Q50. You have created a new method in a class component called handleClick, but it is not working. Which code is missing?
-@@
-  '''javascript
-  class Button extends React.Component{
-@@
-    constructor(props) {
-      super(props);
-      // Missing line
-    }
-@@
-    handleClick() {...}
-  }
-  '''
-@@
-  - [ ] 'this.handleClick.bind(this);'
-  - [ ] 'props.bind(handleClick);'
-  - [ ] 'this.handleClick.bind();'
-  - [x] 'this.handleClick = this.handleClick.bind(this);'
-@@
+  #### Q50. What is missting in the following definition?
+  @@
+  <?> are useful when you test how the components interact with external data, for example when you load JSON from an API.
+   <?> will help you debug (when in React's Development mode) why your component is failing by printing helpful messages. 
+  @@
+  - [x] PropTypes
+  - [ ] Typescript
+  - [ ] ReactTypes
+  - [ ] ReduxTypes
+  @@
   #### Q51. React does not render two sibling elements unless they are wrapped in a fragment. Below is one way to render a fragment. What is the shorthand for this?
 @@
   '''javascript
@@ -1241,6 +1232,19 @@ const giveRandomReactQuestion = (dataBlockNumber: number) => {
   - [ ] useSyncExternalStore
   - [ ] useDeferredValue
   @@
+  useImperativeHandle(ref, createHandle, [deps])
+
+  function FancyInput(props, ref) {
+    const inputRef = useRef();
+    useImperativeHandle(ref, () => ({
+      focus: () => {
+        inputRef.current.focus();
+      }
+    }));
+    return <input ref={inputRef} ... />;
+  }
+  FancyInput = forwardRef(FancyInput);
+  @@
   #### Q109. Which hook does this?
   @@
   Returns a stateful value for the pending state of the transition, and a function to start it.  Lets you mark updates in the provided callback as transitions.
@@ -1437,6 +1441,14 @@ let store = Redux.createStore(reduce, { counter: -100 });
 - [ ] An object that can be cloned to produce an action
 - [ ] A UI element with an event handler that triggers an action dispatch
 - [ ] A store subscriber that dispatches actions to the store
+@@
+function addTodo(todo) {
+  return {
+    type: 'ADD_TODO',
+    todo: todo
+  }
+}
+With this in place, creating an action is simply a matter of calling the addTodo action creator and passing the todo (the payload) as an argument.
 @@
   `;
   const dataArray = data.split('####').slice(1);
