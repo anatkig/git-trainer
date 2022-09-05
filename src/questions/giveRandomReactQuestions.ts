@@ -1450,6 +1450,61 @@ function addTodo(todo) {
 }
 With this in place, creating an action is simply a matter of calling the addTodo action creator and passing the todo (the payload) as an argument.
 @@
+#### Q131. What does useTransition return?
+@@
+ - [x] [isPending, startTransition]
+ - [ ] [isLoading, setTransition]
+ - [ ] [isPending, initTransition]
+ - [ ] [isLoadiing, addTransition]
+ @@
+ #### Q132. What is the difference between useTransition and useDeferredValue?
+ @@
+ - [x] useTransition to wrap code which you have access to, useDeferredValue to wrap value received from the code you don't have access to
+ - [ ] useDeferredValue to wrap code which you have access to, useTransition to wrap value received from the code you don't have access to
+ - [ ] useTransition to wrap value which you have access to, useDeferredValue to wrap code received from the code you don't have access to
+ - [ ] useDeferredValue to wrap value which you have access to, useTransition to wrap code received from the code you don't have access to
+ @@
+ They both are responsible for Concurrency in React. Concurrency can be defined as the ability to do numerous tasks at the same time.
+ @@
+ #### Q133. What is the purpose of isPending in useTransition?
+ @@
+ - [x] to show some fallback content while waiting for the main state update to complete
+ - [ ] to show some content instead of the one
+ - [ ] to check whether the main content has been updated
+ - [ ] to check whether the main has been loaded
+ @@
+ isPending tells you whether there are currently some state updates that are still pending (hasn’t been performed yet by React, and is treated with lower priority
+ @@
+ #### Q134. What is in common between useTransitioin and useDeferredValue?
+ @@
+ These two hooks give you the crazy power of deciding on the <?> of a state update, or rather, to specify if an update is less important than others and put it aside in favour of more urgent ones
+ @@
+ - [x] priority
+ - [ ] order
+ - [ ] position
+ - [ ] relevance
+ @@
+ #### Q135. What does useReducer return?
+ @@
+ - [x] [state, dispatch]
+ - [ ] [state, setState]
+ - [ ] [intialState, setDispatch]
+ - [ ] [stateArray, dispatch]
+ @@
+ #### Q136. What parameters does useReducer take?
+ @@
+ - [x] (reducer, initialState)
+ - [ ] (callback, initialState)
+ - [ ] (callback, state)
+ - [ ] (reductor, state)
+ @@
+ #### Q137. What parameters does reducer in useReducer take?
+ @@
+ - [x] (state, action)
+ - [ ] (initialState, action)
+ - [ ] (state, callback)
+ - [ ] (state, actions)
+ @@
   `;
   const dataArray = data.split('####').slice(1);
 
