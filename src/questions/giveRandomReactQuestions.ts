@@ -1505,6 +1505,45 @@ With this in place, creating an action is simply a matter of calling the addTodo
  - [ ] (state, callback)
  - [ ] (state, actions)
  @@
+ #### Q138. What are four main concepts in Webpack?
+ @@
+ - [x] entry, output, modules and plug-ins
+ - [ ] entry, output, files and plug-ins
+ - [ ] start, output, modules and plug-ins
+ - [ ] entry, input, modules and plug-ins
+ @@
+ #### Q139. What are main things Babel is used for?
+ @@
+ - [x] Transform syntax
+ Polyfill features that are missing in your target environment (through a third-party polyfill such as core-js)
+ Source code transformations (codemods)
+ - [ ] Parsing
+ Polyfill features that are missing in your target environment (through a third-party polyfill such as core-js)
+ Source code transformations (codemods)
+ - [ ] Transform syntax
+ Polyfill features that are missing in your target environment (through a third-party polyfill such as core-js)
+ Source code transformations (codemodels)
+ - [ ] Transform syntax
+ Polyfill fillings that are missing in your target environment (through a third-party polyfill such as core-js)
+ Source code transformations (codemods)
+ @@
+ Codemod is a tool developed by Facebook to help with the refactor of large-scale codebases. 
+ It enables the developer to refactor a large codebase in a small amount of time
+ @@
+ #### Q140. What does the following statement refer to?
+ @@
+ The word <?> is a programming term that means "a piece of code that does some delayed work". 
+ Rather than execute some logic now, we can write a function body or code that can be used to perform the work later.
+ @@
+ - [x] thunk
+ - [ ] async
+ - [ ] promise
+ - [ ] polyfil
+ @@
+ Why Use Thunks?
+Thunks allow us to write additional Redux-related logic separate from a UI layer.
+This logic can include side effects, such as async requests or generating random values, as well as logic that requires dispatching multiple actions or access to the Redux store state.
+ @@
   `;
   const dataArray = data.split('####').slice(1);
 
