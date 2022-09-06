@@ -2715,6 +2715,180 @@ console.log(obj1);
 - [ ] invisible
 - [ ] invisibility position (IV)
 @@
+#### Q220. What is the difference between Map and object?
+@@
+Type of difference: Accidental Keys
+
+A: An <?> has a prototype, so it contains default keys
+          that could collide with your own keys if you're not careful.
+        
+        
+          
+            Note: This can be bypassed by using
+            <?>.create(null),
+            but this is seldom done.
+
+B: A <?> does not contain any keys by default. It only
+        contains what is explicitly put into it.
+@@
+- [x] A: Object B: Map
+- [ ] B: Object A: Map
+- [ ] both Objects
+- [ ] both Objects
+@@
+
+
+#### Q221. What is the difference between Map and object?
+@@
+Type of difference: Key Types
+
+A: The keys of an <?> must be either a
+        String or a Symbol.
+
+B: A <?>'s keys can be any value (including functions,
+        objects, or any primitive).
+@@
+- [x] A: Object B: Map
+- [ ] B: Object A: Map
+- [ ] both Objects
+- [ ] both Objects
+@@
+
+
+#### Q222. What is the difference between Map and object?
+@@
+Type of difference: Key Order
+
+A: Although the keys of an ordinary <?> are ordered now,
+          this was not always the case, and the order is complex. As a result,
+          it's best not to rely on property order.
+        
+        
+          The order was first defined for own properties only in ECMAScript
+          2015; ECMAScript 2020 defines order for inherited properties as well.
+          See the
+          OrdinaryOwnPropertyKeys
+          and
+          Enumerate<?>Properties
+          abstract specification operations. But note that no single mechanism
+          iterates
+          all of an <?>'s properties; the various mechanisms
+          each include different subsets of properties.
+          (for-in
+          includes only enumerable string-keyed properties;
+          <?>.keys includes only own, enumerable,
+          string-keyed properties;
+          <?>.getOwnPropertyNames includes own,
+          string-keyed properties even if non-enumerable;
+          <?>.getOwnPropertySymbols does the same
+          for just Symbol-keyed properties, etc.)
+
+B: Although the keys of an ordinary <?> are ordered now,
+          this was not always the case, and the order is complex. As a result,
+          it's best not to rely on property order.
+        
+        
+          The order was first defined for own properties only in ECMAScript
+          2015; ECMAScript 2020 defines order for inherited properties as well.
+          See the
+          OrdinaryOwnPropertyKeys
+          and
+          Enumerate<?>Properties
+          abstract specification operations. But note that no single mechanism
+          iterates
+          all of an <?>'s properties; the various mechanisms
+          each include different subsets of properties.
+          (for-in
+          includes only enumerable string-keyed properties;
+          <?>.keys includes only own, enumerable,
+          string-keyed properties;
+          <?>.getOwnPropertyNames includes own,
+          string-keyed properties even if non-enumerable;
+          <?>.getOwnPropertySymbols does the same
+          for just Symbol-keyed properties, etc.)
+@@
+- [x] A: Object B: Object
+- [ ] B: Object A: Object
+- [ ] both Objects
+- [ ] both Maps
+@@
+
+
+#### Q223. What is the difference between Map and object?
+@@
+Type of difference: 
+        Size
+      
+
+A: The number of items in an <?> must be determined
+        manually.
+
+B: The number of items in a <?> is easily retrieved from its
+        size property.
+@@
+- [x] A: Object B: Map
+- [ ] B: Object A: Map
+- [ ] both Objects
+- [ ] both Objects
+@@
+
+
+#### Q224. What is the difference between Map and object?
+@@
+Type of difference: Iteration
+
+A: A <?> is an
+        iterable, so it can be directly iterated.
+
+B: A <?> is an
+        iterable, so it can be directly iterated.
+@@
+- [x] A: Map B: Map
+- [ ] B: Map A: Map
+- [ ] both Maps
+- [ ] both Objects
+@@
+
+
+#### Q225. What is the difference between Map and object?
+@@
+Type of difference: Performance
+
+A: Performs better in scenarios involving frequent additions and removals
+          of key-value pairs.
+
+B: Not optimized for frequent additions and removals of key-value pairs.
+@@
+- [x] A: Map B: Object
+- [ ] B: Map A: Object
+- [ ] both Objects
+- [ ] both Objects
+@@
+
+
+#### Q226. What is the difference between Map and object?
+@@
+Type of difference: Serialization and parsing
+
+A: Native support for serialization from <?> to
+          JSON, using JSON.stringify().
+        
+        
+          Native support for parsing from JSON to <?>,
+          using JSON.parse().
+
+B: Native support for serialization from <?> to
+          JSON, using JSON.stringify().
+        
+        
+          Native support for parsing from JSON to <?>,
+          using JSON.parse().
+@@
+- [x] A: Object B: Object
+- [ ] B: Object A: Object
+- [ ] both Objects
+- [ ] both Maps
+@@
 `;
   const dataArray = data.split('####').slice(1);
 
