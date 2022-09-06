@@ -1502,6 +1502,1172 @@ Requesting an external script from another domain does not have this problem.
 @@
 JSONP stands for JSON with Padding.
 @@
+#### Q153. What is the MIME type for the following extension and document kind?
+@@
+extension: .aac
+kind: AAC audio
+@@
+- [x] audio/aac
+- [ ] application/java-archive
+- [ ] image/avif
+- [ ] video/x-msvideo
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q154. What is the MIME type for the following extension and document kind?
+@@
+extension: .abw
+kind: AbiWord document
+@@
+- [x] application/x-abiword
+- [ ] application/xhtml+xml
+- [ ] application/epub+zip
+- [ ] application/vnd.amazon.ebook
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q155. What is the MIME type for the following extension and document kind?
+@@
+extension: .arc
+kind: Archive document (multiple files embedded)
+@@
+- [x] application/x-freearc
+- [ ] video/ogg
+- [ ] application/x-abiword
+- [ ] application/gzip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q156. What is the MIME type for the following extension and document kind?
+@@
+extension: .avif
+kind: AVIF image
+@@
+- [x] image/avif
+- [ ] application/x-csh
+- [ ] application/x-bzip
+- [ ] application/vnd.openxmlformats-officedocument.wordprocessingml.document
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q157. What is the MIME type for the following extension and document kind?
+@@
+extension: .avi
+kind: AVI: Audio Video Interleave
+@@
+- [x] video/x-msvideo
+- [ ] audio/ogg
+- [ ] image/bmp
+- [ ] video/3gpp2; audio/3gpp2 if it doesn't contain video
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q158. What is the MIME type for the following extension and document kind?
+@@
+extension: .azw
+kind: Amazon Kindle eBook format
+@@
+- [x] application/vnd.amazon.ebook
+- [ ] image/tiff
+- [ ] audio/aac
+- [ ] application/epub+zip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q159. What is the MIME type for the following extension and document kind?
+@@
+extension: .bin
+kind: Any kind of binary data
+@@
+- [x] application/octet-stream
+- [ ] image/tiff
+- [ ] audio/wav
+- [ ] image/avif
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q160. What is the MIME type for the following extension and document kind?
+@@
+extension: .bmp
+kind: Windows OS/2 Bitmap Graphics
+@@
+- [x] image/bmp
+- [ ] video/mpeg
+- [ ] application/x-abiword
+- [ ] font/ttf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q161. What is the MIME type for the following extension and document kind?
+@@
+extension: .bz
+kind: BZip archive
+@@
+- [x] application/x-bzip
+- [ ] application/x-cdf
+- [ ] application/ld+json
+- [ ] image/gif
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q162. What is the MIME type for the following extension and document kind?
+@@
+extension: .bz2
+kind: BZip2 archive
+@@
+- [x] application/x-bzip2
+- [ ] application/vnd.visio
+- [ ] application/msword
+- [ ] application/vnd.oasis.opendocument.presentation
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q163. What is the MIME type for the following extension and document kind?
+@@
+extension: .cda
+kind: CD audio
+@@
+- [x] application/x-cdf
+- [ ] application/vnd.oasis.opendocument.spreadsheet
+- [ ] application/vnd.oasis.opendocument.text
+- [ ] video/webm
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q164. What is the MIME type for the following extension and document kind?
+@@
+extension: .csh
+kind: C-Shell script
+@@
+- [x] application/x-csh
+- [ ] video/mp4
+- [ ] image/gif
+- [ ] application/octet-stream
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q165. What is the MIME type for the following extension and document kind?
+@@
+extension: .css
+kind: Cascading Style Sheets (CSS)
+@@
+- [x] text/css
+- [ ] application/x-freearc
+- [ ] application/ld+json
+- [ ] application/x-bzip2
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q166. What is the MIME type for the following extension and document kind?
+@@
+extension: .csv
+kind: Comma-separated values (CSV)
+@@
+- [x] text/csv
+- [ ] audio/wav
+- [ ] font/ttf
+- [ ] application/vnd.oasis.opendocument.spreadsheet
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q167. What is the MIME type for the following extension and document kind?
+@@
+extension: .doc
+kind: Microsoft Word
+@@
+- [x] application/msword
+- [ ] application/vnd.mozilla.xul+xml
+- [ ] application/java-archive
+- [ ] application/vnd.amazon.ebook
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q168. What is the MIME type for the following extension and document kind?
+@@
+extension: .docx
+kind: Microsoft Word (OpenXML)
+@@
+- [x] application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- [ ] application/vnd.apple.installer+xml
+- [ ] application/epub+zip
+- [ ] application/vnd.amazon.ebook
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q169. What is the MIME type for the following extension and document kind?
+@@
+extension: .eot
+kind: MS Embedded OpenType fonts
+@@
+- [x] application/vnd.ms-fontobject
+- [ ] text/csv
+- [ ] application/ogg
+- [ ] font/otf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q170. What is the MIME type for the following extension and document kind?
+@@
+extension: .epub
+kind: Electronic publication (EPUB)
+@@
+- [x] application/epub+zip
+- [ ] text/javascript
+- [ ] image/png
+- [ ] application/vnd.amazon.ebook
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q171. What is the MIME type for the following extension and document kind?
+@@
+extension: .gz
+kind: GZip Compressed Archive
+@@
+- [x] application/gzip
+- [ ] video/mp2t
+- [ ] application/x-freearc
+- [ ] application/vnd.oasis.opendocument.text
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q172. What is the MIME type for the following extension and document kind?
+@@
+extension: .gif
+kind: Graphics Interchange Format (GIF)
+@@
+- [x] image/gif
+- [ ] video/mp4
+- [ ] text/css
+- [ ] application/vnd.ms-fontobject
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q173. What is the MIME type for the following extension and document kind?
+@@
+extension: .htm .html
+kind: HyperText Markup Language (HTML)
+@@
+- [x] text/html
+- [ ] application/x-csh
+- [ ] image/vnd.microsoft.icon
+- [ ] audio/mpeg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q174. What is the MIME type for the following extension and document kind?
+@@
+extension: .ico
+kind: Icon format
+@@
+- [x] image/vnd.microsoft.icon
+- [ ] video/3gpp2; audio/3gpp2 if it doesn't contain video
+- [ ] video/mp2t
+- [ ] audio/ogg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q175. What is the MIME type for the following extension and document kind?
+@@
+extension: .ics
+kind: iCalendar format
+@@
+- [x] text/calendar
+- [ ] application/ogg
+- [ ] application/x-shockwave-flash
+- [ ] application/x-httpd-php
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q176. What is the MIME type for the following extension and document kind?
+@@
+extension: .jar
+kind: Java Archive (JAR)
+@@
+- [x] application/java-archive
+- [ ] video/webm
+- [ ] video/mp2t
+- [ ] text/javascript
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q177. What is the MIME type for the following extension and document kind?
+@@
+extension: .jpeg .jpg
+kind: JPEG images
+@@
+- [x] image/jpeg
+- [ ] application/java-archive
+- [ ] text/javascript
+- [ ] video/3gpp; audio/3gpp if it doesn't contain video
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q178. What is the MIME type for the following extension and document kind?
+@@
+extension: .js
+kind: JavaScript
+@@
+- [x] text/javascript (Specifications: HTML and RFC 9239)
+- [ ] video/3gpp; audio/3gpp if it doesn't contain video
+- [ ] application/vnd.amazon.ebook
+- [ ] application/gzip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q179. What is the MIME type for the following extension and document kind?
+@@
+extension: .json
+kind: JSON format
+@@
+- [x] application/json
+- [ ] application/vnd.oasis.opendocument.text
+- [ ] application/vnd.apple.installer+xml
+- [ ] application/x-bzip2
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q180. What is the MIME type for the following extension and document kind?
+@@
+extension: .jsonld
+kind: JSON-LD format
+@@
+- [x] application/ld+json
+- [ ] application/vnd.visio
+- [ ] text/javascript (Specifications: HTML and RFC 9239)
+- [ ] video/3gpp; audio/3gpp if it doesn't contain video
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q181. What is the MIME type for the following extension and document kind?
+@@
+extension: .mid .midi
+kind: Musical Instrument Digital Interface (MIDI)
+@@
+- [x] audio/midi audio/x-midi
+- [ ] application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- [ ] application/java-archive
+- [ ] application/x-7z-compressed
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q182. What is the MIME type for the following extension and document kind?
+@@
+extension: .mjs
+kind: JavaScript module
+@@
+- [x] text/javascript
+- [ ] video/ogg
+- [ ] text/html
+- [ ] text/calendar
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q183. What is the MIME type for the following extension and document kind?
+@@
+extension: .mp3
+kind: MP3 audio
+@@
+- [x] audio/mpeg
+- [ ] application/xhtml+xml
+- [ ] text/javascript (Specifications: HTML and RFC 9239)
+- [ ] application/x-tar
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q184. What is the MIME type for the following extension and document kind?
+@@
+extension: .mp4
+kind: MP4 video
+@@
+- [x] video/mp4
+- [ ] application/x-cdf
+- [ ] font/ttf
+- [ ] application/json
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q185. What is the MIME type for the following extension and document kind?
+@@
+extension: .mpeg
+kind: MPEG Video
+@@
+- [x] video/mpeg
+- [ ] text/calendar
+- [ ] text/javascript (Specifications: HTML and RFC 9239)
+- [ ] application/rtf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q186. What is the MIME type for the following extension and document kind?
+@@
+extension: .mpkg
+kind: Apple Installer Package
+@@
+- [x] application/vnd.apple.installer+xml
+- [ ] application/x-abiword
+- [ ] application/epub+zip
+- [ ] image/jpeg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q187. What is the MIME type for the following extension and document kind?
+@@
+extension: .odp
+kind: OpenDocument presentation document
+@@
+- [x] application/vnd.oasis.opendocument.presentation
+- [ ] application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- [ ] application/x-httpd-php
+- [ ] application/vnd.oasis.opendocument.text
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q188. What is the MIME type for the following extension and document kind?
+@@
+extension: .ods
+kind: OpenDocument spreadsheet document
+@@
+- [x] application/vnd.oasis.opendocument.spreadsheet
+- [ ] application/vnd.rar
+- [ ] application/vnd.mozilla.xul+xml
+- [ ] text/csv
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q189. What is the MIME type for the following extension and document kind?
+@@
+extension: .odt
+kind: OpenDocument text document
+@@
+- [x] application/vnd.oasis.opendocument.text
+- [ ] application/x-freearc
+- [ ] text/calendar
+- [ ] application/vnd.visio
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q190. What is the MIME type for the following extension and document kind?
+@@
+extension: .oga
+kind: OGG audio
+@@
+- [x] audio/ogg
+- [ ] application/x-bzip
+- [ ] application/vnd.oasis.opendocument.spreadsheet
+- [ ] video/mpeg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q191. What is the MIME type for the following extension and document kind?
+@@
+extension: .ogv
+kind: OGG video
+@@
+- [x] video/ogg
+- [ ] application/msword
+- [ ] application/vnd.oasis.opendocument.presentation
+- [ ] application/zip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q192. What is the MIME type for the following extension and document kind?
+@@
+extension: .ogx
+kind: OGG
+@@
+- [x] application/ogg
+- [ ] application/x-csh
+- [ ] image/png
+- [ ] application/rtf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q193. What is the MIME type for the following extension and document kind?
+@@
+extension: .opus
+kind: Opus audio
+@@
+- [x] audio/opus
+- [ ] application/gzip
+- [ ] application/x-abiword
+- [ ] video/x-msvideo
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q194. What is the MIME type for the following extension and document kind?
+@@
+extension: .otf
+kind: OpenType font
+@@
+- [x] font/otf
+- [ ] application/x-7z-compressed
+- [ ] application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- [ ] application/x-csh
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q195. What is the MIME type for the following extension and document kind?
+@@
+extension: .png
+kind: Portable Network Graphics
+@@
+- [x] image/png
+- [ ] application/vnd.oasis.opendocument.spreadsheet
+- [ ] text/html
+- [ ] text/javascript (Specifications: HTML and RFC 9239)
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q196. What is the MIME type for the following extension and document kind?
+@@
+extension: .pdf
+kind: Adobe Portable Document Format (PDF)
+@@
+- [x] application/pdf
+- [ ] application/ogg
+- [ ] application/octet-stream
+- [ ] font/otf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q197. What is the MIME type for the following extension and document kind?
+@@
+extension: .php
+kind: Hypertext Preprocessor (Personal Home Page)
+@@
+- [x] application/x-httpd-php
+- [ ] font/woff
+- [ ] font/otf
+- [ ] application/epub+zip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q198. What is the MIME type for the following extension and document kind?
+@@
+extension: .ppt
+kind: Microsoft PowerPoint
+@@
+- [x] application/vnd.ms-powerpoint
+- [ ] text/javascript
+- [ ] video/x-msvideo
+- [ ] application/x-bzip2
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q199. What is the MIME type for the following extension and document kind?
+@@
+extension: .pptx
+kind: Microsoft PowerPoint (OpenXML)
+@@
+- [x] application/vnd.openxmlformats-officedocument.presentationml.presentation
+- [ ] font/woff
+- [ ] application/zip
+- [ ] application/x-cdf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q200. What is the MIME type for the following extension and document kind?
+@@
+extension: .rar
+kind: RAR archive
+@@
+- [x] application/vnd.rar
+- [ ] text/css
+- [ ] application/epub+zip
+- [ ] application/vnd.mozilla.xul+xml
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q201. What is the MIME type for the following extension and document kind?
+@@
+extension: .rtf
+kind: Rich Text Format (RTF)
+@@
+- [x] application/rtf
+- [ ] image/vnd.microsoft.icon
+- [ ] image/tiff
+- [ ] font/otf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q202. What is the MIME type for the following extension and document kind?
+@@
+extension: .sh
+kind: Bourne shell script
+@@
+- [x] application/x-sh
+- [ ] application/x-cdf
+- [ ] image/webp
+- [ ] audio/ogg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q203. What is the MIME type for the following extension and document kind?
+@@
+extension: .svg
+kind: Scalable Vector Graphics (SVG)
+@@
+- [x] image/svg+xml
+- [ ] application/vnd.ms-powerpoint
+- [ ] image/webp
+- [ ] application/vnd.ms-excel
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q204. What is the MIME type for the following extension and document kind?
+@@
+extension: .swf
+kind: Small web format (SWF) or Adobe Flash document
+@@
+- [x] application/x-shockwave-flash
+- [ ] application/rtf
+- [ ] application/vnd.visio
+- [ ] text/calendar
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q205. What is the MIME type for the following extension and document kind?
+@@
+extension: .tar
+kind: Tape Archive (TAR)
+@@
+- [x] application/x-tar
+- [ ] application/x-freearc
+- [ ] application/java-archive
+- [ ] audio/ogg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q206. What is the MIME type for the following extension and document kind?
+@@
+extension: .tif .tiff
+kind: Tagged Image File Format (TIFF)
+@@
+- [x] image/tiff
+- [ ] application/vnd.openxmlformats-officedocument.wordprocessingml.document
+- [ ] application/x-bzip
+- [ ] application/x-bzip2
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q207. What is the MIME type for the following extension and document kind?
+@@
+extension: .ts
+kind: MPEG transport stream
+@@
+- [x] video/mp2t
+- [ ] image/png
+- [ ] application/vnd.visio
+- [ ] application/x-freearc
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q208. What is the MIME type for the following extension and document kind?
+@@
+extension: .ttf
+kind: TrueType Font
+@@
+- [x] font/ttf
+- [ ] application/x-csh
+- [ ] image/bmp
+- [ ] audio/ogg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q209. What is the MIME type for the following extension and document kind?
+@@
+extension: .txt
+kind: Text, (generally ASCII or ISO 8859-n)
+@@
+- [x] text/plain
+- [ ] application/vnd.amazon.ebook
+- [ ] video/ogg
+- [ ] application/ogg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q210. What is the MIME type for the following extension and document kind?
+@@
+extension: .vsd
+kind: Microsoft Visio
+@@
+- [x] application/vnd.visio
+- [ ] image/svg+xml
+- [ ] text/html
+- [ ] image/tiff
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q211. What is the MIME type for the following extension and document kind?
+@@
+extension: .wav
+kind: Waveform Audio Format
+@@
+- [x] audio/wav
+- [ ] font/woff2
+- [ ] video/x-msvideo
+- [ ] text/css
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q212. What is the MIME type for the following extension and document kind?
+@@
+extension: .weba
+kind: WEBM audio
+@@
+- [x] audio/webm
+- [ ] image/svg+xml
+- [ ] image/vnd.microsoft.icon
+- [ ] application/x-abiword
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q213. What is the MIME type for the following extension and document kind?
+@@
+extension: .webm
+kind: WEBM video
+@@
+- [x] video/webm
+- [ ] text/csv
+- [ ] image/svg+xml
+- [ ] audio/mpeg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q214. What is the MIME type for the following extension and document kind?
+@@
+extension: .webp
+kind: WEBP image
+@@
+- [x] image/webp
+- [ ] audio/aac
+- [ ] application/x-sh
+- [ ] application/zip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q215. What is the MIME type for the following extension and document kind?
+@@
+extension: .woff
+kind: Web Open Font Format (WOFF)
+@@
+- [x] font/woff
+- [ ] application/x-freearc
+- [ ] application/vnd.rar
+- [ ] application/x-tar
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q216. What is the MIME type for the following extension and document kind?
+@@
+extension: .woff2
+kind: Web Open Font Format (WOFF)
+@@
+- [x] font/woff2
+- [ ] text/csv
+- [ ] image/svg+xml
+- [ ] application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q217. What is the MIME type for the following extension and document kind?
+@@
+extension: .xhtml
+kind: XHTML
+@@
+- [x] application/xhtml+xml
+- [ ] application/octet-stream
+- [ ] text/css
+- [ ] application/zip
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q218. What is the MIME type for the following extension and document kind?
+@@
+extension: .xls
+kind: Microsoft Excel
+@@
+- [x] application/vnd.ms-excel
+- [ ] image/webp
+- [ ] application/pdf
+- [ ] application/vnd.oasis.opendocument.presentation
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q219. What is the MIME type for the following extension and document kind?
+@@
+extension: .xlsx
+kind: Microsoft Excel (OpenXML)
+@@
+- [x] application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+- [ ] application/vnd.amazon.ebook
+- [ ] image/webp
+- [ ] video/mpeg
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q220. What is the MIME type for the following extension and document kind?
+@@
+extension: .xml
+kind: XML
+@@
+- [x] application/xml is recommended as of RFC 7303 (section 4.1), but text/xml is still used sometimes. You can assign a specific MIME type to a file with .xml extension depending on how its contents are meant to be interpreted. For instance, an Atom feed is application/atom+xml, but application/xml serves as a valid default.
+- [ ] application/ogg
+- [ ] text/plain
+- [ ] application/xhtml+xml
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q221. What is the MIME type for the following extension and document kind?
+@@
+extension: .xul
+kind: XUL
+@@
+- [x] application/vnd.mozilla.xul+xml
+- [ ] application/x-csh
+- [ ] application/vnd.apple.installer+xml
+- [ ] application/x-sh
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q222. What is the MIME type for the following extension and document kind?
+@@
+extension: .zip
+kind: ZIP archive
+@@
+- [x] application/zip
+- [ ] image/bmp
+- [ ] video/mpeg
+- [ ] font/ttf
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q223. What is the MIME type for the following extension and document kind?
+@@
+extension: .3gp
+kind: 3GPP audio/video container
+@@
+- [x] video/3gpp; audio/3gpp if it doesn't contain video
+- [ ] application/vnd.oasis.opendocument.spreadsheet
+- [ ] application/x-abiword
+- [ ] text/plain
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q224. What is the MIME type for the following extension and document kind?
+@@
+extension: .3g2
+kind: 3GPP2 audio/video container
+@@
+- [x] video/3gpp2; audio/3gpp2 if it doesn't contain video
+- [ ] application/pdf
+- [ ] image/webp
+- [ ] video/webm
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
+
+
+#### Q225. What is the MIME type for the following extension and document kind?
+@@
+extension: .7z
+kind: 7-zip archive
+@@
+- [x] application/x-7z-compressed
+- [ ] text/plain
+- [ ] text/calendar
+- [ ] application/x-abiword
+@@
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+A MIME type (now properly called "media type", but also sometimes "content type") is a string sent along with a file indicating the type of the file (describing the content format, for example, a sound file might be labeled audio/ogg, or an image file image/png).
+@@
 `;
 
   const dataArray = data.split('####').slice(1);
