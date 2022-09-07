@@ -2719,22 +2719,16 @@ console.log(obj1);
 @@
 Type of difference: Accidental Keys
 
-A: An <?> has a prototype, so it contains default keys
-          that could collide with your own keys if you're not careful.
-        
-        
-          
-            Note: This can be bypassed by using
-            <?>.create(null),
-            but this is seldom done.
+A: A <?> does not contain any keys by default. It only
+        contains what is explicitly put into it.
 
 B: A <?> does not contain any keys by default. It only
         contains what is explicitly put into it.
 @@
-- [x] A: Object B: Map
-- [ ] B: Object A: Map
-- [ ] both Objects
-- [ ] both Maps
+- [x] A: Map B: Map
+- [ ] A: Object B: Object
+- [ ] A: Map B: Object
+- [ ] A: Object B: Map
 @@
 
 
@@ -2742,16 +2736,16 @@ B: A <?> does not contain any keys by default. It only
 @@
 Type of difference: Key Types
 
-A: The keys of an <?> must be either a
-        String or a Symbol.
+A: A <?>'s keys can be any value (including functions,
+        objects, or any primitive).
 
-B: The keys of an <?> must be either a
-        String or a Symbol.
+B: A <?>'s keys can be any value (including functions,
+        objects, or any primitive).
 @@
-- [x] A: Object B: Object
-- [ ] B: Object A: Object
-- [ ] both Objects
-- [ ] both Objects
+- [x] A: Map B: Map
+- [ ] A: Object B: Object
+- [ ] A: Map B: Object
+- [ ] A: Object B: Map
 @@
 
 
@@ -2759,18 +2753,58 @@ B: The keys of an <?> must be either a
 @@
 Type of difference: Key Order
 
-A: The keys in <?> are ordered in a simple, straightforward
-          way: A <?> object iterates entries, keys, and values in
-          the order of entry insertion.
+A: Although the keys of an ordinary <?> are ordered now,
+          this was not always the case, and the order is complex. As a result,
+          it's best not to rely on property order.
+        
+        
+          The order was first defined for own properties only in ECMAScript
+          2015; ECMAScript 2020 defines order for inherited properties as well.
+          See the
+          OrdinaryOwnPropertyKeys
+          and
+          Enumerate<?>Properties
+          abstract specification operations. But note that no single mechanism
+          iterates
+          all of an <?>'s properties; the various mechanisms
+          each include different subsets of properties.
+          (for-in
+          includes only enumerable string-keyed properties;
+          <?>.keys includes only own, enumerable,
+          string-keyed properties;
+          <?>.getOwnPropertyNames includes own,
+          string-keyed properties even if non-enumerable;
+          <?>.getOwnPropertySymbols does the same
+          for just Symbol-keyed properties, etc.)
 
-B: The keys in <?> are ordered in a simple, straightforward
-          way: A <?> object iterates entries, keys, and values in
-          the order of entry insertion.
+B: Although the keys of an ordinary <?> are ordered now,
+          this was not always the case, and the order is complex. As a result,
+          it's best not to rely on property order.
+        
+        
+          The order was first defined for own properties only in ECMAScript
+          2015; ECMAScript 2020 defines order for inherited properties as well.
+          See the
+          OrdinaryOwnPropertyKeys
+          and
+          Enumerate<?>Properties
+          abstract specification operations. But note that no single mechanism
+          iterates
+          all of an <?>'s properties; the various mechanisms
+          each include different subsets of properties.
+          (for-in
+          includes only enumerable string-keyed properties;
+          <?>.keys includes only own, enumerable,
+          string-keyed properties;
+          <?>.getOwnPropertyNames includes own,
+          string-keyed properties even if non-enumerable;
+          <?>.getOwnPropertySymbols does the same
+          for just Symbol-keyed properties, etc.)
 @@
-- [x] A: Map B: Map
-- [ ] B: Map A: Map
-- [ ] both Objects
-- [ ] both Objects
+- [x] A: Object B: Object
+- [ ] A: Map B: Map
+- [ ] A: Object B: Map
+- [ ] A: Map B: Object
 @@
 
 
@@ -2783,13 +2817,13 @@ Type of difference:
 A: The number of items in an <?> must be determined
         manually.
 
-B: The number of items in a <?> is easily retrieved from its
-        size property.
+B: The number of items in an <?> must be determined
+        manually.
 @@
-- [x] A: Object B: Map
-- [ ] B: Object A: Map
-- [ ] both Objects
-- [ ] both Maps
+- [x] A: Object B: Object
+- [ ] A: Map B: Map
+- [ ] A: Object B: Map
+- [ ] A: Map B: Object
 @@
 
 
@@ -2814,27 +2848,13 @@ A: <?> does not implement an iteration protocol, and so <?>s are not directly it
               statement allows you to iterate over the
               enumerable properties of an <?>.
 
-B: <?> does not implement an iteration protocol, and so <?>s are not directly iterable using the JavaScript
-          for...of
-          statement (by default).
-        
-        
-          Note:
-          
-            
-              An <?> can implement the iteration protocol, or you can get an
-              iterable for an <?> using <?>.keys or <?>.entries.
-            
-            
-              The
-              for...in
-              statement allows you to iterate over the
-              enumerable properties of an <?>.
+B: A <?> is an
+        iterable, so it can be directly iterated.
 @@
-- [x] A: Object B: Object
-- [ ] B: Object A: Object
-- [ ] both Objects
-- [ ] both Objects
+- [x] A: Object B: Map
+- [ ] A: Map B: Object
+- [ ] A: Object B: Object
+- [ ] A: Map B: Map
 @@
 
 
@@ -2844,12 +2864,13 @@ Type of difference: Performance
 
 A: Not optimized for frequent additions and removals of key-value pairs.
 
-B: Not optimized for frequent additions and removals of key-value pairs.
+B: Performs better in scenarios involving frequent additions and removals
+          of key-value pairs.
 @@
-- [x] A: Object B: Object
-- [ ] B: Object A: Object
-- [ ] both Objects
-- [ ] both Objects
+- [x] A: Object B: Map
+- [ ] A: Map B: Object
+- [ ] A: Object B: Object
+- [ ] A: Map B: Map
 @@
 
 
@@ -2876,9 +2897,9 @@ B: No native support for serialization or parsing.
           How do you JSON.stringify an ES6 <?>?).
 @@
 - [x] A: Map B: Map
-- [ ] B: Map A: Map
-- [ ] both Objects
-- [ ] both Objects
+- [ ] A: Object B: Object
+- [ ] A: Map B: Object
+- [ ] A: Object B: Map
 @@
 `;
   const dataArray = data.split('####').slice(1);

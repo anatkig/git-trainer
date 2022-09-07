@@ -553,9 +553,9 @@ Ad hoc polymorphism is also known as function overloading or operator overloadin
 “There should never be more than one reason for a class to change.” — Robert Martin, SRP paper linked from The Principles of OODIn Short: Write a class that concentrates on doing only one thing.
 @@
 - [x] Single Responsibility Principle
+- [ ] Interface Segregation Principle
 - [ ] Open Closed Principle
-- [ ] Open Closed Principle
-- [ ] Open Closed Principle
+- [ ] Dependency Inversion Principle
 @@
 
 
@@ -564,8 +564,8 @@ Ad hoc polymorphism is also known as function overloading or operator overloadin
 “Software entities (classes, modules, functions, etc.) should be open for extension, but closed for modification.” — Robert Martin paraphrasing Bertrand Meyer, OCP paper linked from The Principles of OODIn Short: If you want to change the class behavior then change it using inheritance and composition. Don’t touch the class body.
 @@
 - [x] Open Closed Principle
-- [ ] Interface Segregation Principle
-- [ ] Interface Segregation Principle
+- [ ] Single Responsibility Principle
+- [ ] Dependency Inversion Principle
 - [ ] Interface Segregation Principle
 @@
 
@@ -575,9 +575,9 @@ Ad hoc polymorphism is also known as function overloading or operator overloadin
 “Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it.” — Robert Martin, LSP paper linked from The Principles of OODIn Short: One subclass should be able to easily and nicely use other subclass’ object in place of their parent class.
 @@
 - [x] Liskov Substitution Principle
-- [ ] Single Responsibility Principle
-- [ ] Single Responsibility Principle
-- [ ] Single Responsibility Principle
+- [ ] Open Closed Principle
+- [ ] Interface Segregation Principle
+- [ ] Dependency Inversion Principle
 @@
 
 
@@ -586,9 +586,9 @@ Ad hoc polymorphism is also known as function overloading or operator overloadin
 “Clients should not be forced to depend upon interfaces that they do not use.” — Robert Martin, ISP paper linked from The Principles of OODIn Short: Keep your interfaces super small and compact. Better to write a separate interface for each feature you have in mind.
 @@
 - [x] Interface Segregation Principle
-- [ ] Open Closed Principle
-- [ ] Open Closed Principle
-- [ ] Open Closed Principle
+- [ ] Dependency Inversion Principle
+- [ ] Single Responsibility Principle
+- [ ] Liskov Substitution Principle
 @@
 
 
@@ -597,9 +597,9 @@ Ad hoc polymorphism is also known as function overloading or operator overloadin
 “A. High level modules should not depend upon low level modules. Both should depend upon abstractions.B. Abstractions should not depend upon details. Details should depend upon abstractions.” — Robert Martin, DIP paper linked from The Principles of OODIn Short: Use interfaces and abstractions a lot.
 @@
 - [x] Dependency Inversion Principle
-- [ ] Dependency Inversion Principle
-- [ ] Dependency Inversion Principle
-- [ ] Dependency Inversion Principle
+- [ ] Interface Segregation Principle
+- [ ] Single Responsibility Principle
+- [ ] Liskov Substitution Principle
 @@
   `;
 
